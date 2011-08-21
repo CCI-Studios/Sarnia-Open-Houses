@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="authentication">
+	<name>plg_authentication_filogix</name>
+	<author>Jonathan Bennett</author>
+	<creationDate>August 2011</creationDate>
+	<copyright></copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>jbennett@ccistudios.com</authorEmail>
+	<authorUrl>www.ccistudios.com</authorUrl>
+	<version>0.1.0</version>
+	<description>PLG_FILOGIX_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="filogix">filogix.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
