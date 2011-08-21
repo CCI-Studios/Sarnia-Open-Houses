@@ -5,11 +5,6 @@ jimport('joomla.event.plugin');
 class plgAuthenticationFilogix extends JPlugin
 {
 	
-	public function __construct(&$subject)
-	{
-		parent::__construct($subject);
-	}
-	
 	public function onUserAuthenticate($credentials, $options, &$response)
 	{
 		$message = '';
@@ -65,10 +60,33 @@ class plgAuthenticationFilogix extends JPlugin
 			$response->email = $credentials['username'] .'@filogix.com';
 			$response->username = $credentials['username'];
 			$response->password = $credentials['password'];
+			
+			$this->_createUser($credentials);
 		} else {
 			$response->status = JAUTHENTICATE_STATUS_FAILURE;
 			$response->error_message = JText::_('JGLOBAL_AUTH_FAILED', $message);
 		}
+	}
+	
+	
+	protected function _createUser($credentials)
+	{
+		$instance = JUser::getInstance();
+		if ($id = intval(JUserHelper::getUserId($credentials['username']))) {
+			return;
+		}
+		
+		$defaultUserGroup = $this->params->get('usertype', 2); // make param;
+		$acl = JFactory::getACL();
+		
+		$instance->set('id',		0);
+		$instance->set('name',		$credentials['username']);
+		$instance->set('username',	$credentials['username']);
+		$instance->set('email',		$credentials['username'] .'@filogix.com');
+		$instance->set('usertype',	'depreciated');
+		$instance->set('groups',	array($defaultUserGroup));
+		
+		$instance->save();
 	}
 	
 }
