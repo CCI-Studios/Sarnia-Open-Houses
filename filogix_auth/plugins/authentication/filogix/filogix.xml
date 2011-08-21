@@ -16,7 +16,13 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-
+				<field
+					name="usertype"
+					type="usergroup"
+					default="2"
+					label="Default Usergroup"
+					description="Default usergroup for new accounts created through the filogix plugin.">
+				</field>
 			</fieldset>
 		</fields>
 	</config>
