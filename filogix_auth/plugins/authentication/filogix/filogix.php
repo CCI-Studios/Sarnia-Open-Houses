@@ -13,12 +13,8 @@ class plgAuthenticationFilogix extends JPlugin
 		if (function_exists('curl_init')) {
 			
 			if (strlen($credentials['username']) && strlen($credentials['password'])) {
-				$jar = tempnam("/tmp", "CURLCOOKIE");
-				
 				$curl = curl_init('http://www.filogixdms.com/slon/login_submit.html');
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-				//curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-				//curl_setopt($curl, CURLOPT_COOKIEJAR, $jar);
 				curl_setopt($curl, CURLOPT_HEADER, 1);
 				curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query(array(
 					'js_check'	=> 'ok',
