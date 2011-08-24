@@ -82,7 +82,11 @@ class plgAuthenticationFilogix extends JPlugin
 		$instance->set('usertype',	'depreciated');
 		$instance->set('groups',	array($defaultUserGroup));
 		
-		$instance->save();
+		if ($instance->save()) {
+			$row = KFactory::get('admin::com.openhouse.database.row.agent');
+			$row->set('user_id', $instance->id);
+			$row->save();	
+		}
 	}
 	
 }
