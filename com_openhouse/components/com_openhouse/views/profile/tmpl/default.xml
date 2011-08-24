@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Profile" option="profile">
+		<message>
+			<![CDATA[View the profile of the current user.]]>
+		</message>
+	</layout>
+</metadata>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Edit Profile" option="edit profile">
+		<message>
+			<![CDATA[Edit the current users profile.]]>
+		</message>
+	</layout>
+</metadata>
