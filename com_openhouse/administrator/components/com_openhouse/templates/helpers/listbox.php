@@ -12,7 +12,7 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 			'value'		=> 'id',
 			'text'		=> 'title',
 			'prompt'		=> '- Select Location -',
-			'attribs'	=> array('id'=>$config->name),
+			//'attribs'	=> array('id'=>$config->name),
 		));
 		
 		return parent::_listbox($config);

@@ -7,7 +7,7 @@
 		<thead>
 			<tr>
 				<th width="1%"><?= @helper('grid.checkall') ?></th>
-				<th><?= @helper('grid.sort', array('column' => 'title')) ?></th>
+				<th><?= @helper('grid.sort', array('column' => 'name')) ?></th>
 			</tr>
 		</thead>
 		
@@ -20,15 +20,14 @@
 		</tfoot>
 		
 		<tbody>
-			<? foreach ($locations as $location): ?>
+			<? foreach ($agents as $agent): ?>
 			<tr>
-				<td align="center"><?= @helper('grid.checkbox', array('row'=>$location)) ?></td>
-				<td><a href="<?= @route('view=location&id='. $location->id) ?>">
-					<?= $location->title ?>
+				<td align="center"><?= @helper('grid.checkbox', array('row'=>$agent)) ?></td>
+				<td><a href="<?= @route('view=location&id='. $agent->id) ?>">
+					<?= $agent->name ?>
 				</a></td>
 			</tr>
 			<? endforeach; ?>
 		</tbody>
 	</table>
 </form>
-		
