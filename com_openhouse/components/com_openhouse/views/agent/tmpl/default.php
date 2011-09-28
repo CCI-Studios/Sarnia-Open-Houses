@@ -11,7 +11,7 @@
 </h2>
 
 
-<img class="profile-picture fltlft" src="http://dummyimage.com/150x200/ddd/333.jpg&amp;text=Profile" />
+<img class="profile-picture fltlft" width="150" height="200" src="http://dummyimage.com/150x200/ddd/333.jpg&amp;text=Profile" />
 
 <dl class="fltlft data-set">
 	<? if ($agent->phone): ?>
