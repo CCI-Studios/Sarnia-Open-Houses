@@ -46,7 +46,6 @@ class ComOpenhouseModelAgents extends ComDefaultModelDefault
 		$item = $this->getItem();
 		
 		$errors = array();
-		$errors[] = "asd";
 		
 		if (!$item->name) {
 			$errors[] = JText::_("Name cannot be blank");
