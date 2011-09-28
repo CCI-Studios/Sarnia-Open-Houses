@@ -25,7 +25,10 @@ class ComOpenhouseViewAgentHtml extends ComDefaultViewHtml
 		
 		$agent->isOwnable();
 		
-		if ($this->getModel()->isValid() !== true && $agent->canEdit()) {
+		$valid = $this->getModel()->isValid() === true;
+		$this->assign('valid', $valid);
+		
+		if (!$valid && $agent->canEdit()) {
 			$url = JRoute::_('index.php?option=com_openhouse&view=agent&layout=form&id='. $agent->id);
 			$app->enqueueMessage('Your profile is incomplete. Please <a href="'. $url .'">update your profile</a>.', 'notice');
 		}
