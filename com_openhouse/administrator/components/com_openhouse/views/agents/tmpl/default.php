@@ -23,7 +23,7 @@
 			<? foreach ($agents as $agent): ?>
 			<tr>
 				<td align="center"><?= @helper('grid.checkbox', array('row'=>$agent)) ?></td>
-				<td><a href="<?= @route('view=location&id='. $agent->id) ?>">
+				<td><a href="<?= @route('view=agent&id='. $agent->id) ?>">
 					<?= $agent->name ?>
 				</a></td>
 			</tr>
