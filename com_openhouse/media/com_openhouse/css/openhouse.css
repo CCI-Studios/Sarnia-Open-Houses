@@ -48,3 +48,28 @@ dl.data-set dd {
 .button a, button a {
 	text-decoration: none;
 }
+
+.gallery {
+	
+}
+
+.gallery .current {
+	
+}
+
+.gallery ul {
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.gallery li {
+	display: inline-block;
+	*display: block;
+	*zoom: 1;
+	
+	cursor: pointer;
+}
+
+.gallery img { display: block; }
