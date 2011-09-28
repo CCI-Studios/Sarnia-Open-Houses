@@ -33,7 +33,7 @@
 <div class="clear"></div>
 
 <h3><?= @text('House Listings') ?></h3>
-<?= $houses ?>
+<?= @template('site::com.openhouse.view.houses.list', array('houses' => $houses)) ?>
 <? if ($valid): ?>
 	<p><a href="<?= @route('view=house&layout=form') ?>">Add new house listing</a></p>
 <? else: ?>
