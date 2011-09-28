@@ -31,7 +31,7 @@
 		<menu view="dashboard" img="media/com_openhouse/images/favicon.png" link="option=com_openhouse">Open Houses</menu>
 		<submenu>
 			<menu view="dashboard" link="option=com_openhouses">Dashboard</menu>
-			<menu view="listings" link="option=com_openhouses&amp;view=listings">Listings</menu>
+			<menu view="houses" link="option=com_openhouses&amp;view=houses">House Listings</menu>
 			<menu view="notifications" link="option=com_openhouses&amp;view=notifications">Notifications</menu>
 		</submenu>
 		

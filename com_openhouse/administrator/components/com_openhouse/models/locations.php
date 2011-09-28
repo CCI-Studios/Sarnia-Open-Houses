@@ -11,6 +11,4 @@ class ComOpenHouseModelLocations extends ComDefaultModelDefault
 			->remove('sort')
 			->insert('sort', 'cmd', 'title');
 	}
-	
-	
 }

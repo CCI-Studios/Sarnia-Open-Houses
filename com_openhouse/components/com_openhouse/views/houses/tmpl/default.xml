@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="Listings" option="listings">
+	<layout title="houses" option="houses">
 		<message>
 			<![CDATA[Listins desc]]>
 		</message>

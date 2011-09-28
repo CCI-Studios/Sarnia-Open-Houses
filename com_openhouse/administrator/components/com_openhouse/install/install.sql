@@ -32,8 +32,8 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_offices` (
 	`title` VARCHAR(250) NOT NULL
 ) ENGINE=MyISAM;
 
-CREATE TABLE IF NOT EXISTS `#__openhouse_listings` (
-	`openhouse_listing_id` SERIAL,
+CREATE TABLE IF NOT EXISTS `#__openhouse_houses` (
+	`openhouse_house_id` SERIAL,
 	
 	`price` VARCHAR(15) NOT NULL,
 	`bedrooms` VARCHAR(10) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_images` (
 	`enabled` TINYINT(1) NOT NULL DEFAULT '0',
 	
 	`ordering` TINYINT(3) NOT NULL DEFAULT '0',
-	`openhouse_listing_id` BIGINT(20) UNSIGNED NOT NULL
+	`openhouse_house_id` BIGINT(20) UNSIGNED NOT NULL
 ) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS `#__openhouse_showings` (
@@ -64,5 +64,5 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_showings` (
 	`end_date` DATE NOT NULL,
 	`hours` VARCHAR(50) NOT NULL,
 	
-	`openhouse_listing_id` BIGINT(20) UNSIGNED NOT NULL
+	`openhouse_house_id` BIGINT(20) UNSIGNED NOT NULL
 ) ENGINE=MyISAM;

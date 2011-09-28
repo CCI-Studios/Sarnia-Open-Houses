@@ -1,6 +1,6 @@
 <?php
 
-class ComOpenHouseViewListingHtml extends ComDefaultViewHtml
+class ComOpenHouseViewHouseHtml extends ComDefaultViewHtml
 {
 	
 	public function display()

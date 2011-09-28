@@ -12,9 +12,9 @@ class ComOpenHouseControllerToolbarMenubar extends ComDefaultControllerToolbarMe
 			'active'	=> ($name == 'dashboard')
 		));
 		
-		$this->addCommand('Listings', array(
-			'href'		=> 'index.php?option=com_openhouse&view=listings',
-			'active'	=> ($name == 'listing')
+		$this->addCommand('House Listings', array(
+			'href'		=> 'index.php?option=com_openhouse&view=houses',
+			'active'	=> ($name == 'house')
 		));
 		
 		$this->addCommand('Agents', array(

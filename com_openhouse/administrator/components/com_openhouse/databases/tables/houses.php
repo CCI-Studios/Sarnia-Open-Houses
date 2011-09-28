@@ -1,15 +1,15 @@
 <?php
 
-class ComOpenHouseDispatcher extends ComDefaultDispatcher
+class ComOpenHouseDatabaseTableHouses extends KDatabaseTableDefault
 {
 	
 	protected function _initialize(KConfig $config)
 	{
 		$config->append(array(
-			'controller'	=> 'houses'
+			'behaviors'	=> array('creatable', 'ownable')
 		));
-		
 		
 		parent::_initialize($config);
 	}
+	
 }

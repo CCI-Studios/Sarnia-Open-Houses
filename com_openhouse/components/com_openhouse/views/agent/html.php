@@ -33,7 +33,7 @@ class ComOpenhouseViewAgentHtml extends ComDefaultViewHtml
 			$app->enqueueMessage('Your profile is incomplete. Please <a href="'. $url .'">update your profile</a>.', 'notice');
 		}
 		
-		$listings = "ADSf"; // TODO update this
-		$this->assign('listings', $listings);
+		$houses = "ADSf"; // TODO update this
+		$this->assign('houses', $houses);
 	}
 }

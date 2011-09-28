@@ -32,10 +32,10 @@
 
 <div class="clear"></div>
 
-<h3><?= @text('Listings') ?></h3>
-<?= $listings ?>
+<h3><?= @text('House Listings') ?></h3>
+<?= $houses ?>
 <? if ($valid): ?>
-	<p><a href="<?= @route('view=listing&layout=form') ?>">Add new listing</a></p>
+	<p><a href="<?= @route('view=house&layout=form') ?>">Add new house listing</a></p>
 <? else: ?>
 	<p>You must <a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">complete you profile</a> before creating a new listing.</p>
 <? endif; ?>
