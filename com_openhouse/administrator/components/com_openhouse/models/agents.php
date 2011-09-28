@@ -59,14 +59,14 @@ class ComOpenhouseModelAgents extends ComDefaultModelDefault
 			$errors[] = JText::_("You need to have a phone number listed.");
 		}
 		
-		if (!$item->office_id) {
+		if (!$item->openhouse_office_id) {
 			$errors[] = JText::_("You must specify your office.");
 		}
 		
-		if (!$item->company_id) {
+		if (!$item->openhouse_company_id) {
 			$errors[] = JText::_("You must select the your company.");
 		}
-		
+	
 		return (count($errors))? $errors : true;
 	}
 	
