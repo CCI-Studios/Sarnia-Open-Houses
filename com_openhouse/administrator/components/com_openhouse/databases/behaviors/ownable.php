@@ -25,7 +25,7 @@ class ComOpenhouseDatabaseBehaviorOwnable extends KDatabaseBehaviorAbstract
 	{
 		$methods = array();
 		
-		if (isset($mixer->{$this->_field})) {
+		if (isset($mixer->{$this->_field}) || isset($mixer->created_by)) {
 			$methods = parent::getMixableMethods($mixer);
 		}
 		
@@ -37,7 +37,7 @@ class ComOpenhouseDatabaseBehaviorOwnable extends KDatabaseBehaviorAbstract
 	{
 		$user = JFactory::getUser();
 
-		return $user->id === $this->{$this->_field};
+		return ($user->id === $this->{$this->_field}) || ($user->id === $this->created_by);
 	}
 	
 }
