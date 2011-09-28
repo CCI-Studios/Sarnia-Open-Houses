@@ -7,8 +7,8 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_agents` (
 	`website` VARCHAR(250) NOT NULL DEFAULT '',
 	`email` VARCHAR(250) NOT NULL DEFAULT '',
 	
-	`office_id` BIGINT(20) NOT NULL,
-	`company_id` BIGINT(20) NOT NULL,
+	`openhouse_office_id` BIGINT(20) NOT NULL,
+	`openhouse_company_id` BIGINT(20) NOT NULL,
 	`user_id` INT(11) NOT NULL,
 	
 	UNIQUE KEY `user_id` (`user_id`)

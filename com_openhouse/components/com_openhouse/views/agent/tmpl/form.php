@@ -33,8 +33,15 @@
 		<input type="text" id="field_email" name="email" value="<?= $agent->email ?>" />
 	</div>
 	
-	office<br/>
-	company<br/>
+	<div class="field">
+		<label><?= @text('Office')?>:</label><br>
+		<?= @helper('listbox.offices', array('name' => 'openhouse_office_id')) ?>
+	</div>
+	
+	<div class="field">
+		<label><?= @text('Company')?>:</label><br>
+		<?= @helper('listbox.companies', array('name' => 'openhouse_company_id')) ?>
+	</div>
 	
 	<div class="actions">
 		<button>Submit</button>
