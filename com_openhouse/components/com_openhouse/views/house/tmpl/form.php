@@ -1,5 +1,7 @@
 <?= @helper('behavior.mootools') ?>
 <script src="media://lib_koowa/js/koowa.js" />
+<script src="media://com_openhouse/js/forms.js" />
+<style src="media://com_openhouse/css/openhouse.css" />
 
 <? if ($house->isNew()): ?>
 	<h2>Create a new Home Listing</h2>
