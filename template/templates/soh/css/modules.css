@@ -1,1 +1,30 @@
 /* modules */
+/* @group hmenu */
+.moduletable.hmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.moduletable.hmenu li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	
+	padding-left: 10px;
+}
+.moduletable.hmenu li:first-child { padding-left: 0; }
+
+.moduletable.hmenu li > a,
+.moduletable.hmenu li > span {
+	color: white;
+	text-decoration: none;
+}
+/* @end */
+
+
+.moduletable.hmenu.primary li a,
+.moduletable.hmenu.primary li span {
+	font-size: 14px;
+	line-height: 50px;
+}
