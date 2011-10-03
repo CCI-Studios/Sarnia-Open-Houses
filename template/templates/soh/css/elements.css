@@ -1,24 +1,28 @@
 /* elements */
-body,
-select,
-input,
-textarea {
-  color: #444;
-  font-family: Helvetica, Arial, sans-serif;
+body, select, input, textarea {
+	background: url(../images/body-bg.png);
+	color: #444;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
 }
+body > div {
+	background: url(../images/body-bg2.png) repeat-x;
+}
+
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+
+h2 {
+	font-size: 24px;
+}
+
 a, a:active, a:visited {
   color: #607890;
   text-decoration: none;
 }
+
 a:hover {
   color: #036;
   text-decoration: underline;
