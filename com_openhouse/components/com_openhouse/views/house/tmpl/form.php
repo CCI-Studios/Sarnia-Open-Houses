@@ -46,9 +46,9 @@
 	
 	<div class="actions">
 		<? if ($house->isNew()): ?>
-			<button>Create</button>
+			<button><span>Create</span></button>
 		<? else: ?>
-			<button>Update</button>
+			<button><span>Update</span></button>
 		<? endif; ?>
 	</div>
 </form>

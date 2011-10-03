@@ -44,7 +44,7 @@
 	</div>
 	
 	<div class="actions">
-		<button>Submit</button>
-		<a href="<?= @route('view=agent&id='. $agent->id) ?>" class="button">Done</a>
+		<button><span>Submit</span></button>
+		<a href="<?= @route('view=agent&id='. $agent->id) ?>" class="button"><span>Done</span></a>
 	</div>
 </form>

@@ -46,4 +46,4 @@
 
 <h3>Showing Dates</h3>
 
-<p><a href="#" class="button">Add to card</a></p>
+<p><a href="#" class="button"><span>Add to card</span></a></p>
