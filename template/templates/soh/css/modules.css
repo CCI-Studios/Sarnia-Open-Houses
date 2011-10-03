@@ -1,4 +1,13 @@
-/* modules */
+.moduletable {
+}
+
+.moduletable h3 {
+}
+
+.moduletable.logo { 
+	text-align: center;
+}
+
 /* @group hmenu */
 .moduletable.hmenu ul {
 	margin: 0;
