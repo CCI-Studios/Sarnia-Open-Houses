@@ -52,32 +52,56 @@ $analytics = "UA-XXXXX-X"; // FIXME Update to client ID
 	<?php endif; ?>
 </head>
 
-<body class="<?= $menu ?>">
+<body class="<?= $menu ?>"><div>
 
 	<div id="wrapper">
-		<header>
-			<jdoc:include type="modules" name ="header" style="xhtml" />
-		</header>
-
-		<div id="main">
-			<aside>
-				<jdoc:include type="modules" name="left" style="xhtml" />
-			</aside>
-
-			<article>
-				<jdoc:include type="component" />
-			</article>
+		<div id="header">
+			<jdoc:include type="modules" name="header" style="xhtml" />
+			<div class="clear"></div>
 		</div>
-
-		<footer>
-			<jdoc:include type="modules" name="footer" style="xhtml" />
-		</footer>
+		
+		<div id="menu">
+			<jdoc:include type="modules" name="menu" style="xhtml" />
+			<div class="clear"></div>
+		</div>
+		
+		<div id="masthead">
+			<jdoc:include type="modules" name="masthead" style="xhtml" />
+			<div class="clear"></div>
+		</div>
+		
+		<div id="body"><div>
+			<div id="contents">
+				<div id="top">
+					<jdoc:include type="modules" name="top" style="xhtml" />
+					<div class="clear"></div>
+				</div>
+				
+				<div id="component">
+					<jdoc:include type="component" />
+				</div>
+				
+				<div id="bottom">
+					<jdoc:include type="modules" name="bottom" style="xhtml" />
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<jdoc:include type="modules" name="sidebar" style="rounded" />
+				<div class="clear"></div>
+			</div>
+			
+			<div class="clear"></div>
+		</div></div>
+		
+		<div id="copyright">
+			<div class="right">Site by <a href="http://ccistudios.com">CCI Studios</a></div>
+			<div class="left">&copy; Sarnia Open House <?php echo date('Y') ?>. All Rights Reserved.</div>
+			
+			<div class="clear"></div>
+		</div>
 	</div>
-
-	<div class="hidden">
-		<jdoc:include type="modules" name="hidden" style="raw" />
-	</div>
-
+	
 	<!-- load scripts -->
 	<?php if ($testing): ?>
 		<script src="/templates/<?= $this->template ?>/js/columns.js"></script>
@@ -92,5 +116,5 @@ $analytics = "UA-XXXXX-X"; // FIXME Update to client ID
 	  	</script>
 		<script src="/templates/<?= $this->template ?>/js/scripts.min.js"></script>
 	<?php endif; ?>
-</body>
+</div></body>
 </html>
