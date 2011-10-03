@@ -7,20 +7,9 @@
 	<? endif; ?>
 </h2>
 
-<div class="gallery">
-	<div class="current">
-		<img src="http://dummyimage.com/505x214/ddd/333.jpg&amp;text=Main%20Picture" width="100%" />
-	</div>
-	<ul>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-		<li><img src="http://dummyimage.com/70x30/ddd/333.jpg&amp;text=Thumb" width="70" height="30" /></li>
-	</ul>
-</div>
+
+
+<?= @template('site::com.openhouse.views.images.gallery', array('images' => $images)) ?>
 
 <? if ($house->description): ?>
 	<h3>Description</h3>
@@ -56,4 +45,5 @@
 
 
 <h3>Showing Dates</h3>
+
 <p><a href="#" class="button">Add to card</a></p>

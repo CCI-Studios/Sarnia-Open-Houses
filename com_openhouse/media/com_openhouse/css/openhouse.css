@@ -1,3 +1,5 @@
+/* @group General Styles */
+
 .fltlft { float: left; }
 .fltrgt { float: right; }
 
@@ -6,10 +8,18 @@ img.fltrgt { margin: 0 0 10px 10px; }
 
 .clear { clear: both; }
 
+/* @end */
+
+/* @group Profile */
+
 .profile-picture {
 	padding: 1px;
 	border: 1px solid #ddd;
 }
+
+/* @end */
+
+/* @group Datasets */
 
 dl.data-set {
 	
@@ -27,6 +37,7 @@ dl.data-set dd {
 	float: left;
 }
 
+/* @end */
 
 .button, button {
 	display: inline-block;
@@ -49,31 +60,44 @@ dl.data-set dd {
 	text-decoration: none;
 }
 
-.gallery {
-	
+
+/* @group Gallery */
+.openhouse-gallery {
+	background: #ddd;
+	border: 1px solid #999;
+	padding: 5px;
 }
 
-.gallery .current {
-	
+.openhouse-gallery .main-image {
+	border: 1px solid #999;
+	padding: 3px;
+	background: white;
 }
 
-.gallery ul {
-	margin: 0;
-	padding: 0;
-	
+.openhouse-gallery ul {
+	margin: 0 !important; 
+	padding: 0 !important;
 	list-style: none;
 }
 
-.gallery li {
+.openhouse-gallery li {
 	display: inline-block;
 	*display: block;
 	*zoom: 1;
+	padding: 5px 10px !important;
+	border: 1px solid #999;
+	border-top: none;
+	border-left: none;
+	background: white;
 	
 	cursor: pointer;
 }
+.openhouse-gallery li:first-child { border-left: 1px solid #999; }
 
-.gallery img { display: block; }
-
+.openhouse-gallery img { 
+	display: block;
+}
+/* end */
 
 
 
