@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Customize dispatcher to use 'houses' as tne default view.
+ */
 class ComOpenHouseDispatcher extends ComDefaultDispatcher
 {
 	
