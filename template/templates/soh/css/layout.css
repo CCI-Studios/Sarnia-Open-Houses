@@ -71,3 +71,7 @@
 #copyright {
 	margin: 8px 0 10px;
 }
+
+#copyright a {
+	color: #333;
+}

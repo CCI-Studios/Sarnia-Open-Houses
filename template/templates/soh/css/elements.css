@@ -19,11 +19,11 @@ h2 {
 }
 
 a, a:active, a:visited {
-  color: #607890;
+  color: #bf1e2e;
   text-decoration: none;
 }
 
 a:hover {
-  color: #036;
+  color: #bf1e2e;
   text-decoration: underline;
 }
