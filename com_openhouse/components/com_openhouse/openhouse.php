@@ -1,5 +1,5 @@
 <?php
 defined('KOOWA') or die;
 
-KLoader::load('site::com.openhouse.mappings');
-echo KFactory::get('site::com.openhouse.dispatcher')->dispatch();
+KLoader::loadFile('site::com.openhouse.mappings');
+echo KService::get('com://site/openhouse.dispatcher')->dispatch();

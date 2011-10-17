@@ -26,7 +26,7 @@ class ComOpenhouseControllerAgent extends ComDefaultControllerDefault
 		}
 		
 		$app = JFactory::getApplication();
-		$self = KFactory::get('site::com.openhouse.model.agents')->getMe();
+		$self = $this->getService('com://site/openhouse.model.agents')->getMe();
 		
 		if ($self) {
 			$app->redirect('index.php?option=com_openhouse&view=agent&id='. $self->id);

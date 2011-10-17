@@ -24,13 +24,13 @@ class ComOpenhouseModelAgents extends ComDefaultModelDefault
 	
 	public function getMe()
 	{
-		$user = KFactory::get('lib.joomla.user');
+		$user = JFactory::getUser();
 		
 		if ($user->guest) {
 			return null;
 		}
 		
-		$model = KFactory::get($this->getIdentifier());
+		$model = $this->getService($this->getIdentifier());
 		$list = $model->set('user_id', $user->id)->getList();
 		
 		if (!count($list)) {

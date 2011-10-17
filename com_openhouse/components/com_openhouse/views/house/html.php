@@ -7,10 +7,10 @@ class ComOpenHouseViewHouseHtml extends ComDefaultViewHtml
 	{
 		$house = $this->getModel()->getItem();
 		
-		$agent = KFactory::tmp('admin::com.openhouse.model.agents')->getMe();
+		$agent = $this->getService('com://admin/openhouse.model.agents')->getMe();
 		$this->assign('agent', $agent);
 		
-		$images = KFactory::tmp('site::com.openhouse.model.images')
+		$images = $this->getService('com://admin/openhouse.model.images')
 					->set('house_id', $house->id)
 					->getList();
 		$this->assign('images', $images);

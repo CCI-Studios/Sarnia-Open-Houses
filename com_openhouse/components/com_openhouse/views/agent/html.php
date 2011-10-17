@@ -33,7 +33,7 @@ class ComOpenhouseViewAgentHtml extends ComDefaultViewHtml
                 $app->enqueueMessage('Your profile is incomplete. Please <a href="'. $url .'">update your profile</a>.', 'notice');
             }
 
-            $houses = KFactory::get('site::com.openhouse.model.houses')
+            $houses = $this->getService('com://site/openhouse.model.houses')
                         ->set('openhouse_agent_id', $agent->user_id)
                         ->getList();
 

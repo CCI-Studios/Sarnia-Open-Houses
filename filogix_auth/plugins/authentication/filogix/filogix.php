@@ -83,7 +83,7 @@ class plgAuthenticationFilogix extends JPlugin
 		$instance->set('groups',	array($defaultUserGroup));
 		
 		if ($instance->save()) {
-			$row = KFactory::get('admin::com.openhouse.database.row.agent');
+			$row = $this->getService('com://admin/openhouse.database.row.agent');
 			$row->set('user_id', $instance->id);
 			$row->save();	
 		}
