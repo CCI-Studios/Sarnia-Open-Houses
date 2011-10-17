@@ -9,7 +9,7 @@
 
 
 
-<?= @template('site::com.openhouse.views.images.gallery', array('images' => $images)) ?>
+<?= @template('com://site/openhouse.views.images.gallery', array('images' => $images)) ?>
 
 <? if ($house->description): ?>
 	<h3>Description</h3>
