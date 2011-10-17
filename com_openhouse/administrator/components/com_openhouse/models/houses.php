@@ -7,7 +7,8 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		parent::__construct($config);
 		
 		$this->_state
-			->insert('openhouse_agent_id', 'int');
+			->insert('openhouse_agent_id', 'int')
+			->remove('sort')->insert('sort', 'cmd', 'created_on');
 	}
 	
 	protected function _buildQueryWhere(KDatabaseQuery $query)
