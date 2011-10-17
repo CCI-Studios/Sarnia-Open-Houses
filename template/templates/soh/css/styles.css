@@ -17,3 +17,26 @@
   color: #fff;
   text-shadow: none;
 }
+
+#system-message {
+	margin: 0;
+}
+
+dt.notice {
+	display: none;
+}
+
+dd.notice {
+	margin: 0;
+	padding: 5px 10px;
+}
+
+dd.notice ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+dd.notice {
+	background: rgba(200,0,0, 0.2);
+	border: 1px solid rgba(200,0,0, 0.9);
+}
