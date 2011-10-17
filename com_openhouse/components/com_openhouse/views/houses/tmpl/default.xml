@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="houses" option="houses">
+	<layout title="House Listings" option="houses">
 		<message>
-			<![CDATA[Listins desc]]>
+			<![CDATA[Display a list of houses.]]>
 		</message>
 	</layout>
+	
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="show_search" label="Show Search" type="list" default="1">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			
+			<field name="show_pagination" label="Show Pagination" type="list" default="1">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			
+			<field name="sort" label="Sort order" type="list" default="created_on">
+				<option value="created_on">Creation Date</option>
+				<option value="price">Price</option>
+			</field>
+
+			<field name="direction" label="Sort Direction" type="list" default="asc">
+				<option value="asc">Ascending</option>
+				<option value="desc">Descending</option>	
+			</field>
+		</fieldset>
+	</fields>
 </metadata>

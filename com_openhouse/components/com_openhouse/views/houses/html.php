@@ -5,18 +5,12 @@ class ComOpenHouseViewHousesHtml extends ComDefaultViewHtml
 	
 	public function display()
 	{
-		$params  = JComponentHelper::getParams('com_openhouse');
-		
-		if (KRequest::get('get.min_price', 'int') || 
-			KRequest::get('get.max_price', 'int') ||
-			KRequest::get('get.openhouse_location_id', 'int') ||
-			KRequest::get('get.min_baths', 'int') ||
-			KRequest::get('get.min_bedrooms', 'int')) {
-		
-			$this->assign('searching', false);
-		} else {
-			$this->assign('searching', true);
-		}
+		$params = JFactory::getApplication()->getParams();
+
+		$this->assign('show_pagination', $params->get('show_pagination', 1));
+		$this->assign('show_search', $params->get('show_search', 1));
+		$this->assign('page_title', $params->get('page_title', 'View Houses'));
+		$this->assign('show_page_title', $params->get('show_page_heading', 1));
 		
 		echo parent::display();
 	}

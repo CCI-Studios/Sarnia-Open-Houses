@@ -1,9 +1,15 @@
 <? defined('KOOWA') or die; ?>
 
-<? if ($searching): ?>
-	<h1>Search</h1>
-	<?= @template('default_search') ?>
-<? else: ?>
-	<h1>Search Results</h1>
-	<?= @template('default_results') ?>
+<? if ($show_page_title): ?>
+	<h1><?= $page_title ?></h1>
+<? endif; ?>
+
+<? if ($show_search): ?>
+	<?= @template('default_search'); ?>
+<? endif; ?>
+
+<?= @template('list'); ?>
+
+<? if ($show_pagination): ?>
+	<?= @template('default_pagination'); ?>
 <? endif; ?>
