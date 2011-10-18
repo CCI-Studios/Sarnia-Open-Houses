@@ -8,8 +8,10 @@
 </h2>
 
 
-
-<?= @template('com://site/openhouse.views.images.gallery', array('images' => $images)) ?>
+<?= @service('com://site/openhouse.controller.images')
+		->house_id($house->id)
+		->layout('gallery')
+		->display(); ?>
 
 <? if ($house->description): ?>
 	<h3>Description</h3>
