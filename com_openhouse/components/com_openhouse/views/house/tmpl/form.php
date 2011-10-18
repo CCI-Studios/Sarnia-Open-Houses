@@ -5,6 +5,8 @@
 
 <? if ($house->isNew()): ?>
 	<h2>Create a new Home Listing</h2>
+	
+	<p>*note: pictures and showing times can be added after basic details are saved.</p>
 <? else: ?>
 	<h2>Edit Listing for <?= $house->address ?></h2>
 <? endif; ?>
@@ -17,31 +19,76 @@
 	<? endif; ?>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="Price" data-prefix="$" type="text" id="field_price" name="price" value="<?= $house->price ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="Price" 
+			data-prefix="$" 
+			type="text" 
+			id="field_price" 
+			name="price" 
+			value="<?= $house->price ?>" />
 	</div>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="Bedrooms" data-suffix=" Bedrooms" type="text" id="field_bedrooms" name="bedrooms" value="<?= $house->bedrooms ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="Bedrooms" 
+			data-suffix=" Bedrooms" 
+			type="text" 
+			id="field_bedrooms" 
+			name="bedrooms" 
+			value="<?= $house->bedrooms ?>" />
 	</div>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="Bathrooms" data-suffix=" Bathrooms" type="text" id="field_bathrooms" name="bathrooms" value="<?= $house->bathrooms ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="Bathrooms" 
+			data-suffix=" Bathrooms" 
+			type="text" 
+			id="field_bathrooms" 
+			name="bathrooms" 
+			value="<?= $house->bathrooms ?>" />
 	</div>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="Address" type="text" id="field_address" name="address" value="<?= $house->address ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="Address" 
+			type="text" 
+			id="field_address" 
+			name="address" 
+			value="<?= $house->address ?>" />
 	</div>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="City" type="text" id="field_city" name="city" value="<?= $house->city ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="City" 
+			type="text" 
+			id="field_city" 
+			name="city" 
+			value="<?= $house->city ?>" />
 	</div>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="Postal Code" type="text" id="field_postal" name="postal" value="<?= $house->postal ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="Postal Code" 
+			type="text" 
+			id="field_postal" 
+			name="postal" 
+			value="<?= $house->postal ?>" />
 	</div>
 	
 	<div class="field">
-		<input class="inputfield" placeholder="Description" type="text" id="field_description" name="description" value="<?= $house->description ?>" />
+		<input 
+			class="inputfield" 
+			placeholder="Description" 
+			type="text" 
+			id="field_description" 
+			name="description" 
+			value="<?= $house->description ?>" />
 	</div>
 	
 	<div class="actions">
