@@ -82,13 +82,7 @@
 	</div>
 	
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="Description" 
-			type="text" 
-			id="field_description" 
-			name="description" 
-			value="<?= $house->description ?>" />
+		<?= @editor(array()) ?>
 	</div>
 	
 	<div class="actions">

@@ -20,29 +20,7 @@
 
 
 <h3>Details</h3>
-<dl class="data-set">
-	<dt>Address:</dt>
-	<dd>
-		<? echo ($house->address)? $house->address .'<br />' : '' ?>
-		<? echo ($house->city)? $house->city .'<br />' : '' ?>
-		<? echo ($house->postal)? $house->postal .'<br />' : '' ?>
-	</dd>
-	
-	<? if ($house->price): ?>
-		<dt>Price:</dt>
-		<dd>$<?= $house->price ?></dd>
-	<? endif; ?>
-	
-	<? if ($house->price): ?>
-		<dt>Bathrooms:</dt>
-		<dd><?= $house->bathrooms ?></dd>
-	<? endif; ?>
-
-	<? if ($house->price): ?>	
-		<dt>Bedrooms:</dt>
-		<dd><?= $house->bedrooms ?></dd>
-	<? endif; ?>
-</dl>
+<?= @template('house')?>
 <div class="clear"></div>
 
 
@@ -51,5 +29,7 @@
 		->house_id($house->id)
 		->layout('list')
 		->display() ?>
+		
+<?= @template('default_map') ?>
 
 <p><a href="#" class="button"><span>Add to cart</span></a></p>
