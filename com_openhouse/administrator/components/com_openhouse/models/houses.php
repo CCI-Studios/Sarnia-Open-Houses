@@ -22,5 +22,4 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		parent::_buildQueryWhere($query);
 	}
 	
-	
 }

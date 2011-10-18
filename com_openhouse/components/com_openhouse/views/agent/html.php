@@ -5,38 +5,32 @@ class ComOpenhouseViewAgentHtml extends ComDefaultViewHtml
 	
 	public function display()
 	{	
-            switch ($this->getLayout()) {
+		switch ($this->getLayout()) {
 		case 'form':
-                    break;
+        	break;
 		case 'default':
-                default:
-                    $this->viewAgent();
-            }
+		default:
+			$this->viewAgent();
+		}
 		
-            return parent::display();
+		return parent::display();
 	}
 	
 	/**
          * Setup variables for viewing a single agent.
          */
 	private function viewAgent() {
-            $app = JFactory::getApplication();
-            $agent = $this->getModel()->getItem();
+		$app = JFactory::getApplication();
+		$agent = $this->getModel()->getItem();
 
-            $agent->isOwnable();
+		$agent->isOwnable();
 
-            $valid = $this->getModel()->isValid() === true;
-            $this->assign('valid', $valid);
+		$valid = $this->getModel()->isValid() === true;
+		$this->assign('valid', $valid);
 
-            if (!$valid && $agent->canEdit()) {
-                $url = JRoute::_('index.php?option=com_openhouse&view=agent&layout=form&id='. $agent->id);
-                $app->enqueueMessage('Your profile is incomplete. Please <a href="'. $url .'">update your profile</a>.', 'notice');
-            }
-
-            $houses = $this->getService('com://site/openhouse.model.houses')
-                        ->set('openhouse_agent_id', $agent->user_id)
-                        ->getList();
-
-            $this->assign('houses', $houses);
+		if (!$valid && $agent->canEdit()) {
+		    $url = JRoute::_('index.php?option=com_openhouse&view=agent&layout=form&id='. $agent->id);
+		    $app->enqueueMessage('Your profile is incomplete. Please <a href="'. $url .'">update your profile</a>.', 'notice');
+		}
 	}
 }
