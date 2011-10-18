@@ -8,7 +8,7 @@
 	<?= @template('default_search'); ?>
 <? endif; ?>
 
-<?= @template('list'); ?>
+<?= @template('default_results'); ?>
 
 <? if ($show_pagination): ?>
 	<?= @template('default_pagination'); ?>

@@ -1,7 +1,7 @@
-<ul>
-	<? foreach ($houses as $house): ?>
-		<li>
-			<?= @template('site::com.openhouse.view.house.item', array('house' => $house)) ?>
-		</li>
-	<? endforeach; ?>
-</ul>
+<style src="media://com_openhouse/css/openhouse.css" />
+
+<ul><? foreach ($houses as $house): ?>
+	<li>
+		<a href="<?= @route('view=house&id='. $house->id) ?>"><?= @escape($house->address) ?></a>
+	</li>
+<? endforeach; ?></ul>
