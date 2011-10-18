@@ -72,23 +72,27 @@ $analytics = "UA-XXXXX-X"; // FIXME Update to client ID
 		
 		<div id="body"><div>
 			<div id="contents">
-				<div id="top">
-					<jdoc:include type="modules" name="top" style="xhtml" />
-					<div class="clear"></div>
-				</div>
-				<div id="messages">
-					<jdoc:include type="message" />
-				</div>
+				<? if ($this->countModules('top')): ?>
+					<div id="top">
+						<jdoc:include type="modules" name="top" style="xhtml" />
+						<div class="clear"></div>
+					</div>
+				<? endif; ?>
+				
+				<div id="messages"><jdoc:include type="message" /></div>
 				
 				<div id="component">
 					<jdoc:include type="component" />
 				</div>
 				
-				<div id="bottom">
-					<jdoc:include type="modules" name="bottom" style="xhtml" />
-					<div class="clear"></div>
-				</div>
+				<? if ($this->countModules('bottom')): ?>
+					<div id="bottom">
+						<jdoc:include type="modules" name="bottom" style="xhtml" />
+						<div class="clear"></div>
+					</div>
+				<? endif; ?>
 			</div>
+			
 			<div id="sidebar">
 				<jdoc:include type="modules" name="sidebar" style="rounded" />
 				<div class="clear"></div>
