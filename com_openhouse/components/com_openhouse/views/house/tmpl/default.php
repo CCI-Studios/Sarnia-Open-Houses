@@ -45,5 +45,9 @@
 
 
 <h3>Showing Dates</h3>
+<?= @service('com://site/openhouse.controller.showings')
+		->house_id($house->id)
+		->layout('list')
+		->display() ?>
 
-<p><a href="#" class="button"><span>Add to card</span></a></p>
+<p><a href="#" class="button"><span>Add to cart</span></a></p>
