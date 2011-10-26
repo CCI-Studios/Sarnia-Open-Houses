@@ -59,14 +59,13 @@ $analytics = "UA-XXXXX-X"; // FIXME Update to client ID
 			<jdoc:include type="modules" name="header" style="xhtml" />
 			<div class="clear"></div>
 		</div>
-		
-		<div id="menu">
-			<jdoc:include type="modules" name="menu" style="xhtml" />
-			<div class="clear"></div>
-		</div>
-		
-		
+
 		<div id="body"><div>
+			<div id="menu">
+				<jdoc:include type="modules" name="menu" style="xhtml" />
+				<div class="clear"></div>
+			</div>
+	
 			<div id="contents">
 				<? if ($this->countModules('top')): ?>
 					<div id="top">
