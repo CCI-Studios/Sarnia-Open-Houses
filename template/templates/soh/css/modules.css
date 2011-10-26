@@ -20,20 +20,26 @@
 	*display: inline;
 	*zoom: 1;
 	
-	padding-left: 10px;
+	padding: 0 14px;
 }
-.moduletable.hmenu li:first-child { padding-left: 0; }
 
 .moduletable.hmenu li > a,
 .moduletable.hmenu li > span {
+	display: block;
 	color: white;
 	text-decoration: none;
 }
 /* @end */
 
-
+/* @group primary menu */
 .moduletable.hmenu.primary li a,
 .moduletable.hmenu.primary li span {
 	font-size: 14px;
-	line-height: 50px;
+	line-height: 49px;
 }
+
+.moduletable.hmenu.primary li:hover,
+.moduletable.hmenu.primary li.active {
+	background: #e00000;
+}
+/* @end */

@@ -13,10 +13,11 @@
 }
 
 #menu {
-	background: -webkit-linear-gradient(top, #f00, #900);
-	border-radius: 5px 5px 0 0;
+	height: 49px;
+	margin: 0 -15px;
+	padding: 1px 30px 11px;
 	
-	min-height: 40px;
+	background: url(../images/menu-bg.png) no-repeat;
 }
 
 #masthead {
