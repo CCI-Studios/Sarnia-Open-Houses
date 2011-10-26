@@ -1,10 +1,11 @@
 /* elements */
-body, select, input, textarea {
+body {
 	background: url(../images/body-bg.png);
 	color: #444;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
 }
+
 body > div {
 	background: url(../images/body-bg2.png) repeat-x;
 }
