@@ -1,5 +1,12 @@
 <style src="media://com_openhouse/css/openhouse.css" />
 
+<module title="" position="sidebar">
+	<?= @service('com://site/openhouse.controller.agent')
+		->user_id($house->created_by)
+		->layout('module')
+		->display(); ?>
+</module>
+
 <h1 class="house-address">
 	<?= $house->address ?><br>
 	<small><?= $house->city .', '. $house->location ?></small>
@@ -10,9 +17,9 @@
 
 
 <?= @service('com://site/openhouse.controller.images')
-		->house_id($house->id)
-		->layout('gallery')
-		->display(); ?>
+	->house_id($house->id)
+	->layout('gallery')
+	->display(); ?>
 		 
 <div class="padded gradient clearfix">
 	<p><?= $house->address .', '. $house->city .', '. $house->location ?></p>
