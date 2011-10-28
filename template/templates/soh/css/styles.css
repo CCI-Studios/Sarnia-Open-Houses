@@ -40,3 +40,21 @@ dd.notice {
 	background: rgba(200,0,0, 0.2);
 	border: 1px solid rgba(200,0,0, 0.9);
 }
+
+
+.gradient {
+	background: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+}
+
+.padded {
+	padding: 15px 25px 25px;
+}
+
+.clearfix { *zoom: 1; *display: block; }
+.clearfix:after {
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}

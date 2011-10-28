@@ -48,9 +48,7 @@
 }
 
 #top {
-	background: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
-
-	min-height: 70px;
+	
 }
 
 #component {
