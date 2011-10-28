@@ -32,7 +32,7 @@
 </div>
 
 <div class="gradient padded clearfix">
-	<h3>Dates</h3>
+	<h2>Dates</h2>
 	
 	<div class="left">
 		<?= @service('com://site/openhouse.controller.showings')

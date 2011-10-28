@@ -1,11 +1,20 @@
-.moduletable {
+.moduletable, .module {
 }
 
-.moduletable h3 {
-}
-
-.moduletable.logo { 
+.moduletable h3, .module h3 {
+	margin: 0 0 15px;
+	padding-bottom: 22px;
+	font-size: 18px;
+	color: #7f7f7f;
+	font-style: italic;
+	background: url(../images/h3-bg.png) bottom no-repeat;
 	text-align: center;
+}
+
+.moduletable h4, .module h4 {
+	margin: 0;
+	font-size: 18px;
+	color: #807f7f;
 }
 
 /* @group hmenu */

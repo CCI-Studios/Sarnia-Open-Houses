@@ -138,4 +138,4 @@ dl.data-set dd {
 }
 
 h1.house-address { text-align: center; }
-h1.house-address small { font-weight: normal; }
+h1.house-address small { color: #807f7f; font-weight: normal; }

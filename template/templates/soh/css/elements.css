@@ -12,11 +12,24 @@ body > div {
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  	font-weight: bold;
+}
+
+h1 {
+	color: #000;
+	font-size: 24px;
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 14px;
 }
 
 a, a:active, a:visited {

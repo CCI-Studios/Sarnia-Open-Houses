@@ -1,4 +1,4 @@
-<h3><?= $house->address ?> - $<?= $house->price ?></h3>
+<h2><?= $house->address ?> - $<?= $house->price ?></h2>
 
 <?= $house->description ?>
 
