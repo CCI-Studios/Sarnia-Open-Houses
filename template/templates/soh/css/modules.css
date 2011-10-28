@@ -17,6 +17,18 @@
 	color: #807f7f;
 }
 
+/* @group popout */
+.module.popout {
+	margin: 0 -13px 0 -46px;
+	padding-bottom: 18px;
+	background: url(../images/modules/popup-bg1.png) bottom no-repeat;
+}
+.module.popout > div {
+	padding: 10px 25px 15px;
+	background: url(../images/modules/popup-bg2.png) center top no-repeat;
+}
+/* @end */
+
 /* @group hmenu */
 .moduletable.hmenu ul {
 	margin: 0;

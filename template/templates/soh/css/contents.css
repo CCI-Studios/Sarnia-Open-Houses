@@ -6,9 +6,12 @@
 	padding: 3px;
 	
 	background: #f5f5f5;
+	border: none; /* fixes borders */
 	border-radius: 5px;
 	text-decoration: none;
 }
+.module.popout button,
+.module.popout .button { background: #ebebeb; }
 
 	
 .button span, button span {
