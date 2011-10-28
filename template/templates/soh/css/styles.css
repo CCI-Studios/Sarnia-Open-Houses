@@ -47,7 +47,13 @@ dd.notice {
 }
 
 .padded {
-	padding: 15px 25px 25px;
+	padding: 15px 25px;
+}
+
+.bordered {
+	padding: 3px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
 .clearfix { *zoom: 1; *display: block; }
