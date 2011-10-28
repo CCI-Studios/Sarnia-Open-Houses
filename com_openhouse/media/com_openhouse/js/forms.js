@@ -2,7 +2,7 @@ window.addEvent('domready', function() {
 	inputs = $$('input[data-prefix], input[data-suffix]');
 	
 	strip = function (string, s1, s2) {
-		return string.substr(s1.length, string.length - s1.length - s2.lenght);
+		return string.substr(s1.length, string.length - s1.length - s2.length);
 	}
 	
 	inputs.each(function (input) {
