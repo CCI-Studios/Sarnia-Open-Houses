@@ -2,6 +2,7 @@
 .clr, .clear { clear: both; }
 .left { float: left; }
 .right { float: right; }
+.center { text-align: center; }
 
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
