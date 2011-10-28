@@ -12,7 +12,9 @@
 		<div class="bottom-shadow"></div>
 		<div class="prev-button"></div>
 		<div class="next-button"></div>
-		<div class="price"><span>$159,900</span></div>
+		<? if (isset($price)): ?>
+			<div class="price"><span><?= $price ?></span></div>
+		<? endif; ?>
 	</div></div>
 
 	<ul>

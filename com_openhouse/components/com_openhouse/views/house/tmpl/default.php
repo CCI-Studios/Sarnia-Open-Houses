@@ -18,6 +18,7 @@
 
 <?= @service('com://site/openhouse.controller.images')
 	->house_id($house->id)
+	->price($house->getPrice())
 	->layout('gallery')
 	->display(); ?>
 		 

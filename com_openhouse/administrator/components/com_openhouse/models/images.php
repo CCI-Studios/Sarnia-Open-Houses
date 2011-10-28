@@ -8,7 +8,8 @@ class ComOpenHouseModelImages extends ComDefaultModelDefault
 		parent::__construct($config);
 		
 		$this->_state
-			->insert('house_id', 'int');
+			->insert('house_id', 'int')
+			->insert('price', 'string');
 	}
 	
 	protected function _buildQueryWhere(KDatabaseQuery $query)
