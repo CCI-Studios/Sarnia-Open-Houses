@@ -16,6 +16,8 @@
 	height: 49px;
 	margin: 0 -15px;
 	padding: 1px 30px 11px;
+	position: relative;
+	z-index: 2;
 	
 	background: url(../images/menu-bg.png) no-repeat;
 }
@@ -44,6 +46,7 @@
 
 #contents {
 	width: 700px;
+	margin-top: -11px;
 	float: left;
 }
 
@@ -60,11 +63,9 @@
 }
 
 #sidebar {
-	width: 223px;
-	margin-left: 7px;
+	width: 204px;
+	margin: -11px 13px 0;
 	float: left;
-	
-	height: 40px;
 }
 
 #copyright {
