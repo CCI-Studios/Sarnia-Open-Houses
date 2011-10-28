@@ -28,3 +28,5 @@ a:hover {
   color: #bf1e2e;
   text-decoration: underline;
 }
+
+iframe { display: block; }
