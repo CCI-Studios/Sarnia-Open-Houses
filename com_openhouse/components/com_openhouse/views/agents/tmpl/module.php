@@ -2,10 +2,10 @@
 <div class="center">
 	<p><img class="bordered" src="media://com_openhouse/uploads/agents/agent-49.png" /></p>
 	
-	<h4>Leo Rhoncus</h4>
+	<h4><?= $agent->name ?></h4>
 	<div>
-		(519) 555-1234<br>
-		<a href="mailto:LRhoncus@mail.com">LRhoncus@mail.com</a>
+		<?= $agent->phone?><br>
+		<a href="mailto:<?= $agent->email ?>"><?= $agent->email ?></a>
 	</div>
 </div>
 <? endforeach; ?>
