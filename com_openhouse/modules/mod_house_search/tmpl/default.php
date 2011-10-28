@@ -12,7 +12,7 @@
 	
 	<div class="field">
 		<label>Location</label>
-		<?// @helper('com://site/openhouse.template.helper.listbox.locations') ?>
+		<?= @helper('com://site/openhouse.template.helper.listbox.locations') ?>
 	</div>
 	
 	<div class="actions center">
