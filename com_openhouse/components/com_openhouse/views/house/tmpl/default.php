@@ -9,7 +9,7 @@
 
 <h1 class="house-address">
 	<?= $house->address ?><br>
-	<small><?= $house->city .', '. $house->location ?></small>
+	<small><?= $house->getLocation() ?></small>
 	<? if ($house->isOwnable() && $house->canEdit()): ?>
 		<br><small> - <a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit Listing</a></small>
 	<? endif; ?>
@@ -23,7 +23,7 @@
 	->display(); ?>
 		 
 <div class="padded gradient clearfix">
-	<p><?= $house->address .', '. $house->city .', '. $house->location ?></p>
+	<p><?= $house->address .', '. $house->getLocation() ?></p>
 
 	<p><a href="#" target="_blank" class="button"><span>Take a Virtual Tour</span></a></p>
 
@@ -33,7 +33,7 @@
 	</div>
 	<? endif; ?>
 	<div class="left">
-		<p>Price: <?= $house->price ?><br>
+		<p>Price: <?= $house->getPrice() ?><br>
 		Bedrooms: <?= $house->bedrooms ?><br>
 		Bathrooms: <?= $house->bathrooms ?></p>
 	</div>

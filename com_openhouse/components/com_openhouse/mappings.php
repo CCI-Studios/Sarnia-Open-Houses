@@ -13,3 +13,6 @@ KService::setAlias('com://site/openhouse.model.showings', 'com://admin/openhouse
 // tables
 KService::setAlias('com://site/openhouse.database.table.agents', 'com://admin/openhouse.database.table.agents');
 KService::setAlias('com://site/openhouse.database.table.houses', 'com://admin/openhouse.database.table.houses');
+
+// rows
+KService::setAlias('com://site/openhouse.database.row.house', 'com://admin/openhouse.database.row.house');
