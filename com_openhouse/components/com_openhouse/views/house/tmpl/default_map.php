@@ -1,7 +1,7 @@
 <?php
 	$address = urlencode('110 Water St, Sarnia, On N7T 5T2, Canada');
-	$width = 300;
-	$height = 300;
+	$width = 267;
+	$height = 153;
 	$url = 'http://maps.google.com/maps?';
 	
 	$map = array();
