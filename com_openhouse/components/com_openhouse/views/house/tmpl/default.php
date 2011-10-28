@@ -1,11 +1,12 @@
 <style src="media://com_openhouse/css/openhouse.css" />
 
-<h2>
-	<?= $house->address ?>
+<h1 class="house-address">
+	<?= $house->address ?><br>
+	<small><?= $house->city .', '. $house->location ?></small>
 	<? if ($house->isOwnable() && $house->canEdit()): ?>
-		<small> - <a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit Listing</a></small>
+		<br><small> - <a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit Listing</a></small>
 	<? endif; ?>
-</h2>
+</h1>
 
 
 <?= @service('com://site/openhouse.controller.images')

@@ -136,3 +136,6 @@ dl.data-set dd {
 	
 	font-size: 1.4em;
 }
+
+h1.house-address { text-align: center; }
+h1.house-address small { font-weight: normal; }
