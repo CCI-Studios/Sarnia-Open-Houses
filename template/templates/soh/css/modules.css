@@ -40,8 +40,6 @@
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	
-	padding: 0 14px;
 }
 
 .moduletable.hmenu li > a,
@@ -49,6 +47,13 @@
 	display: block;
 	color: white;
 	text-decoration: none;
+	padding: 0 14px;
+}
+
+.moduletable.hmenu img {
+	margin-bottom: 5px;
+	padding: 0 10px 0 0;
+	vertical-align: middle;
 }
 /* @end */
 
@@ -61,7 +66,11 @@
 
 .moduletable.hmenu.primary li:hover,
 .moduletable.hmenu.primary li.active {
-	background: #e00000;
+	background: #eb0000;
+	background-image: -webkit-linear-gradient(bottom, #bd0000, #e40000);
+}
+/* @end */
+
 /* @group pagination */
 .pagination {
 	padding: 33px 25px;
