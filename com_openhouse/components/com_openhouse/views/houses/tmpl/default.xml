@@ -18,6 +18,8 @@
 				<option value="0">No</option>
 			</field>
 			
+			<field name="pagination_limit" label="Pagination Limit" type="text" default="10" />
+			
 			<field name="sort" label="Sort order" type="list" default="created_on">
 				<option value="created_on">Creation Date</option>
 				<option value="price">Price</option>

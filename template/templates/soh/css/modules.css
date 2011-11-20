@@ -62,5 +62,48 @@
 .moduletable.hmenu.primary li:hover,
 .moduletable.hmenu.primary li.active {
 	background: #e00000;
+/* @group pagination */
+.pagination {
+	padding: 33px 25px;
 }
+
+.pagination .pages {
+	padding: 0;
+	text-align: right;
+	float: none;
+}
+
+.pagination li {
+	display: inline-block;
+	*display: block;
+	*zoom: 1;
+	margin-left: 10px;
+	
+	background: #f4f4f4;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+}
+
+.pagination li a,
+.pagination li span {
+	display: inline-block;
+	*display: block;
+	*zoom: 1;
+	padding: 2px 6px;
+	
+	color: #000;
+	text-decoration: none;
+}
+
+.pagination li.active {
+	background: #c32c3b;
+	border-color: #8c0000;
+}
+
+.pagination li .active {
+	font-weight: normal;
+	color: #fff;
+	cursor: default;
+}
+
 /* @end */
