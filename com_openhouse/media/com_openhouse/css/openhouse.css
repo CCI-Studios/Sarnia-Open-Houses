@@ -54,12 +54,16 @@ dl.data-set dd {
 
 .openhouse-listings .image {
 	float: left;
-	margin: 0 15px 20px 0;
+	padding-bottom: 37px;
+	background: url(../images/image-shadow.png) bottom no-repeat;
+}
+
+.openhouse-listings .image > div {
 	padding: 3px;
 	border-radius: 5px;
 	position: relative;
 	
-	background: white;
+	background: #fff;
 	border: 1px solid #e5e5e5;
 }
 
@@ -69,8 +73,7 @@ dl.data-set dd {
 }
 
 .openhouse-listings .description {
-	float: left;
-	width: 362px;
+	margin-left: 298px;
 }
 
 .price { /* TODO fix this */
