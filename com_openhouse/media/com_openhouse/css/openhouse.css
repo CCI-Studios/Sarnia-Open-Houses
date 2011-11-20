@@ -99,8 +99,10 @@ dl.data-set dd {
 }
 
 .openhouse-listings h2 {
+	margin-top: 0;
 	padding-bottom: 15px;
 	
+	color: #000;
 	text-align: center;
 	line-height: 1em;
 	background: url(../images/h2-bg.png) center bottom no-repeat;
