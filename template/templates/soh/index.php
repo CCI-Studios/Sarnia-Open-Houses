@@ -74,7 +74,9 @@ $analytics = "UA-XXXXX-X"; // FIXME Update to client ID
 					</div>
 				<? endif; ?>
 				
-				<div id="messages"><jdoc:include type="message" /></div>
+				<? if(count(JFactory::getApplication()->getMessageQueue())): ?>
+					<div id="messages" class="gradient padded"><jdoc:include type="message" /></div>
+				<? endif; ?>
 				
 				<div id="component">
 					<jdoc:include type="component" />
