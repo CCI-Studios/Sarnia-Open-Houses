@@ -9,10 +9,12 @@
 
 <h1 class="house-address">
 	<?= $house->address ?><br>
-	<small><?= $house->getLocation() ?></small>
-	<? if ($house->isOwnable() && $house->canEdit()): ?>
-		<br><small> - <a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit Listing</a></small>
-	<? endif; ?>
+	<small>
+		<?= $house->getLocation() ?>
+		<? if ($house->isOwnable() && $house->canEdit()): ?>
+			- <a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit Listing</a>
+		<? endif; ?>
+	</small>
 </h1>
 
 

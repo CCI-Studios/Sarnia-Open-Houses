@@ -13,9 +13,6 @@ class ComOpenhouseControllerHouse extends ComDefaultControllerDefault
 	
 	public function saveRedirect(KCommandContext $context)
 	{
-		$app = JFactory::getApplication();
-		$result = $context->result;
-		
-		$app->redirect('index.php?option=com_openhouse&view=house&id='. $result->id);
+		JFactory::getApplication()->redirect('index.php?option=com_openhouse&view=house&id='. $context->result->id);
 	}	
 }
