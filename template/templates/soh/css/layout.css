@@ -32,13 +32,18 @@
 
 #body {
 	margin: 25px 0 8px;
+	padding-bottom: 9px;
+	background: url(../images/body-shadow.png) bottom no-repeat;
+}
+
+#body > div {
 	padding: 3px;
 	border-radius: 5px;
 
 	background: #f7f7f7;
 	border: 1px solid #d8d8d8;
 }
-#body > div {
+#body > div > div {
 	border-radius: 5px;
 	background: -webkit-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
 	border: 1px solid #e5e5e5;

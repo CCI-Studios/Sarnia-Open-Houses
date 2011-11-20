@@ -61,7 +61,7 @@ JHtml::_('behavior.mootools');
 			<div class="clear"></div>
 		</div>
 
-		<div id="body"><div>
+		<div id="body"><div><div>
 			<div id="menu">
 				<jdoc:include type="modules" name="menu" style="xhtml" />
 				<div class="clear"></div>
@@ -97,7 +97,7 @@ JHtml::_('behavior.mootools');
 			</div>
 			
 			<div class="clear"></div>
-		</div></div>
+		</div></div></div>
 		
 		<div id="copyright">
 			<div class="right">Site by <a href="http://ccistudios.com">CCI Studios</a></div>
