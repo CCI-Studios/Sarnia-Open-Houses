@@ -71,6 +71,20 @@
 }
 /* @end */
 
+/* @group social-links */
+.social-links {
+	margin: 0;
+	padding: 0;
+}
+
+.social-links li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 10px 0 0 11px;
+}
+/* @end */
+
 /* @group pagination */
 .pagination {
 	padding: 33px 25px;
@@ -114,5 +128,4 @@
 	color: #fff;
 	cursor: default;
 }
-
 /* @end */
