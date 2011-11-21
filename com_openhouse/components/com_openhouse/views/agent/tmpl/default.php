@@ -1,13 +1,11 @@
 <style src="media://com_openhouse/css/openhouse.css" />
 
-<section>
-	<img class="profile-picture fltrgt" width="150" height="200" src="http://dummyimage.com/150x200/ddd/333.jpg&amp;text=Profile" />
-	
-	<h1><?= @escape($agent->name) ?></h1>
-	<?= $agent->title ?><br/>	
-	<? if ($agent->canEdit()): ?>
-		<a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">Update profile</a><Br/>
-	<? endif; ?>
+<module title="" position="sidebar">
+	<?= @service('com://site/openhouse.controller.agent')
+		->user_id($agent->user_id)
+		->layout('module')
+		->display(); ?>
+</module>
 
 <div class="padded gradient clearfix">
 	<h1><?= @escape($agent->name) ?></h1>
