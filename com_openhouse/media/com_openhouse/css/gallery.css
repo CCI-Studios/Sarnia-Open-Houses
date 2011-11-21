@@ -24,6 +24,13 @@
 	border-radius: 10px;
 }
 
+.openhouse-gallery .image2 {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	opacity: 0;
+}
+
 .openhouse-gallery .top-shadow,
 .openhouse-gallery .bottom-shadow {
 	position: absolute;

@@ -4,9 +4,12 @@
 <style src="media://com_openhouse/css/gallery.css" />
 
 <? if (count($images)): ?>
-<div class="openhouse-gallery">
+<div class="openhouse-gallery" data-path="media://com_openhouse/uploads/large/">
 	<div class="main-image"><div>
-		<img src="media://com_openhouse/uploads/large/house1.png" />
+		<img class="image1" src="media://com_openhouse/uploads/large/<?= $images->current()->filename ?>" />
+		<img class="image2" src="media://com_openhouse/uploads/large/<?= $images->current()->filename ?>" />
+
+		
 		
 		<div class="top-shadow"></div>
 		<div class="bottom-shadow"></div>
@@ -17,9 +20,9 @@
 		<? endif; ?>
 	</div></div>
 
-	<ul>
+	<ul class="thumbnails">
 		<? foreach($images as $image): ?>
-			<li><img src="media://com_openhouse/uploads/small/<?= $image->filename ?>" height="27" /></li>
+			<li data-filename="<?= $image->filename ?>"><img src="media://com_openhouse/uploads/small/<?= $image->filename ?>" height="27" /></li>
 		<? endforeach; ?>
 	</ul>
 </div>

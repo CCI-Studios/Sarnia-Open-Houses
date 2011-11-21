@@ -39,6 +39,22 @@ dl.data-set dd {
 
 /* @end */
 
+/* @group house listing */
+.com_openhouse .details {
+	float: right;
+	width: 100px;
+}
+
+.com_openhouse .description {
+	margin-right: 100px;
+}
+
+.com_openhouse .map {
+	margin-top: -35px;
+}
+
+/* @end */
+
 /* @group listings */
 .openhouse-listings {
 	margin: 0;
