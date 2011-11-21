@@ -9,25 +9,40 @@
 		<a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">Update profile</a><Br/>
 	<? endif; ?>
 
-	<dl class="fltlft data-set">
-		<? if ($agent->phone): ?>
-			<dt><?= @text('Phone Number') ?>:</dt>
-			<dd><?= $agent->phone ?></dd>
+<div class="padded gradient clearfix">
+	<h1><?= @escape($agent->name) ?></h1>
+	
+	<img class="profile-picture bordered" width="193" height="193" src="http://dummyimage.com/193x193/ddd/333.jpg&amp;text=Profile" />
+	
+	<p>
+		<?= $agent->title ?><br/>	
+		<? if ($agent->canEdit()): ?>
+			<a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">Update profile</a><Br/>
 		<? endif; ?>
+	</p>
 
-		<? if ($agent->website): ?>
-			<dt><?= @text('Website') ?>:</dt>
-			<dd><a href="<?= $agent->website ?>" target="_blank"><?= $agent->website ?></a></dd>
-		<? endif; ?>
+	<p>
+	<? if ($agent->phone): ?>
+		<?= @text('Phone Number') ?>:
+		<?= $agent->phone ?>
+		<br/>
+	<? endif; ?>
 
-		<? if ($agent->email): ?>
-			<dt><?= @text('Email') ?>:</dt>
-			<dd><a href="mailto:<?= $agent->email ?>"><?= $agent->email ?></a></dd>
-		<? endif; ?>
-	</dl>
-</section>
+	<? if ($agent->website): ?>
+		<?= @text('Website') ?>:
+		<a href="<?= $agent->website ?>" target="_blank"><?= $agent->website ?></a>
+		<br/>
+	<? endif; ?>
 
-<section>
+	<? if ($agent->email): ?>
+		<?= @text('Email') ?>:
+		<a href="mailto:<?= $agent->email ?>"><?= $agent->email ?></a>
+		<br/>
+	<? endif; ?>
+	</p>
+</div>
+
+<div class="padded gradient">
 	<h2><?= @text('House Listings') ?></h2>
 
 	<?= @service('com://site/openhouse.controller.house')
@@ -42,4 +57,4 @@
 	<? else: ?>
 		<p>You must <a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">complete you profile</a> before creating a new listing.</p>
 	<? endif; ?>
-</section>
+</div>
