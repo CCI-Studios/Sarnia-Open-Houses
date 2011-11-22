@@ -11,7 +11,7 @@
 					<label for="modlgn-passwd"><?php echo JText::_('JGLOBAL_PASSWORD') ?>:</label>
 					<input id="modlgn-passwd" type="password" name="password" class="inputbox" size="18"  />
 				</div>
-				<div class="center"><a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
+				<div class="center" style="margin-left: 50px;"><a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
 					<?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a></div>
 			</td>
 			<td valign="top">
