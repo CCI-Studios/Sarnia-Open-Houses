@@ -6,6 +6,7 @@ class ComOpenHouseViewHousesHtml extends ComDefaultViewHtml
 	public function display()
 	{
 		$params = JFactory::getApplication()->getParams();
+		$this->getModel()->set('limit', $params->get('pagination_limit', 10));
 
 		$this->assign('show_pagination', $params->get('show_pagination', 1));
 		$this->assign('pagination_limit', $params->get('pagination_limit', 10));
