@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_houses` (
 	`bathrooms` VARCHAR(10) NOT NULL,
 	`address` VARCHAR(30) NOT NULL,
 	`city` VARCHAR(20) NOT NULL,
+	`province` VARCHAR(40) NOT NULL,
+	`virtual_link` VARCHAR(250) NOT NULL,
 	`postal` VARCHAR(20) NOT NULL,
 	`description` VARCHAR(500) NOT NULL,
 	`enabled` TINYINT(1) NOT NULL DEFAULT '0',
