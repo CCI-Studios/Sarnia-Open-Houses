@@ -5,21 +5,21 @@
 			<![CDATA[Display a list of houses.]]>
 		</message>
 	</layout>
-	
+
 	<fields name="params">
 		<fieldset name="basic">
 			<field name="show_search" label="Show Search" type="list" default="1">
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</field>
-			
+
 			<field name="show_pagination" label="Show Pagination" type="list" default="1">
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</field>
-			
+
 			<field name="pagination_limit" label="Pagination Limit" type="text" default="10" />
-			
+
 			<field name="sort" label="Sort order" type="list" default="created_on">
 				<option value="created_on">Creation Date</option>
 				<option value="price">Price</option>
@@ -27,7 +27,12 @@
 
 			<field name="direction" label="Sort Direction" type="list" default="asc">
 				<option value="asc">Ascending</option>
-				<option value="desc">Descending</option>	
+				<option value="desc">Descending</option>
+			</field>
+
+			<field name="show_custom_search" label="Show Search Button" type="list" default="0">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
 			</field>
 		</fieldset>
 	</fields>

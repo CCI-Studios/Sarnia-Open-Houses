@@ -10,6 +10,9 @@
 
 <?= @template('default_results'); ?>
 
-<? if ($show_pagination): ?>
+<? if ($show_pagination || $show_custom_search): ?>
+<div class="padded">
 	<?= @template('default_pagination'); ?>
+	<a href="<?= @route('view=houses') ?>" class="button"><span>Do Custom Search</span></a>
+</div>
 <? endif; ?>
