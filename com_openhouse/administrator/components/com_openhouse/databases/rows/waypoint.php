@@ -1,17 +1,12 @@
 <?php
 
-class ComOpenhouseDatabaseRowWaypoint extends KDatabaseRowDefault
+class ComOpenhouseDatabaseRowWaypoint extends ComOpenhouseDatabaseRowRelated
 {
-	protected $_house;
-	
-	public function getHouse() {
-		if (!isset($this->_house)) {
-			$this->_house = $this->getService('com://admin/openhouse.model.house')
-								->id($this->openhouse_house_id)
-								->getItem();
-		}
-		
-		return $this->_house;
+
+	public function __construct(KConfig $config = null)
+	{
+		parent::__construct($config);
+
+		$this->has_one('house');
 	}
-	
 }
