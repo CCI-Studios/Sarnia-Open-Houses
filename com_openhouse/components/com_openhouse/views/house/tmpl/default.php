@@ -57,11 +57,23 @@
 				<tr>
 					<td>October 21, 2011</td>
 					<td>3:00pm - 8:00pm</td>
+					<? if ($house->isOwnable() && $house->canEdit()): ?>
+					<td>
+						<a href="#">remove</a><!-- TODO Make into a remove form -->
+					</td>
+					<? endif; ?>
 				</tr>
-				<tr>
-					<td>October 22, 2011</td>
-					<td>2:00pm - 5:00pm</td>
-				</tr>
+				<? if ($house->isOwnable() && $house->canEdit()): ?>
+				<tfoot>
+					<tr>
+						<td colspan="2">
+							<a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">
+								Add New Listing
+							</a>
+						</td>
+					</tr>
+				</tfoot>
+				<? endif; ?>
 			</table>
 
 			<? if (JFactory::getUser()->guest !== 1): ?>

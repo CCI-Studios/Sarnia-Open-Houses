@@ -17,4 +17,5 @@ KService::setAlias('com://site/openhouse.database.table.waypoints', 'com://admin
 
 // rows
 KService::setAlias('com://site/openhouse.database.row.house', 'com://admin/openhouse.database.row.house');
+KService::setAlias('com://site/openhouse.database.row.showing', 'com://admin/openhouse.database.row.showing');
 KService::setAlias('com://site/openhouse.database.row.waypoint', 'com://admin/openhouse.database.row.waypoint');
