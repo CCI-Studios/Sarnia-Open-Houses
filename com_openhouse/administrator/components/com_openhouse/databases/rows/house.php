@@ -8,13 +8,13 @@ class ComOpenHouseDatabaseRowHouse extends KDatabaseRowDefault
 			return '$'. number_format($this->price, 0, '', ',');
 		}
 	}
-	
-	public function getLocation()
+
+	public function getFullLocation()
 	{
-		if ($this->city && $this->location) {
-			return $this->city .', '. 'LOCATION'; // TODO Add locations
+		if ($this->city && $this->province) {
+			return $this->city .', '. $this->province;
 		} else {
-			return $this->city.$this->location; // TODO Add locations
+			return $this->city.$this->province;
 		}
 	}
 }
