@@ -11,6 +11,9 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 		if ($name === 'agent') {
 			$item = $this->getMixer()->getModel()->getItem();
 			return ($user->id == $item->user_id);
+		} elseif ($name === 'house') {
+			$item = $this->getMixer()->getModel()->getItem();
+			return ($user->id == $item->created_by);
 		}
 		
 		return parent::canEdit();
