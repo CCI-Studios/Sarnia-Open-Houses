@@ -106,6 +106,7 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 			$config->id = $this->id;
 		} else {
 			$config->id = $this->{$config->key};
+			$config->key = 'id';
 		}
 
 		$model = $this->getService($config->model);
