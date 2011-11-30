@@ -5,10 +5,10 @@
 <div>
 	<? foreach($waypoints as $wp): ?>
 	<div class="padded gradient">
-		<?= @template('com://site/openhouse.view.house.item', array('house'=>$wp->getHouse())); ?>
+		<?= @template('com://site/openhouse.view.house.item', array('house'=>$wp->house)); ?>
 		<p class="remove_from_cart button"><span>Remove</span></p>
 	</div>
 	<? endforeach; ?>
-	
+
 	<div class="clear"></div>
 </div>

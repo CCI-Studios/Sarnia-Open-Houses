@@ -30,10 +30,9 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 		$config->append(array(
 			'model'		=> $model_identifier,
 			'key'		=> $model_identifier->package .'_'. $name .'_id',
-		))->append(array(
-			'id'	=> $this->{$config->key}
 		));
 		$config->plural = false;
+		$config->foreign = true;
 
 		$this->_has_one[$name] = $config;
 	}
@@ -47,10 +46,13 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 		$config = new KConfig($config);
 		$config->append(array(
 			'model' => $model_identifier,
-			'key'	=> 'id',
-			'id'	=> $this->{$model_identifier->package .'_'. $name .'_id'}
+			'key'	=> $model_identifier->package .'_'. $name .'_id'
 		));
 		$config->plural = false;
+		$config->foreign = false;
+
+		echo $model_identifier->package .'_'. $name .'_id';
+		echo $this->openhouse_house_id;
 
 		$this->_belongs_to[$name] = $config;
 	}
@@ -69,9 +71,9 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 		$config->append(array(
 			'model'	=> $model_identifier,
 			'key'	=> $model_identifier->package .'_'. $this->getIdentifier()->name .'_id',
-			'id'	=> $this->id
 		));
 		$config->plural = true;
+		$config->foreign = true;
 
 		$this->_has_many[$name] = $config;
 	}
@@ -100,8 +102,15 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 			return;
 		}
 
+		if ($config->foreign) {
+			$config->id = $this->id;
+		} else {
+			$config->id = $this->{$config->key};
+		}
+
 		$model = $this->getService($config->model);
 		$model->set($config->key, $config->id);
+
 		if ($config->plural) {
 			$config->items = $model->getList();
 		} else {

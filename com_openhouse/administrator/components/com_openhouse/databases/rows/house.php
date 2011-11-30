@@ -1,7 +1,16 @@
 <?php
 
-class ComOpenHouseDatabaseRowHouse extends KDatabaseRowDefault
+class ComOpenHouseDatabaseRowHouse extends ComOpenhouseDatabaseRowRelated
 {
+
+	public function __construct(KConfig $config = null)
+	{
+		parent::__construct($config);
+
+		$this->has_many('showings');
+		$this->has_many('images');
+	}
+
 	public function getPrice()
 	{
 		if ($this->price) {
