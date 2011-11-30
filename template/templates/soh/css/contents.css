@@ -9,11 +9,11 @@
 	border: none; /* fixes borders */
 	border-radius: 5px;
 	text-decoration: none;
+	cursor: pointer;
 }
 .module.popout button,
 .module.popout .button { background: #ebebeb; }
 
-	
 .button span, button span {
 	display: block;
 	padding: 9px 30px;
@@ -23,6 +23,7 @@
 	border: 1px solid #d9d9d9;
 	font-weight: bold;
 	color: #444;
+	text-align: center;
 }
 
 .button:hover, button:hover {
@@ -32,7 +33,10 @@
 .button:hover span, button:hover span {
 	background: -webkit-linear-gradient(bottom, #ddd, #fff);
 }
-
+.button.disabled span, button.disabled span {
+	background: #ddd;
+	cursor: default;
+}
 
 
 .button.red, button.red {}
