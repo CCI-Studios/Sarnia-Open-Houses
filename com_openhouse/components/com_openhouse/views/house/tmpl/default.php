@@ -1,4 +1,6 @@
 <style src="media://com_openhouse/css/openhouse.css" />
+<script src="media://com_openhouse/js/dotter.js" />
+<script src="media://com_openhouse/js/handlers.js" />
 
 <module title="" position="sidebar">
 	<?= @service('com://site/openhouse.controller.agent')
@@ -61,7 +63,14 @@
 					<td>2:00pm - 5:00pm</td>
 				</tr>
 			</table>
-			<p><a href="#" class="button"><span>Add to cart</span></a></p>
+
+			<? if (JFactory::getUser()->guest !== 1): ?>
+			<p>
+				<div class="button add_to_cart" data-id="<?= $house->id ?>" data-token="<?= JUtility::getToken() ?>">
+					<span>Add to cart</span>
+				</div>
+			</p>
+			<? endif; ?>
 		</div>
 	</div>
 

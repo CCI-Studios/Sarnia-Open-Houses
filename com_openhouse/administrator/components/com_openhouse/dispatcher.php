@@ -8,8 +8,8 @@ class ComOpenHouseDispatcher extends ComDefaultDispatcher
 		$config->append(array(
 			'controller'	=> 'dashboard'
 		));
-		
-		parent::_initialize($config);
+
+        parent::_initialize($config);
 	}
 	
 }

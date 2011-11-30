@@ -1,5 +1,6 @@
-<h2><?= $house->address ?> - $<?= $house->price ?></h2>
+<img src="images/default/home.png" width="75" class="left bordered" style="margin-right: 10px;" />
 
-<?= $house->description ?>
-
-<p><a href="<?= @route('view=house&id='. $house->id) ?>	" class="button"><span>View Details</span></a></p>
+<h2><a href="<?= @route('view=house&id='. $house->id) ?>">
+	<?= $house->address ?>
+</a></h2>
+<p>$<?= $house->price ?></p>

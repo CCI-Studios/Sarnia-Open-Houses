@@ -13,6 +13,8 @@ img.fltrgt { margin: 0 0 10px 10px; }
 /* @group Profile */
 
 .profile-picture {
+	float: right;
+	margin: -44px 0 10px 10px;
 	padding: 1px;
 	border: 1px solid #ddd;
 }
