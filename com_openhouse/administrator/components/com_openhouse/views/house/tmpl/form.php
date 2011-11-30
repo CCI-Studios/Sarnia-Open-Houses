@@ -7,26 +7,29 @@
 	<div class="width-60 fltlft">
 		<fieldset class="adminform">
 			<legend>House Details</legend>
-			
+
 			<ul class="adminformlist">
 				<li>
 					<label>Address</label>
 					<input type="text" name="address" class="inputbox" value="<?= $house->address ?>" />
+				</li>
 				<li>
 					<label>City</label>
-					<input type="text" name="city" class="inputbox" value="<?= $house->city ?>" />
+					<?= @helper('listbox.locations', array('selected' => $house->city, 'value'=>'title', 'name'=>'city')); ?>
+				</li>
 				<li>
 					<label>Province</label>
-					<input type="text" name="province" class="inputbox" value="<?= $house->province ?>" />
+					<?= @helper('listbox.provinces', array('selected' => $house->province)); ?>
+				</li>
 			</ul>
 		</fieldset>
-		
+
 		<fieldset class="adminform">
 			<legend>Description</legend>
 			<textarea name="description" style="width: 100%; height: 250px;"><?= $house->description ?></textarea>
 		</fieldset>
 	</div>
-	
+
 	<div class="width-40 fltlft">
 		<fieldset class="adminform">
 			<legend>Listing Details</legend>
@@ -35,7 +38,7 @@
 					<label>Price</label>
 					<input type="text" name="price" class="inputbox" value="<?= $house->price ?>" />
 				</li>
-			
+
 				<li>
 					<label>Bedrooms</label>
 					<input type="text" name="bedrooms" class="inputbox" value="<?= $house->bedrooms ?>" />

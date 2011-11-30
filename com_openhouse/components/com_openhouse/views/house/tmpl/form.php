@@ -5,7 +5,7 @@
 
 <? if ($house->isNew()): ?>
 	<h2>Create a new Home Listing</h2>
-	
+
 	<p>*note: pictures and showing times can be added after basic details are saved.</p>
 <? else: ?>
 	<h2>Edit Listing for <?= $house->address ?></h2>
@@ -15,76 +15,74 @@
 	<? if ($house->isNew()): ?>
 		<input type="hidden" name="openhouse_agent_id" value="<?= $agent->id ?>">
 	<? else: ?>
-	
+
 	<? endif; ?>
-	
+
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="Price" 
-			data-prefix="$" 
-			type="text" 
-			id="field_price" 
-			name="price" 
+		<input
+			class="inputfield"
+			placeholder="Price"
+			data-prefix="$"
+			type="text"
+			id="field_price"
+			name="price"
 			value="<?= $house->price ?>" />
 	</div>
-	
+
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="Bedrooms" 
-			data-suffix=" Bedrooms" 
-			type="text" 
-			id="field_bedrooms" 
-			name="bedrooms" 
+		<input
+			class="inputfield"
+			placeholder="Bedrooms"
+			data-suffix=" Bedrooms"
+			type="text"
+			id="field_bedrooms"
+			name="bedrooms"
 			value="<?= $house->bedrooms ?>" />
 	</div>
-	
+
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="Bathrooms" 
-			data-suffix=" Bathrooms" 
-			type="text" 
-			id="field_bathrooms" 
-			name="bathrooms" 
+		<input
+			class="inputfield"
+			placeholder="Bathrooms"
+			data-suffix=" Bathrooms"
+			type="text"
+			id="field_bathrooms"
+			name="bathrooms"
 			value="<?= $house->bathrooms ?>" />
 	</div>
-	
+
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="Address" 
-			type="text" 
-			id="field_address" 
-			name="address" 
+		<input
+			class="inputfield"
+			placeholder="Address"
+			type="text"
+			id="field_address"
+			name="address"
 			value="<?= $house->address ?>" />
 	</div>
-	
+
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="City" 
-			type="text" 
-			id="field_city" 
-			name="city" 
-			value="<?= $house->city ?>" />
+		<?= @helper('listbox.locations', array('selected' => $house->city, 'value'=>'title', 'name'=>'city')) ?>
 	</div>
-	
+
 	<div class="field">
-		<input 
-			class="inputfield" 
-			placeholder="Postal Code" 
-			type="text" 
-			id="field_postal" 
-			name="postal" 
+		<?= @helper('listbox.provinces', array('selected' => $house->province)) ?>
+	</div>
+
+	<div class="field">
+		<input
+			class="inputfield"
+			placeholder="Postal Code"
+			type="text"
+			id="field_postal"
+			name="postal"
 			value="<?= $house->postal ?>" />
 	</div>
-	
+
 	<div class="field">
-		<?= @editor(array()) ?>
+		<textarea name="description"><?= $house->description ?></textarea>
 	</div>
-	
+
 	<div class="actions">
 		<? if ($house->isNew()): ?>
 			<button><span>Create</span></button>

@@ -2,7 +2,7 @@
 
 class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 {
-	
+
 	public function locations($config = array())
 	{
 		$config = new KConfig($config);
@@ -14,10 +14,26 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 			'prompt'		=> '- Select Location -',
 			//'attribs'	=> array('id'=>$config->name),
 		));
-		
+
 		return parent::_listbox($config);
 	}
-	
+
+	public function provinces($config = array())
+	{
+		$config = new KConfig($config);
+		$config->append(array(
+			'name'		=> 'province',
+			'attribs'	=> array(),
+			'selected'	=> null
+		));
+
+		$options = array();
+		$options[] = $this->option(array('value' => 'Ontario', 'text' => 'Ontario'));
+		$config->options = $options;
+
+		return $this->optionlist($config);
+	}
+
 	public function offices($config = array())
 	{
 		$config = new KConfig($config);
@@ -29,10 +45,10 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 			'prompt'		=> '- Select Office -',
 			//'attribs'	=> array('id'=>$config->name),
 		));
-		
+
 		return parent::_listbox($config);
 	}
-	
+
 	public function companies($config = array())
 	{
 		$config = new KConfig($config);
@@ -44,8 +60,8 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 			'prompt'		=> '- Select Company -',
 			//'attribs'	=> array('id'=>$config->name),
 		));
-		
+
 		return parent::_listbox($config);
 	}
-	
+
 }
