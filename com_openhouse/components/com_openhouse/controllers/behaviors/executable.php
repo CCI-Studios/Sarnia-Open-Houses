@@ -15,4 +15,17 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 		
 		return parent::canEdit();
 	}
+	
+	public function canAdd() {
+		$name = $this->getMixer()->getIdentifier()->name;
+		$user = JFactory::getUser();
+		
+		if ($name === 'waypoint') {
+			return true;
+		} elseif ($name === 'house') {
+			
+		}
+		
+		return parent::canAdd();
+	}
 }
