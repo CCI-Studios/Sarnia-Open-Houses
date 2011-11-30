@@ -33,6 +33,9 @@ button {
   overflow: visible;
 }
 
+select {
+	width: 142px;
+}
 
 textarea, input[type=text], input[type=password] {
 	border: 1px solid #cbcbcb;
@@ -44,4 +47,9 @@ textarea, input[type=text], input[type=password] {
 textarea:focus, input[type=text]:focus, input[type=password]:focus {
 	border-color: red;
 	outline: none;
+}
+
+textarea {
+	width: 90%;
+	height: 150px;
 }
