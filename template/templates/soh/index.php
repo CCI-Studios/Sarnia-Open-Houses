@@ -69,14 +69,14 @@ JHtml::_('behavior.mootools');
 	
 			<div id="contents">
 				<? if ($this->countModules('top')): ?>
-					<div id="top" class="gradient padded">
+					<div id="top" class="gradient">
 						<jdoc:include type="modules" name="top" style="xhtml" />
 						<div class="clear"></div>
 					</div>
 				<? endif; ?>
-				
+			
 				<? if(count(JFactory::getApplication()->getMessageQueue())): ?>
-					<div id="messages" class="gradient padded"><jdoc:include type="message" /></div>
+					<div id="messages" class="gradient"><jdoc:include type="message" /></div>
 				<? endif; ?>
 				
 				<div id="component">
