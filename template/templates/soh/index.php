@@ -53,7 +53,7 @@ JHtml::_('behavior.mootools');
 	<?php endif; ?>
 </head>
 
-<body class="<?= $menu ?>"><div>
+<body class="<?= $menu ?>"><div class="inner">
 
 	<div id="wrapper">
 		<div id="header">

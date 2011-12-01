@@ -6,7 +6,7 @@ body {
 	font-size: 12px;
 }
 
-body > div {
+body > .inner {
 	background: url(../images/body-bg2.png) repeat-x;
 }
 
