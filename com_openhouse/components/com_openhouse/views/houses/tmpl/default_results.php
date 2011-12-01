@@ -1,7 +1,7 @@
 <style src="media://com_openhouse/css/openhouse.css" />
 
 <ul class="openhouse-listings"><? foreach ($houses as $house): ?>
-	<li>
+	<li class="gradient">
 		<div class="image"><div>
 			<img src="images/default/home.png" />
 			

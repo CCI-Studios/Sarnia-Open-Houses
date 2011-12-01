@@ -64,12 +64,6 @@ dl.data-set dd {
 	list-style: none;
 }
 
-.openhouse-listings li {
-	padding: 20px 20px 25px;
-	
-	background: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 60px);
-}
-
 .openhouse-listings .image {
 	float: left;
 	padding-bottom: 37px;
@@ -137,6 +131,10 @@ dl.data-set dd {
 }
 /* @end */
 
+
+.openhouse-houses footer {
+	padding-top: 15px;
+}
 
 
 /* keepers */

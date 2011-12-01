@@ -6,10 +6,8 @@
 	)) ?>
 </module>
 
-<div class="padded gradient clearfix">
-	<h1><?= @escape($agent->name) ?></h1>
-
-	<img class="profile-picture bordered" width="193" height="193" src="http://dummyimage.com/193x193/ddd/333.jpg&amp;text=Profile" />
+<div class="gradient">
+	<h2><?= @escape($agent->name) ?></h2>
 
 	<p>
 		<?= $agent->title ?><br/>

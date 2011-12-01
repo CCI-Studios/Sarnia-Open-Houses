@@ -2,10 +2,8 @@
 <script src="media://lib_koowa/js/koowa.js" />
 <style src="media://com_openhouse/css/openhouse.css" />
 
-<div class="padded gradient">
-	<h1>
-		Editing <?= $agent->name ?>'s Profile
-	</h1>
+<div>
+	<h2>Editing <?= $agent->name ?>'s Profile</h2>
 
 	<form action="<?= @route('view=agent&id='. $agent->id) ?>" method="post" class="-koowa-form">
 	
@@ -35,15 +33,20 @@
 		</div>
 	
 		<div class="field">
-			<label><?= @text('Office')?>:</label><br>
-			<?= @helper('listbox.offices', array('name' => 'openhouse_office_id')) ?>
-		</div>
-	
-		<div class="field">
 			<label><?= @text('Company')?>:</label><br>
 			<?= @helper('listbox.companies', array('name' => 'openhouse_company_id')) ?>
 		</div>
-	
+		
+		<div class="field">
+			<label><?= @text('Office')?>:</label><br>
+			<?= @helper('listbox.offices', array('name' => 'openhouse_office_id')) ?>
+		</div>
+
+		<!--<div class="field"> FIXME upload profile pic
+			<label><?= @text('Upload new profile picture') ?>:</label><br>
+			<input type="file" name="profile_upload" />
+		</div>-->
+
 		<div class="actions">
 			<button><span>Submit</span></button>
 			<a href="<?= @route('view=agent&id='. $agent->id) ?>" class="button"><span>Done</span></a>

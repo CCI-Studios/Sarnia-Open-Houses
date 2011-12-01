@@ -18,7 +18,7 @@
 
 		<tr>
 			<td>&nbsp;</td>
-			<td><button class="red"><span>Search</span></button></td>
+			<td><div class="button red"><span>Search</span></div></td><!-- FIXME enable search -->
 		</tr>
 	</table>
 </form>

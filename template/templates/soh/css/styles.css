@@ -9,12 +9,12 @@
    Also: hot pink! */
 /* TODO Update selection BG color */
 ::-moz-selection {
-  background: #FF5E99;
+  background: #f80001;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #FF5E99;
+  background: #f80001;
   color: #fff;
   text-shadow: none;
 }
@@ -44,11 +44,9 @@ dd.notice {
 
 
 .gradient {
-	background: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
-}
-
-.padded {
+	margin: 0 -25px;
 	padding: 15px 25px;
+	background: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
 }
 
 .bordered {

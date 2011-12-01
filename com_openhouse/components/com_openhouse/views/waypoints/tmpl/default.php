@@ -4,7 +4,7 @@
 
 <div>
 	<? foreach($waypoints as $wp): ?>
-	<div class="padded gradient">
+	<div class="gradient">
 		<?= @template('com://site/openhouse.view.house.item', array('house'=>$wp->house)); ?>
 		<p class="remove_from_cart button"><span>Remove</span></p>
 	</div>
