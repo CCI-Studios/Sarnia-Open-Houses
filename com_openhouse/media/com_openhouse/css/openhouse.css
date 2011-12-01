@@ -106,7 +106,13 @@ dl.data-set dd {
 	padding: 7px 20px;
 	border-radius: 10px;
 	
+	background: red;
 	background: -webkit-linear-gradient(top, #f00, #900);
+	background: -moz-linear-gradient(top, #f00, #900);
+	background: -o-linear-gradient(top, #f00, #900);
+	background: -ms-linear-gradient(top, #f00, #900);
+	background: linear-gradient(top, #f00, #900);
+	
 	box-shadow: inset 0 -2px 10px 3px #7a0000;
 }
 
@@ -152,6 +158,10 @@ dl.data-set dd {
 	padding: 4px 5px 3px;
 	
 	background: -webkit-linear-gradient(top, white, #ddd 1px,  #fff 10px);
+	background: -moz-linear-gradient(top, white, #ddd 1px,  #fff 10px);
+	background: -o-linear-gradient(top, white, #ddd 1px,  #fff 10px);
+	background: -ms-linear-gradient(top, white, #ddd 1px,  #fff 10px);
+	background: linear-gradient(top, white, #ddd 1px,  #fff 10px);
 	border: 1px solid #999;
 	border-radius: 3px;
 	

@@ -67,7 +67,12 @@
 .moduletable.hmenu.primary li:hover,
 .moduletable.hmenu.primary li.active {
 	background: #eb0000;
+	background: url(../images/menu-hover.jpg) no-repeat;
 	background-image: -webkit-linear-gradient(bottom, #bd0000, #e40000);
+	background-image: -moz-linear-gradient(bottom, #bd0000, #e40000);
+	background-image: -o-linear-gradient(bottom, #bd0000, #e40000);
+	background-image: -ms-linear-gradient(bottom, #bd0000, #e40000);
+	background-image: linear-gradient(bottom, #bd0000, #e40000);
 }
 /* @end */
 

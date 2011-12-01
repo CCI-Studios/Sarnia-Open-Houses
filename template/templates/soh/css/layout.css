@@ -45,7 +45,12 @@
 }
 #body > div > div {
 	border-radius: 5px;
-	background: -webkit-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
+	background: url(../images/faux-cols.jpg) repeat-y;
+	background-image: -webkit-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
+	background-image: -moz-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
+	background-image: -o-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
+	background-image: -ms-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
+	background-image: linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
 	border: 1px solid #e5e5e5;
 }
 

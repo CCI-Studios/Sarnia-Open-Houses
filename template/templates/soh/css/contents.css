@@ -20,6 +20,10 @@
 	border-radius: 5px;
 	
 	background: -webkit-linear-gradient(bottom, #e6e6e6, #fff);
+	background: -moz-linear-gradient(bottom, #e6e6e6, #fff);
+	background: -o-linear-gradient(bottom, #e6e6e6, #fff);
+	background: -ms-linear-gradient(bottom, #e6e6e6, #fff);
+	background: linear-gradient(bottom, #e6e6e6, #fff);
 	border: 1px solid #d9d9d9;
 	font-weight: bold;
 	color: #444;
@@ -32,6 +36,10 @@
 
 .button:hover span, button:hover span {
 	background: -webkit-linear-gradient(bottom, #ddd, #fff);
+	background: -moz-linear-gradient(bottom, #ddd, #fff);
+	background: -o-linear-gradient(bottom, #ddd, #fff);
+	background: -ms-linear-gradient(bottom, #ddd, #fff);
+	background: linear-gradient(bottom, #ddd, #fff);
 }
 .button.disabled span, button.disabled span {
 	background: #ddd;

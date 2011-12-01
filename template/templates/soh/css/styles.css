@@ -46,7 +46,12 @@ dd.notice {
 .gradient {
 	margin: 0 -25px;
 	padding: 15px 25px;
-	background: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+	background: url(../images/gradient.jpg) bottom repeat-x;
+	background-image: -webkit-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+	background-image: -moz-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+	background-image: -o-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+	background-image: -ms-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+	background-image: linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
 }
 
 .bordered {
