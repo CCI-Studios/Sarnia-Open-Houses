@@ -28,14 +28,7 @@ class ComOpenhouseModelAgents extends ComDefaultModelDefault
 		}
 
 		$model = $this->getService($this->getIdentifier());
-		$list = $model->set('user_id', $user->id)->getList();
-
-		if (!count($list)) {
-			return null;
-		}
-
-		return $list->top();
-
+		return $model->set('user_id', $user->id)->getItem();
 	}
 
 	public function isValid()
