@@ -53,3 +53,8 @@ textarea {
 	width: 90%;
 	height: 150px;
 }
+
+img.calendar {
+	vertical-align: middle;
+	margin-left: 5px;
+}
