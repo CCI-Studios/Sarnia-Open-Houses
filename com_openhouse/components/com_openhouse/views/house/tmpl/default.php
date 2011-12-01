@@ -2,11 +2,11 @@
 <script src="media://com_openhouse/js/dotter.js" />
 <script src="media://com_openhouse/js/handlers.js" />
 
+
 <module title="" position="sidebar">
-	<?= @service('com://site/openhouse.controller.agent')
-		->user_id($house->created_by)
-		->layout('module')
-		->display(); ?>
+	<?= @template('com://site/openhouse.view.agent.module', array(
+		'agent'	=> $house->agent
+	)) ?>
 </module>
 
 <div class="com_openhouse">
@@ -21,12 +21,11 @@
 			</small>
 		</h1>
 
+		<?= @template('com://site/openhouse.view.images.gallery', array(
+			'images'	=> $house->images,
+			'price'		=> $house->price
+		)) ?>
 
-		<?= @service('com://site/openhouse.controller.images')
-			->house_id($house->id)
-			->price($house->getPrice())
-			->layout('gallery')
-			->display(); ?>
 
 		<p><?= $house->address .', '. $house->getFullLocation() ?></p>
 		<p><a href="#" target="_blank" class="button"><span>Take a Virtual Tour</span></a></p>
@@ -49,20 +48,16 @@
 		</div>
 
 		<div class="left">
-			<?= @service('com://site/openhouse.controller.showings')
-					->house_id($house->id)
-					->layout('list')
-					->display() ?>
-			<table>
-				<tr>
-					<td>October 21, 2011</td>
-					<td>3:00pm - 8:00pm</td>
-					<? if ($house->isOwnable() && $house->canEdit()): ?>
-					<td>
-						<a href="#">remove</a><!-- TODO Make into a remove form -->
-					</td>
-					<? endif; ?>
-				</tr>
+			<table width="300px">
+				<tbody>
+					<? foreach ($house->showings as $showing): ?>
+					<tr>
+						<td><?= date('F j, Y', strtotime($showing->start_date)); ?></td>
+						<td><?= $showing->hours; ?></td>
+					</tr>
+					<? endforeach; ?>
+				</tbody>
+
 				<? if ($house->isOwnable() && $house->canEdit()): ?>
 				<tfoot>
 					<tr>

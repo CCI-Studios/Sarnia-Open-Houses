@@ -1,19 +1,18 @@
 <style src="media://com_openhouse/css/openhouse.css" />
 
 <module title="" position="sidebar">
-	<?= @service('com://site/openhouse.controller.agent')
-		->user_id($agent->user_id)
-		->layout('module')
-		->display(); ?>
+	<?= @template('com://site/openhouse.view.agent.module', array(
+		'agent'	=> $agent
+	)) ?>
 </module>
 
 <div class="padded gradient clearfix">
 	<h1><?= @escape($agent->name) ?></h1>
-	
+
 	<img class="profile-picture bordered" width="193" height="193" src="http://dummyimage.com/193x193/ddd/333.jpg&amp;text=Profile" />
-	
+
 	<p>
-		<?= $agent->title ?><br/>	
+		<?= $agent->title ?><br/>
 		<? if ($agent->canEdit()): ?>
 			<a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">Update profile</a><Br/>
 		<? endif; ?>
@@ -43,12 +42,9 @@
 <div class="padded gradient">
 	<h2><?= @text('House Listings') ?></h2>
 
-	<?= @service('com://site/openhouse.controller.house')
-			->openhouse_agent_id(49)
-			->sort('address')
-			->layout('list')
-			->display(); ?>
-
+	<?= @template('com://site/openhouse.view.houses.list', array(
+		'houses' => $agent->houses
+	)) ?>
 
 	<? if ($valid): ?>
 		<p><a href="<?= @route('view=house&layout=form') ?>">Add new house listing</a></p>
