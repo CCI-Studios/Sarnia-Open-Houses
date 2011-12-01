@@ -31,8 +31,6 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 			'model'			=> $model_identifier,
 			'foreign_key'	=> $model_identifier->package .'_'. $name .'_id',
 			'local_key'		=> 'id'
-		))->append(array(
-			'id'			=> $this->{$config->local_key}
 		));
 		$config->plural = false;
 
@@ -50,8 +48,6 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 			'model'			=> $model_identifier,
 			'foreign_key'	=> 'id',
 			'local_key'		=> $model_identifier->package .'_'. $name .'_id',
-		))->append(array(
-			'id'			=> $this->{$config->local_key}
 		));
 		$config->plural = false;
 
@@ -73,8 +69,6 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 			'model'			=> $model_identifier,
 			'foreign_key'	=> $model_identifier->package .'_'. $this->getIdentifier()->name .'_id',
 			'local_key'		=> 'id'
-		))->append(array(
-			'id'			=> $this->{$config->local_id}
 		));
 		$config->plural = true;
 
@@ -106,7 +100,7 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 		}
 
 		$model = $this->getService($config->model);
-		$model->set($config->foreign_key, $config->id);
+		$model->set($config->foreign_key, $this->{$config->local_key});
 
 		if ($config->plural) {
 			$config->items = $model->getList();
