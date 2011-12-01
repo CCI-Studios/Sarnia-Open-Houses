@@ -22,11 +22,15 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 	public function canAdd() {
 		$name = $this->getMixer()->getIdentifier()->name;
 		$user = JFactory::getUser();
+		$acl = JFactory::getAcl();
 		
 		if ($name === 'waypoint') {
 			return true;
 		} elseif ($name === 'house') {
-			
+			$groups = $acl->getGroupsByUser($user->id);
+			if (in_array(9, $groups)) {
+				return true;
+			}
 		}
 		
 		return parent::canAdd();
