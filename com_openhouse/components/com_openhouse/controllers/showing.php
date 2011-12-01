@@ -13,4 +13,11 @@ class ComOpenhouseControllerShowing extends ComDefaultControllerDefault
 
 		return $data;
 	}
+
+	protected function _actionAdd(KCommandContext $context)
+	{
+		$data = parent::_actionAdd($context);
+		$this->setRedirect(JRoute::_('index.php?option=com_openhouse&view=house&id='. $data->openhouse_house_id));
+		return $data;
+	}
 }
