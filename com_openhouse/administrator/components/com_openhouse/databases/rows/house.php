@@ -9,6 +9,11 @@ class ComOpenHouseDatabaseRowHouse extends ComOpenhouseDatabaseRowRelated
 
 		$this->has_many('showings');
 		$this->has_many('images');
+		$this->belongs_to('agent', array(
+			'foreign_key'	=> 'user_id',
+			'local_key'		=> 'created_by',
+			'id'			=> 49
+		));
 	}
 
 	public function getPrice()

@@ -24,15 +24,17 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 	{
 		$model_identifier = clone $this->getIdentifier();
 		$model_identifier->path = array('model');
-		$model_identifier->name = $name;
+		$model_identifier->name = KInflector::pluralize($name);
 
 		$config = new KConfig($config);
 		$config->append(array(
-			'model'		=> $model_identifier,
-			'key'		=> $model_identifier->package .'_'. $name .'_id',
+			'model'			=> $model_identifier,
+			'foreign_key'	=> $model_identifier->package .'_'. $name .'_id',
+			'local_key'		=> 'id'
+		))->append(array(
+			'id'			=> $this->{$config->local_key}
 		));
 		$config->plural = false;
-		$config->foreign = true;
 
 		$this->_has_one[$name] = $config;
 	}
@@ -41,18 +43,17 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 	{
 		$model_identifier = clone $this->getIdentifier();
 		$model_identifier->path = array('model');
-		$model_identifier->name = $name;
+		$model_identifier->name = KInflector::pluralize($name);
 
 		$config = new KConfig($config);
 		$config->append(array(
-			'model' => $model_identifier,
-			'key'	=> $model_identifier->package .'_'. $name .'_id'
+			'model'			=> $model_identifier,
+			'foreign_key'	=> 'id',
+			'local_key'		=> $model_identifier->package .'_'. $name .'_id',
+		))->append(array(
+			'id'			=> $this->{$config->local_key}
 		));
 		$config->plural = false;
-		$config->foreign = false;
-
-		echo $model_identifier->package .'_'. $name .'_id';
-		echo $this->openhouse_house_id;
 
 		$this->_belongs_to[$name] = $config;
 	}
@@ -65,15 +66,17 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 	{
 		$model_identifier = clone $this->getIdentifier();
 		$model_identifier->path = array('model');
-		$model_identifier->name = $name;
+		$model_identifier->name = KInflector::pluralize($name);
 
 		$config = new KConfig($config);
 		$config->append(array(
-			'model'	=> $model_identifier,
-			'key'	=> $model_identifier->package .'_'. $this->getIdentifier()->name .'_id',
+			'model'			=> $model_identifier,
+			'foreign_key'	=> $model_identifier->package .'_'. $this->getIdentifier()->name .'_id',
+			'local_key'		=> 'id'
+		))->append(array(
+			'id'			=> $this->{$config->local_id}
 		));
 		$config->plural = true;
-		$config->foreign = true;
 
 		$this->_has_many[$name] = $config;
 	}
@@ -102,15 +105,8 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 			return;
 		}
 
-		if ($config->foreign) {
-			$config->id = $this->id;
-		} else {
-			$config->id = $this->{$config->key};
-			$config->key = 'id';
-		}
-
 		$model = $this->getService($config->model);
-		$model->set($config->key, $config->id);
+		$model->set($config->foreign_key, $config->id);
 
 		if ($config->plural) {
 			$config->items = $model->getList();
