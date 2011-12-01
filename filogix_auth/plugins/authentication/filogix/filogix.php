@@ -68,7 +68,7 @@ class plgAuthenticationFilogix extends JPlugin
 
 	protected function _createUser($credentials)
 	{
-		$instance = JUser::getInstance();
+		$user = JUser::getInstance();
 		if ($id = intval(JUserHelper::getUserId($credentials['username']))) {
 			return;
 		}
@@ -76,16 +76,17 @@ class plgAuthenticationFilogix extends JPlugin
 		$defaultUserGroup = $this->params->get('usertype', 2); // make param;
 		$acl = JFactory::getACL();
 
-		$instance->set('id',		0);
-		$instance->set('name',		$credentials['username']);
-		$instance->set('username',	$credentials['username']);
-		$instance->set('email',		$credentials['username'] .'@filogix.com');
-		$instance->set('usertype',	'depreciated');
-		$instance->set('groups',	array($defaultUserGroup));
+		$user->set('id',		0);
+		$user->set('name',		$credentials['username']);
+		$user->set('username',	$credentials['username']);
+		$user->set('email',		$credentials['username'] .'@filogix.com');
+		$user->set('usertype',	'depreciated');
+		$user->set('groups',	array($defaultUserGroup));
 
-		if ($instance->save()) {
-			$row = $this->getService('com://admin/openhouse.database.row.agent');
-			$row->set('user_id', $instance->id);
+		if ($user->save()) {
+			$row = KService::get('com://admin/openhouse.database.row.agent');
+			$row->set('name', $credentials['username']);
+			$row->set('user_id', $user->id);
 			$row->save();
 		}
 	}
