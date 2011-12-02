@@ -46,11 +46,7 @@ JHtml::_('behavior.mootools');
 	<?php endif; ?>
 
 	<!-- load modernizer, all other at bottom -->
-	<?php if ($testing): ?>
-		<script src="/templates/<?= $this->template ?>/js/libs/modernizr-1.7.js"></script>
-	<?php else: ?>
-		<script src="/templates/<?= $this->template ?>/js/libs/modernizr-1.7.min.js"></script>
-	<?php endif; ?>
+	<script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js"></script>
 </head>
 
 <body class="<?= $menu ?>"><div class="inner">
