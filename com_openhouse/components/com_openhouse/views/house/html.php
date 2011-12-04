@@ -1,6 +1,6 @@
 <?php
 
-class ComOpenHouseViewHouseHtml extends ComDefaultViewHtml
+class ComOpenHouseViewHouseHtml extends ComOpenhouseViewHtml
 {
     protected function _initialize(KConfig $config)
     {

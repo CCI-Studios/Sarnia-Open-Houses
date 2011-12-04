@@ -52,7 +52,7 @@
 				<tbody>
 					<? foreach ($house->showings as $showing): ?>
 					<tr>
-						<td><?= date('F j, Y', strtotime($showing->start_date)); ?></td>
+						<td><?= @format('named_date', $showing->start_date); ?></td>
 						<td><?= $showing->hours; ?></td>
 					</tr>
 					<? endforeach; ?>

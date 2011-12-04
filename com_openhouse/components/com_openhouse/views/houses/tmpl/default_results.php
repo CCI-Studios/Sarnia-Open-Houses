@@ -6,7 +6,7 @@
 			<img src="images/default/home.png" />
 			
 			<div class="price"><span>
-				$<?= $house->price ?>
+				<?= @format('price', $house->price) ?>
 			</span></div>
 		</div></div>
 		

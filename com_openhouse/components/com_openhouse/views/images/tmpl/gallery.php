@@ -16,7 +16,7 @@
 		<div class="prev-button"></div>
 		<div class="next-button"></div>
 		<? if (isset($price)): ?>
-			<div class="price"><span>$<?= $price ?></span></div>
+			<div class="price"><span><?= @format('price', $price) ?></span></div>
 		<? endif; ?>
 	</div></div>
 
