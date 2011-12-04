@@ -53,6 +53,12 @@
 		<div class="left">
 			<table style="width:300px;">
 				<tbody>
+					<? if (count($house->showings) === 0): ?>
+					<tr>
+						<td>There are currently no showings dates.</td>
+					</tr>
+					<? endif; ?>
+				
 					<? foreach ($house->showings as $showing): ?>
 					<tr>
 						<td><?= @format('named_date', $showing->start_date); ?></td>

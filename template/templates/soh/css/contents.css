@@ -51,3 +51,15 @@
 .button.red span, button.red span {
 	color: #bf1e2e;
 }
+
+.button.plain, button.plain {
+	padding: 0;
+	border-radius: 0;
+	
+	background: none;
+	border: none;
+	font-weight: normal;
+	color: #bf1e2e;
+}
+
+.button.plain:hover, button.plain:hover { text-decoration: underline; }
