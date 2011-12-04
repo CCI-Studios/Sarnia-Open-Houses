@@ -26,9 +26,12 @@
 			'price'		=> $house->price
 		)) ?>
 
-
 		<p><?= $house->address .', '. $house->getFullLocation() ?></p>
-		<p><a href="#" target="_blank" class="button"><span>Take a Virtual Tour</span></a></p>
+		<? if ($house->virtual_link): ?>
+			<p><a href="<?= str_replace('http://http://', 'http://', 'http://'.$house->virtual_link) ?>" target="_blank" class="button">
+				<span>Take a Virtual Tour</span></a>
+			</p>
+		<? endif; ?>
 		<div class="details">
 			Price: <?= $house->getPrice() ?><br>
 			Bedrooms: <?= $house->bedrooms ?><br>
