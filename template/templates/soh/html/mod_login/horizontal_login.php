@@ -1,6 +1,6 @@
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" >
 
-	<table width="100%">
+	<table style="width:100%;">
 		<tr>
 			<td valign="top">
 				<label for="modlgn-username"><?php echo JText::_('Username') ?>:</label>

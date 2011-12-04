@@ -3,7 +3,7 @@ window.addEvent('domready', function() {
 	
 	strip = function (string, s1, s2) {
 		return string.substr(s1.length, string.length - s1.length - s2.length);
-	}
+	};
 	
 	inputs.each(function (input) {
 		var prefix, suffix;

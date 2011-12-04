@@ -48,7 +48,7 @@
 		</div>
 
 		<div class="left">
-			<table width="300px">
+			<table style="width:300px;">
 				<tbody>
 					<? foreach ($house->showings as $showing): ?>
 					<tr>

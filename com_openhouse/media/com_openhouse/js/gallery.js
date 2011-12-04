@@ -102,5 +102,5 @@ window.addEvent('domready', function() {
 	$$('.openhouse-gallery').each(function(g) {
 		gallery = new CCI.OpenHouse.Gallery(g);
 		gallery.start();
-	})
-})
+	});
+});
