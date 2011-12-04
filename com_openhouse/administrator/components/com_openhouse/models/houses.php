@@ -8,6 +8,7 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		
 		$this->_state
 			->insert('openhouse_agent_id', 'int')
+			->insert('enabled', 'bool')
 			->remove('sort')->insert('sort', 'cmd', 'created_on');
 	}
 	
@@ -17,6 +18,10 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		
 		if (is_numeric($state->openhouse_agent_id)) {
 			$query->where('created_by', '=', $state->openhouse_agent_id);
+		}
+		
+		if (is_numeric($state->enabled)) {
+			$query->where('enabled', '=', $state->enabled);
 		}
 		
 		parent::_buildQueryWhere($query);
