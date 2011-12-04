@@ -2,10 +2,18 @@
 <script src="media://lib_koowa/js/koowa.js" />
 <style src="media://com_openhouse/css/openhouse.css" />
 
+<module title="" position="sidebar">
+	<?= @template('com://site/openhouse.view.agent.module', array(
+		'agent'	=> $agent
+	)) ?>
+</module>
+
 <div>
 	<h2>Editing <?= $agent->name ?>'s Profile</h2>
 
-	<form action="<?= @route('view=agent&id='. $agent->id) ?>" method="post" class="-koowa-form">
+	<form action="<?= @route('view=agent&id='. $agent->id) ?>" method="post" class="-koowa-form" enctype="multipart/form-data">
+		<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+	
 		<table class="form">
 			<tr>
 				<td align="right"><label for="field_name"><?= @text('Name') ?>:</label></td>
@@ -42,10 +50,13 @@
 				<td><?= @helper('listbox.offices', array('name' => 'openhouse_office_id')) ?></td>
 			</tr>
 	
-			<!--<div class="field"> FIXME upload profile pic
-				<label><?= @text('Upload new profile picture') ?>:</label><br>
-				<input type="file" name="profile_upload" />
-			</div>-->
+			<tr>
+				<td align="right"><label><?= @text('Profile Picture') ?>:</label></td>
+				<td>
+					<input type="file" name="fileupload" /><br/>
+					Images will be automatically resized to 193x193 and should be under 2 megabytes in size.
+				</td>
+			</tr>
 	
 			<tr class="actions">
 				<td width="100">&nbsp;</td>

@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_agents` (
 	`phone` VARCHAR(20) NOT NULL DEFAULT '',
 	`website` VARCHAR(250) NOT NULL DEFAULT '',
 	`email` VARCHAR(250) NOT NULL DEFAULT '',
+	`picture` VARCHAR(250) NOT NULL DEFAULT '',
 
 	`openhouse_office_id` BIGINT(20) NOT NULL,
 	`openhouse_company_id` BIGINT(20) NOT NULL,
