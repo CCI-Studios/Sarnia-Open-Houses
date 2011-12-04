@@ -14,15 +14,15 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 			case 'agent':
 				return false;
 			case 'house':
-				return parent::canAdd();
+				return $user->authorize('core.create', 'com_openhouse');
 			// image
 			// profile
 			case 'showing':
-				return parent::canAdd(); // FIXME any agent can create a listing for any house
+				return $user->authorize('core.create', 'com_openhouse'); // FIXME any agent can create a listing for any house
 			case 'waypoint':
 				return true;
 			default:
-				return parent::canAdd();
+				return $user->authorize('core.create', 'com_openhouse');
 		}
 	}
 	
@@ -35,9 +35,9 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 		
 		switch($name) {
 			case 'agent':
-				return ($user->id === $item->user_id) && parent::canEdit();
+				return ($user->id === $item->user_id) && $user->authorize('core.edit', 'com_openhouse');
 			case 'house':
-				return ($user->id === $item->created_by) && parent::canEdit();
+				return ($user->id === $item->created_by) && $user->authorize('core.edit', 'com_openhouse');
 			// image
 			// profile
 			case 'showing':
@@ -45,7 +45,7 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 			case 'waypoint':
 				return false;
 			default:
-				return parent::canEdit();
+				return $user->authorize('core.edit', 'com_openhouse');
 		}
 	}
 }
