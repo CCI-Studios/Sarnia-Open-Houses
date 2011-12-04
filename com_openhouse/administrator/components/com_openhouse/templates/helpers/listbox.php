@@ -75,8 +75,8 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 		
 		$options = array();
 		
-		$options[] = $this->option(array('text' => 'Recent Listings', 'value' => 'created_on'));
-		$options[] = $this->option(array('text' => 'Upcoming Listings', 'value' => 'upcoming'));
+		$options[] = $this->option(array('text' => 'Recently Listed', 'value' => 'created_on'));
+		$options[] = $this->option(array('text' => 'Upcoming Open Houses', 'value' => 'upcoming'));
 		
 		$config->options = $options;
 		return $this->optionlist($config);

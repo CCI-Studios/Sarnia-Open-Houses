@@ -9,6 +9,7 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		$this->_state
 			->insert('openhouse_agent_id', 'int')
 			->insert('enabled', 'bool')
+			->insert('past', 'bool')
 			->insert('min_price', 'int')
 			->insert('max_price', 'int')
 			->insert('city', 'string')
@@ -25,6 +26,10 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		
 		if (is_numeric($state->enabled)) {
 			$query->where('enabled', '=', $state->enabled);
+		}
+		
+		if (is_numeric($state->past) && $state->past == 1) {
+			$query->where('upcoming', '>=', date('Y-m-d'));
 		}
 		
 		if (is_numeric($state->min_price)) {

@@ -2,13 +2,13 @@
 
 	<table>
 		<tr>
-			<td align="right"><label><?= @text('Min Price') ?>:</label></td>
-			<td><input type="text" name="min_price" value="<?= KRequest::get('get.min_price', 'raw') ?>" /></td>
+			<td align="right"><label for="mod_min_price"><?= @text('Min Price') ?>:</label></td>
+			<td><input type="text" id="mod_min_price" name="min_price" value="<?= KRequest::get('get.min_price', 'raw') ?>" /></td>
 		</tr>
 
 		<tr>
-			<td align="right"><label><?= @text('Max Price') ?>:</label></td>
-			<td><input type="text" name="max_price" value="<?= KRequest::get('get.max_price', 'raw') ?>" /></td>
+			<td align="right"><label for="mod_max_price" ><?= @text('Max Price') ?>:</label></td>
+			<td><input type="text" name="max_price" id="mod_max_price" value="<?= KRequest::get('get.max_price', 'raw') ?>" /></td>
 		</tr>
 
 		<tr>

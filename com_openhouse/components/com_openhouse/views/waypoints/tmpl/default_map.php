@@ -6,6 +6,7 @@
 	$height = 193;
 	
 	$address = $waypoints->current()->house->getFullAddress();
+	$markers[] = 'color:0xff624f|'. $waypoints->current()->house->getFullAddress();
 	
 	while ($waypoints->next()) {
 		$to[] = $waypoints->current()->house->getFullAddress();
@@ -16,13 +17,13 @@
 	$map['saddr'] = $address;
 	$map['hl'] = 'en';
 	$map['t'] = 'm';
-	$map['z'] = 10;
+	$map['z'] = 12;
 	$map['daddr'] = implode(' to:', $to);
 
 	$poser_url = "http://maps.googleapis.com/maps/api/staticmap?";
 	$poser = array();
 	$poser['center'] = $address;
-	$poser['zoom'] = 10;
+	$poser['zoom'] = 12;
 	$poser['size'] = $width .'x'. $height;
 	$poser['sensor'] = 'false';
 ?>
