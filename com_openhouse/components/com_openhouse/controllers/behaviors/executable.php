@@ -48,4 +48,18 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 				return $user->authorize('core.edit', 'com_openhouse');
 		}
 	}
+	
+	public function canDelete()
+	{
+		$name = $this->getMixer()->getIdentifier()->name;
+		$item = $this->getMixer()->getModel()->getItem();
+		$user = JFactory::getUser();
+		
+		switch ($name) {
+			case 'waypoint':
+				return ($user->id === $item->created_by) && $user->authorize('core.delete', 'com_openhouse');
+			default:
+				return parent::canDelete();
+		}
+	}
 }
