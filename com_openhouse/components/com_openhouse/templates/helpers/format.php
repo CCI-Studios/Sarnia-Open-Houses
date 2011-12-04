@@ -21,6 +21,6 @@ class ComOpenhouseTemplateHelperFormat extends KTemplateHelperDefault
 			'value'	=> time(),
 		));
 		
-		return date('F j, Y', strtotime($config->value));
+		return date('D M j', strtotime($config->value));
 	}
 }
