@@ -28,7 +28,6 @@ input:invalid, textarea:invalid {
 }
 
 label {
-	font-size: 1.2em;
 	margin-right: 5px;
 }
 /* Make buttons play nice in IE:

@@ -65,14 +65,14 @@
 		</tr>
 		
 		<tr class="actions">
-			<td width="100">
+			<td width="100">&nbsp;</td>
+			<td>
 				<? if ($house->isNew()): ?>
 					<button><span>Create</span></button>
 				<? else: ?>
 					<button><span>Update</span></button>
 				<? endif; ?>
 			</td>
-			<td>&nbsp;</td>
 		</tr>
 		
 	
