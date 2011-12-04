@@ -7,6 +7,6 @@ class ComOpenhouseDatabaseRowWaypoint extends ComOpenhouseDatabaseRowRelated
 	{
 		parent::__construct($config);
 
-		$this->has_one('house');
+		$this->belongs_to('house');
 	}
 }
