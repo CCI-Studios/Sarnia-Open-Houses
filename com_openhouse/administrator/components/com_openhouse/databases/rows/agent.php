@@ -6,6 +6,8 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 	{
 		parent::__construct($config);
 
-		$this->has_many('houses');
+		$this->has_many('houses', array(
+			'local_key'	=> 'user_id'
+		));
 	}
 }
