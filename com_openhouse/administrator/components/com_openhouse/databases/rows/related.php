@@ -20,6 +20,16 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 		$this->_belongs_to = array();
 	}
 
+    /**
+     * Adds a has one relationship.
+     *
+     * $config can contain:
+     *
+     *
+     *
+     * @param $name
+     * @param null $config
+     */
 	protected function has_one($name, $config = null)
 	{
 		$model_identifier = clone $this->getIdentifier();
@@ -28,9 +38,9 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 
 		$config = new KConfig($config);
 		$config->append(array(
-			'model'			=> $model_identifier,
-			'foreign_key'	=> $model_identifier->package .'_'. $name .'_id',
-			'local_key'		=> 'id'
+			'model'	        => $model_identifier,
+			'foreign_key'   => $model_identifier->package .'_'. $name .'_id',
+			'local_key'	    => 'id'
 		));
 		$config->plural = false;
 
@@ -94,7 +104,7 @@ class ComOpenhouseDatabaseRowRelated extends KDatabaseRowDefault
 		return parent::__get($key);
 	}
 
-	protected function _getRelated($config) {
+	protected function _getRelated(KConfig $config) {
 		if (isset($config->item) || isset($config->items)) {
 			return;
 		}
