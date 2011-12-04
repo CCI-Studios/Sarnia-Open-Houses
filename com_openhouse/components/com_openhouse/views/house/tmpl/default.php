@@ -71,13 +71,20 @@
 				<? endif; ?>
 			</table>
 
-			<? if (JFactory::getUser()->guest !== 1): ?>
+			
 			<p>
-				<div class="button add_to_cart" data-id="<?= $house->id ?>" data-token="<?= JUtility::getToken() ?>">
-					<span>Add to cart</span>
-				</div>
+				<? if ($allow_waypoint): ?>
+					<? if ($has_waypoint): ?>
+						<div class="button disabled"><span>House is already in cart</span></div>
+					<? else: ?>
+						<div class="button add_to_cart" data-id="<?= $house->id ?>" data-token="<?= JUtility::getToken() ?>">
+							<span>Add to cart</span>
+						</div>
+					<? endif; ?>
+				<?  else: ?>
+					<a class="button"><span>Register to add directions</span></a>
+				<? endif; ?>
 			</p>
-			<? endif; ?>
 		</div>
 	</div>
 
