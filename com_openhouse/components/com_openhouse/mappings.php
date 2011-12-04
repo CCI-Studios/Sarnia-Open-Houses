@@ -13,6 +13,7 @@ KService::setAlias('com://site/openhouse.model.waypoints', 'com://admin/openhous
 // tables
 KService::setAlias('com://site/openhouse.database.table.agents', 'com://admin/openhouse.database.table.agents');
 KService::setAlias('com://site/openhouse.database.table.houses', 'com://admin/openhouse.database.table.houses');
+KService::setAlias('com://site/openhouse.database.table.showings', 'com://admin/openhouse.database.table.showings');
 KService::setAlias('com://site/openhouse.database.table.waypoints', 'com://admin/openhouse.database.table.waypoints');
 
 // rows

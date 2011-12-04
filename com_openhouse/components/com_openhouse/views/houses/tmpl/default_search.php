@@ -14,10 +14,7 @@
 			<td><?= @helper('listbox.locations', array('selected' => KRequest::get('get.city', 'string'), 'name' => 'city', 'value' => 'title')) ?></td>
 			
 			<td align="right"><label>Sort</label></td>
-			<td><select name="sorting">
-				<option value="created_at">Most Recent</option>
-				<option value="upcoming">Upcoming</option>
-			</select></td>
+			<td><?= @helper('listbox.houseSorting', array('selected' => KRequest::get('get.sort', 'string'))) ?></td>
 		</tr>
 	
 		<tr class="action">
