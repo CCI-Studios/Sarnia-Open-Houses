@@ -17,78 +17,65 @@
 	<? else: ?>
 
 	<? endif; ?>
-
-	<div class="field">
-		<input
-			class="inputfield"
-			placeholder="Price"
-			data-prefix="$"
-			type="text"
-			id="field_price"
-			name="price"
-			value="<?= $house->price ?>" />
-	</div>
-
-	<div class="field">
-		<input
-			class="inputfield"
-			placeholder="Bedrooms"
-			data-suffix=" Bedrooms"
-			type="text"
-			id="field_bedrooms"
-			name="bedrooms"
-			value="<?= $house->bedrooms ?>" />
-	</div>
-
-	<div class="field">
-		<input
-			class="inputfield"
-			placeholder="Bathrooms"
-			data-suffix=" Bathrooms"
-			type="text"
-			id="field_bathrooms"
-			name="bathrooms"
-			value="<?= $house->bathrooms ?>" />
-	</div>
-
-	<div class="field">
-		<input
-			class="inputfield"
-			placeholder="Address"
-			type="text"
-			id="field_address"
-			name="address"
-			value="<?= $house->address ?>" />
-	</div>
-
-	<div class="field">
-		<?= @helper('listbox.locations', array('selected' => $house->city, 'value'=>'title', 'name'=>'city')) ?>
-	</div>
-
-	<div class="field">
-		<?= @helper('listbox.provinces', array('selected' => $house->province)) ?>
-	</div>
-
-	<div class="field">
-		<input
-			class="inputfield"
-			placeholder="Postal Code"
-			type="text"
-			id="field_postal"
-			name="postal"
-			value="<?= $house->postal ?>" />
-	</div>
-
-	<div class="field">
-		<textarea name="description"><?= $house->description ?></textarea>
-	</div>
-
-	<div class="actions">
-		<? if ($house->isNew()): ?>
-			<button><span>Create</span></button>
-		<? else: ?>
-			<button><span>Update</span></button>
-		<? endif; ?>
-	</div>
+	
+	<table class="form">
+		<tr>
+			<td align="right"><label for="price_field">Price:</label></td>
+			<td><input class="inputfield" type="text" id="price_field" name="price" value="<?= $house->price ?>" /></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><label for="bedrooms_field">Bedrooms:</label></td>
+			<td><input class="inputfield" type="text" id="bedrooms_field" name="bedrooms" value="<?= $house->bedrooms ?>" /></td>
+		</tr>
+			
+		<tr>
+			<td align="right"><label for="bathrooms_field">Bathrooms:</label></td>
+			<td><input class="inputfield" type="text" id="bathrooms_field" name="bathrooms" value="<?= $house->bathrooms ?>" /></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><label for="address_field">Address:</label></td>
+			<td><input class="inputfield" type="text" id="address_field" name="address" value="<?= $house->address ?>" /></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><label for="city_field">City:</label></td>
+			<td><?= @helper('listbox.locations', array('selected' => $house->city, 'value'=>'title', 'name'=>'city')) ?></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><label for="province_field">Province:</label></td>
+			<td><?= @helper('listbox.provinces', array('selected' => $house->province)) ?></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><label for="postal_field">Postal Code:</label></td>
+			<td><input class="inputfield" type="text" id="field_postal" name="postal" value="<?= $house->postal ?>" /></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><label for="enabled_field">Listed:</label></td>
+			<td><?= @helper('select.booleanlist', array('selected' => $house->enabled, 'name' => 'enabled'))?>
+		
+		<tr>
+			<td colspan="2">
+				<textarea name="description"><?= $house->description ?></textarea>
+			</td>
+		</tr>
+		
+		<tr class="actions">
+			<td width="100">
+				<? if ($house->isNew()): ?>
+					<button><span>Create</span></button>
+				<? else: ?>
+					<button><span>Update</span></button>
+				<? endif; ?>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		
+	
+	</table>
 </form>
 

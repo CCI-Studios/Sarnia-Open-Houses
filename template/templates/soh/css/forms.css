@@ -26,6 +26,11 @@ input:invalid, textarea:invalid {
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
+
+label {
+	font-size: 1.2em;
+	margin-right: 5px;
+}
 /* Make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {
@@ -34,14 +39,14 @@ button {
 }
 
 select {
-	width: 142px;
+	width: 135px;
 }
 
 textarea, input[type=text], input[type=password] {
 	border: 1px solid #cbcbcb;
 	border-radius: 5px;
 	padding: 4px 5px;
-	width: 130px;
+	width: 125px;
 }
 
 textarea:focus, input[type=text]:focus, input[type=password]:focus {
