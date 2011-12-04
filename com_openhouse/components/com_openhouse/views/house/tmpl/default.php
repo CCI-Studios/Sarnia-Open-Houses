@@ -57,6 +57,14 @@
 					<tr>
 						<td><?= @format('named_date', $showing->start_date); ?></td>
 						<td><?= $showing->hours; ?></td>
+						<?  if ($house->isOwnable() && $house->canEdit()): ?>
+							<td>
+							<form action="<?= @route('view=showing&id='. $showing->id) ?>" method="post" class="-koowa-form">
+								<input type="hidden" name="action" value="delete" />
+								<button class="plain">Delete</button>
+							</form>
+							</td>
+						<?  endif; ?>
 					</tr>
 					<? endforeach; ?>
 				</tbody>

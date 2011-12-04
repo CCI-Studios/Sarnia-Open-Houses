@@ -56,6 +56,8 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 		$user = JFactory::getUser();
 		
 		switch ($name) {
+			case 'showing':
+				return ($user->id === $item->house->created_by);
 			case 'waypoint':
 				return ($user->id === $item->created_by) && $user->authorize('core.delete', 'com_openhouse');
 			default:
