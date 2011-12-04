@@ -2,6 +2,11 @@
 <script src="media://com_openhouse/js/dotter.js" />
 <script src="media://com_openhouse/js/handlers.js" />
 
+<module title="Directions" position="sidebar">
+	<?= @template('default_map') ?>
+	<p class="center">Click the map for directions</p>
+</module>
+
 <div>
 	<? foreach($waypoints as $wp): ?>
 	<div class="gradient">

@@ -30,4 +30,15 @@ class ComOpenHouseDatabaseRowHouse extends ComOpenhouseDatabaseRowRelated
 			return $this->city.$this->province;
 		}
 	}
+	
+	public function getFullAddress()
+	{
+		$values = array_filter(array(
+			$this->address,
+			$this->city,
+			$this->province,
+			$this->postal), 'strlen');
+		
+		return implode(', ', $values);
+	}
 }

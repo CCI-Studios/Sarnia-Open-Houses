@@ -12,4 +12,13 @@ class ComOpenhouseViewHtml extends ComDefaultViewHtml
 		), KTemplateFilter::MODE_READ, true);
 	}
 	
+	protected function _initialize(KConfig $config)
+	{
+		$config->append(array(
+	            'template_filters' => array('module'),
+		));
+	
+		parent::_initialize($config);
+	}
+	
 }
