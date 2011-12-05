@@ -3,7 +3,14 @@
 <ul class="openhouse-listings"><? foreach ($houses as $house): ?>
 	<li class="gradient">
 		<div class="image"><div>
-			<img src="images/default/home.png" />
+			<? if (count($house->images)): ?>
+				<img 
+					src="media://com_openhouse/uploads/large/<?= $house->images->current()->filename ?>"
+					width="275"
+					height="129" />
+			<? else: ?>
+				df
+			<?  endif; ?>
 			
 			<div class="price"><span>
 				<?= @format('price', $house->price) ?>

@@ -40,7 +40,7 @@
 	<p>
 		<label><?= @text('Add Picture') ?>:</label>
 		<input type="file" name="fileupload" /><br/>
-		Images will be automatically resized to 620x230 and should be under 2 megabytes in size.<br/>
+		Images will be automatically resized to 620x290 and should be under 2 megabytes in size.<br/>
 		<button><span>Save</span></button>
 	</p>
 		
