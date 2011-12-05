@@ -18,7 +18,9 @@
 	$map['hl'] = 'en';
 	$map['t'] = 'm';
 	$map['z'] = 12;
-	$map['daddr'] = implode(' to:', $to);
+	if (count($waypoints) > 1) {
+		$map['daddr'] = implode(' to:', $to);
+	}
 
 	$poser_url = "http://maps.googleapis.com/maps/api/staticmap?";
 	$poser = array();
