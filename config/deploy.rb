@@ -94,6 +94,10 @@ namespace :deploy do
       run <<-cmd
         mkdir -p #{deploy_to}/shared &&
         cd #{deploy_to}/shared &&
+        mkdir -p uploads/com_openhouse/agents &&
+        mkdir -p uploads/com_openhouse/full &&
+        mkdir -p uploads/com_openhouse/large &&
+        mkdir -p uploads/com_openhouse/small &&
         svn checkout -q #{nooku_url} nooku &&
         ./symlinker #{deploy_to}/shared/nooku #{public}
       cmd
@@ -149,6 +153,8 @@ namespace :deploy do
     extensions.each do |path|
       run "#{deploy_to}/shared/symlinker #{current_path}/#{path} #{public}"
     end
+    
+    run "ln -nfs #{deploy_to}/shared/uploads/com_openhouse #{public}/media/com_openhouse/uploads"
   end
 
   task :start do ; end
