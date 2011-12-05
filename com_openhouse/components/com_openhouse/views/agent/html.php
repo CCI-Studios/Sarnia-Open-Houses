@@ -1,10 +1,10 @@
 <?php
 
-class ComOpenhouseViewAgentHtml extends ComDefaultViewHtml
+class ComOpenhouseViewAgentHtml extends ComOpenhouseViewHtml
 {
 	
 	public function display()
-	{	
+	{
 		switch ($this->getLayout()) {
 		case 'form':
         	break;
@@ -16,24 +16,14 @@ class ComOpenhouseViewAgentHtml extends ComDefaultViewHtml
 		return parent::display();
 	}
 	
-	protected function _initialize(KConfig $config)
-    {
-        $config->append(array(
-            'template_filters' => array('module'),
-        ));
-
-        parent::_initialize($config);
-	}
-	
 	/**
-         * Setup variables for viewing a single agent.
-         */
+	 * Setup variables for viewing a single agent.
+	 */
 	private function viewAgent() {
 		$app = JFactory::getApplication();
 		$agent = $this->getModel()->getItem();
 
 		$agent->isOwnable();
-
 		$valid = $this->getModel()->isValid() === true;
 		$this->assign('valid', $valid);
 
