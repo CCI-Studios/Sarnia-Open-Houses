@@ -1,30 +1,23 @@
 /* editor content */
 .button, button {
+	display: block;
+	padding: 0 0 0 13px;
+	
+	background: url(../images/button.png) no-repeat;
+	border: 0; /* fixes borders */
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.button span, button span {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	padding: 3px;
+	padding: 14px 30px 13px 17px;
 	
-	background: #f5f5f5;
-	border: none; /* fixes borders */
-	border-radius: 5px;
-	text-decoration: none;
-	cursor: pointer;
-}
-.module.popout button,
-.module.popout .button { background: #ebebeb; }
-
-.button span, button span {
-	display: block;
-	padding: 9px 30px;
-	border-radius: 5px;
-	
-	background: -webkit-linear-gradient(bottom, #e6e6e6, #fff);
-	background: -moz-linear-gradient(bottom, #e6e6e6, #fff);
-	background: -o-linear-gradient(bottom, #e6e6e6, #fff);
-	background: -ms-linear-gradient(bottom, #e6e6e6, #fff);
-	background: linear-gradient(bottom, #e6e6e6, #fff);
-	border: 1px solid #d9d9d9;
+	background: url(../images/button.png) right -45px no-repeat;
+	/*	background-image: -webkit-linear-gradient(bottom, #e6e6e6, #fff);*/
 	font-weight: bold;
 	color: #444;
 	text-align: center;
@@ -34,13 +27,6 @@
 	text-decoration: none;
 }
 
-.button:hover span, button:hover span {
-	background: -webkit-linear-gradient(bottom, #ddd, #fff);
-	background: -moz-linear-gradient(bottom, #ddd, #fff);
-	background: -o-linear-gradient(bottom, #ddd, #fff);
-	background: -ms-linear-gradient(bottom, #ddd, #fff);
-	background: linear-gradient(bottom, #ddd, #fff);
-}
 .button.disabled span, button.disabled span {
 	background: #ddd;
 	cursor: default;
@@ -54,12 +40,8 @@
 
 .button.plain, button.plain {
 	padding: 0;
-	border-radius: 0;
-	
 	background: none;
-	border: none;
 	font-weight: normal;
 	color: #bf1e2e;
 }
-
 .button.plain:hover, button.plain:hover { text-decoration: underline; }
