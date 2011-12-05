@@ -102,7 +102,9 @@
 						</div>
 					<? endif; ?>
 				<?  else: ?>
-					<a class="button"><span>Register to add directions</span></a>
+					<a href="<?= @route('option=com_users&view=registration') ?>" class="button">
+						<span>Register to add directions</span>
+					</a>
 				<? endif; ?>
 			</p>
 		</div>
