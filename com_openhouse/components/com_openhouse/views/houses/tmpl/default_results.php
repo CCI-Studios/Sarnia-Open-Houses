@@ -9,7 +9,10 @@
 					width="275"
 					height="129" />
 			<? else: ?>
-				df
+				<img
+					src="http://dummyimage.com/275x129/f80000/ffffff&text=Coming+Soon"
+					width="275"
+					height="129" />
 			<?  endif; ?>
 			
 			<div class="price"><span>
