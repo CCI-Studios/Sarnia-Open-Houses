@@ -30,6 +30,9 @@ class ComOpenhouseViewNotificationsHtml extends ComOpenhouseViewHtml
 							->set('created_after', date('Y-m-d', strtotime("-1 day")))
 							->getList();
 			$house_count += count($houses);
+			if (!count($houses)) {
+				continue;
+			}
 			
 			$full_body = $body;
 			foreach ($houses as $house) {
