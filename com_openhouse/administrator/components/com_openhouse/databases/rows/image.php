@@ -57,6 +57,10 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 		$field = "fileupload";
 		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
 		$valid = array('jpeg', 'jpg');
+		
+		if (!isset($_FILES[$field])) {
+			return;
+		}
 	
 		$upload = $_FILES[$field];
 	

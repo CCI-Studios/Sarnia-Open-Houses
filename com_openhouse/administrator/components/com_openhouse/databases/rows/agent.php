@@ -32,6 +32,10 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 		$width = 193;
 		$height = 193;
 		
+		if (!isset($_FILES[$field])) {
+			return;
+		}
+		
 		$upload = $_FILES[$field];
 		
 		if ($upload['error'] > 0) {
@@ -76,5 +80,22 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 		imagedestroy($process);
 		imagedestroy($myImage);
 		imagedestroy($thumb);
+	}
+	
+	/**
+	* Delete saved images when deleting row data.
+	*
+	* @see KDatabaseRowTable::delete()
+	*/
+	public function delete()
+	{
+		jimport('joomla.filesystem.file');
+		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
+	
+		if (JFile::exists($path .'agent/'. $this->picture)) {
+			JFile::delete($path .'agent/'. $this->picture);
+		}
+	
+		return parent::delete();
 	}
 }

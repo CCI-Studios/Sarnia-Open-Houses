@@ -3,6 +3,7 @@
 .left { float: left; }
 .right { float: right; }
 .center { text-align: center; }
+.hidden { display: none; }
 
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
