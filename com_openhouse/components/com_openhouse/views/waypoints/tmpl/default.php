@@ -12,12 +12,9 @@
 	<div class="gradient">
 		<?= @template('com://site/openhouse.view.house.item', array('house'=>$wp->house)); ?>
 		
-		<form action="<?= @route('view=waypoint&id='. $wp->id) ?>" method="post" class="-koowa-form">
-			<input type="hidden" name="action" value="delete" />
-			
-			<button><span>Remove</span></button>	
-		</form> 
-		
+		<div class="button remove_from_cart" data-id="<?= $wp->id ?>" data-token="<?= JUtility::getToken() ?>">
+			<span>Remove from Cart</span>
+		</div>
 	</div>
 	<? endforeach; ?>
 

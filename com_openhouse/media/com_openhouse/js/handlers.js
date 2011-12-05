@@ -46,12 +46,43 @@ window.addEvent('domready', function() {
 
 
 window.addEvent('domready', function() {
-	$$('remove_from_cart').each(function(cart) {
-		if (cart.hasClass('disabled')) {
-			return;
-		}
-		
+	$$('.remove_from_cart').each(function(cart) {
 		var child, dotter, request, id;
+		id = cart.get('data-id');
+		token = cart.get('data-token');
+		child = cart.getChildren()[0];
+		child.setStyle('width', child.getStyle('width'));
+		
+		dotter = new Dotter(cart.getChildren()[0], {
+			delay: 1000,
+			dot: '.',
+			message: 'Removing'
+		});
+		
+		cart.addEvent('click', function(event) {
+			event.stop();
+			dotter.start();
+			
+			request = new Request.JSON({
+				url: 'index.php?option=com_openhouse&view=waypoint&id=' + id,
+				method: 'post',
+				data: 'action=delete&_token='+ token,
+
+				onSuccess: function(json, text) {
+					console.log(json);
+					console.log(text);
+					dotter.stop();
+					child.set('html', 'Removed');
+					cart.removeEvents('click');
+					cart.addClass('disabled');
+				},
+				onError: function(text, error) {
+					dotter.stop();
+					child.set('html', 'Error');
+				}
+			});
+			request.send();
+		});
 		
 		
 		
