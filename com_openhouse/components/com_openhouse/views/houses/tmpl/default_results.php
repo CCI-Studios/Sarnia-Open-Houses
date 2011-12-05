@@ -15,9 +15,9 @@
 					height="129" />
 			<?  endif; ?>
 			
-			<div class="price"><span>
+			<div class="price"><span><span>
 				<?= @format('price', $house->price) ?>
-			</span></div>
+			</span></span></div>
 		</div></div>
 		
 		<div class="description">
