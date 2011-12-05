@@ -27,6 +27,7 @@
 	text-decoration: none;
 }
 
+.button.disabled, button.disabled,
 .button.disabled span, button.disabled span {
 	background: #ddd;
 	cursor: default;
