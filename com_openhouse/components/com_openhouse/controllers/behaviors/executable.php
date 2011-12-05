@@ -14,15 +14,15 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 			case 'agent':
 				return false;
 			case 'house':
-				return $user->authorize('core.create', 'com_openhouse');
+				return $user->authorize('core.create', 'com_openhouse') === true;
 			// image
 			// profile
 			case 'showing':
-				return $user->authorize('core.create', 'com_openhouse'); // FIXME any agent can create a listing for any house
+				return $user->authorize('core.create', 'com_openhouse') === true;
 			case 'waypoint':
 				return true;
 			default:
-				return $user->authorize('core.create', 'com_openhouse');
+				return $user->authorize('core.create', 'com_openhouse') === true;
 		}
 	}
 	
@@ -35,17 +35,18 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 		
 		switch($name) {
 			case 'agent':
-				return ($user->id === $item->user_id) && $user->authorize('core.edit', 'com_openhouse');
+				return ($user->id === $item->user_id) && $user->authorize('core.edit', 'com_openhouse') === true;
 			case 'house':
-				return ($user->id === $item->created_by) && $user->authorize('core.edit', 'com_openhouse');
+				return ($user->id === $item->created_by) && $user->authorize('core.edit', 'com_openhouse') === true;
 			// image
-			// profile
+			case 'profile':
+				return ($user->id === $item->created_by);
 			case 'showing':
 				return false;
 			case 'waypoint':
 				return false;
 			default:
-				return $user->authorize('core.edit', 'com_openhouse');
+				return $user->authorize('core.edit', 'com_openhouse') === true;
 		}
 	}
 	
@@ -57,11 +58,11 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 		
 		switch ($name) {
 			case 'image':
-				return ($user->id === $item->house->created_by) && $user->authorize('core.delete', 'com_openhouse');
+				return ($user->id === $item->house->created_by);
 			case 'showing':
 				return ($user->id === $item->house->created_by);
 			case 'waypoint':
-				return ($user->id === $item->created_by) && $user->authorize('core.delete', 'com_openhouse');
+				return ($user->id === $item->created_by);
 			default:
 				return parent::canDelete();
 		}
