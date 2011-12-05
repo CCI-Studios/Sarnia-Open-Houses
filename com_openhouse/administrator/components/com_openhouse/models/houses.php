@@ -15,7 +15,22 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 			->insert('city', 'string')
 			->insert('province', 'string')
 			->insert('created_after', 'datetime')
-			->remove('sort')->insert('sort', 'cmd', 'created_on');
+			->insert('hasShowing', 'boolean')
+			->remove('sort')->insert('sort', 'cmd', 'upcoming')
+			->remove('direction')->insert('direction', 'cmd', 'asc');
+	}
+	
+	protected function _buildQueryOrder(KDatabaseQuery $query)
+	{
+		$state = $this->_state;
+		
+		if ($state->sort === 'created_on') {
+			$state->direction = 'desc';
+		} else {
+			$state->direction = 'asc';
+		}
+		
+		parent::_buildQueryOrder($query);
 	}
 	
 	protected function _buildQueryWhere(KDatabaseQuery $query)
@@ -52,6 +67,10 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		
 		if ($state->created_after) {
 			$query->where('created_on', '>=', $state->created_after);
+		}
+		
+		if ($state->hasShowing === true) {
+			$query->where('upcoming', '>=', date('Y-m-d'));
 		}
 		
 		parent::_buildQueryWhere($query);

@@ -21,7 +21,6 @@ class ComOpenhouseDatabaseTableShowings extends KDatabaseTableDefault
 	
 	public function updateUpcoming(KCommandContext $context)
 	{
-		echo "<pre>";
 		$showing = $context->data;
 		$house = $showing->house;
 		$table = $showing->getTable();
