@@ -13,6 +13,8 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 			->insert('min_price', 'int')
 			->insert('max_price', 'int')
 			->insert('city', 'string')
+			->insert('province', 'string')
+			->insert('created_after', 'datetime')
 			->remove('sort')->insert('sort', 'cmd', 'created_on');
 	}
 	
@@ -42,6 +44,14 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		
 		if ($state->city) {
 			$query->where('city', '=', $state->city);
+		}
+		
+		if ($state->province) {
+			$query->where('province', '=', $state->province);
+		}
+		
+		if ($state->created_after) {
+			$query->where('created_on', '>=', $state->created_after);
 		}
 		
 		parent::_buildQueryWhere($query);

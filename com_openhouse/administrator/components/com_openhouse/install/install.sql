@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_offices` (
 CREATE TABLE IF NOT EXISTS `#__openhouse_houses` (
 	`openhouse_house_id` SERIAL,
 
-	`price` VARCHAR(15) NOT NULL,
+	`price` MEDIUMINT NOT NULL,
 	`bedrooms` VARCHAR(10) NOT NULL,
 	`bathrooms` VARCHAR(10) NOT NULL,
 	`address` VARCHAR(30) NOT NULL,
