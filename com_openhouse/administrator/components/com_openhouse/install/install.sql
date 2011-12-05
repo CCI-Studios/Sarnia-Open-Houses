@@ -71,3 +71,11 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_showings` (
 
 	`openhouse_house_id` BIGINT(20) UNSIGNED NOT NULL
 ) ENGINE=MyISAM;
+
+CREATE TABLE `#__openhouse_waypoints` (
+  `openhouse_waypoint_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_by` int(11) unsigned NOT NULL,
+  `openhouse_house_id` bigint(20) unsigned NOT NULL,
+  `ordering` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`openhouse_waypoint_id`)
+) ENGINE=MyISAM;
