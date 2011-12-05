@@ -79,3 +79,16 @@ CREATE TABLE `#__openhouse_waypoints` (
   `ordering` int(11) unsigned NOT NULL,
   PRIMARY KEY (`openhouse_waypoint_id`)
 ) ENGINE=MyISAM;
+
+CREATE TABLE `#__openhouse_profiles` (
+	`openhouse_profile_id` SERIAL,
+	
+	`min_price` INT(11) UNSIGNED NOT NULL,
+	`max_price` INT(11) UNSIGNED NOT NULL,
+	`city`	VARCHAR(20) NOT NULL,
+	`province` VARCHAR(40) NOT NULL,
+	`notifications` TINYINT(1) NOT NULL DEFAULT '1',
+	
+	`created_by` INT(11) UNSIGNED NOT NULL,
+	UNIQUE KEY `created_by` (`created_by`)
+) ENGINE=MyISAM;

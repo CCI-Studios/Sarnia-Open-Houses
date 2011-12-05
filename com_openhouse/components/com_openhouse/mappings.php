@@ -7,6 +7,7 @@ KService::setAlias('com://site/openhouse.template.helper.listbox', 'com://admin/
 KService::setAlias('com://site/openhouse.model.agents', 'com://admin/openhouse.model.agents');
 KService::setAlias('com://site/openhouse.model.houses', 'com://admin/openhouse.model.houses');
 KService::setAlias('com://site/openhouse.model.images', 'com://admin/openhouse.model.images');
+KService::setAlias('com://site/openhouse.model.profiles', 'com://admin/openhouse.model.profiles');
 KService::setAlias('com://site/openhouse.model.showings', 'com://admin/openhouse.model.showings');
 KService::setAlias('com://site/openhouse.model.waypoints', 'com://admin/openhouse.model.waypoints');
 
