@@ -55,6 +55,17 @@
 		</tr>
 		
 		<tr>
+			<td align="right"><label for="virtual_link_field">Virtual Tour:</label></td>
+			<td><input 
+					class="inputfield" 
+					type="text" 
+					id="virtual_link_field" 
+					name="virtual_link"
+					placeholder="http://site.com"
+					value="<?= $house->virtual_link ?>" /></td>
+		</tr>
+		
+		<tr>
 			<td align="right"><label for="enabled_field">Listed:</label></td>
 			<td><?= @helper('select.booleanlist', array('selected' => $house->enabled, 'name' => 'enabled'))?>
 		
