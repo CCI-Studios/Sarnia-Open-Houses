@@ -1,38 +1,37 @@
 <? defined('KOOWA') or die('Nooku is not installed') ?>
 <?= @helper('behavior.mootools') ?>
 <script src="media://lib_koowa/js/koowa.js" />
+<style src="media://lib_koowa/css/koowa.css" />
 
 <h2>Images for <?= $house->address ?></h2>
 
-<table style="width: 300px;">
-	<thead>
-		<tr>
-			<th width="50">Preview</th>
-			<th width="50">Order</th>
-			<th width="75">Delete</th>
-		</tr>
-	</thead>
-	
-	<tbody>
-		<? foreach ($images as $image): ?>
-		<tr>
-			<td align="center"><img src="media://com_openhouse/uploads/small/<?= $image->filename ?>" class="bordered left" /></td>
-			<td align="center">
-				<form action="<?= @route('view=images') ?>" method="get" class="-koowa-grid"> 
-					<?= @helper('grid.order', array('row' => $image)) ?>
-				</form>
-			</td>
-			<td align="center">
-				<form action="<?= @route('view=image&id='. $image->id) ?>" method="post">
-					<input type="hidden" name="action" value="delete" />
-				
-					<button class="plain">Permanently Delete</button>
-				</form>
-			</td>
-		</tr>
-		<? endforeach; ?>
-	</tbody>
-</table>
+<form action="<?= @route('view=images') ?>" method="get" class="-koowa-grid">
+	<table style="width: 300px;">
+		<thead>
+			<tr>
+				<th width="50">Preview</th>
+				<th width="50">Order</th>
+				<th width="75">Delete</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<? foreach ($images as $image): ?>
+			<tr>
+				<td align="center">
+					<div class="hidden"><?= @helper('grid.checkbox', array('row'=>$image))?></div>
+					<img src="media://com_openhouse/uploads/small/<?= $image->filename ?>" class="bordered left" />
+				</td>
+				<td align="center"><?= @helper('grid.order', array('row' => $image)) ?></td>
+				<td align="center">
+					<div class="button plain"
+						data-action="delete">Permanently Delete</div>
+				</td>
+			</tr>
+			<? endforeach; ?>
+		</tbody>
+	</table>
+</form>
 
 <form action="<?= @route('view=image&id=') ?>" method="post" class="-koowa-form" enctype="multipart/form-data">
 	<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
