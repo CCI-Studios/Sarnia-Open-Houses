@@ -1,3 +1,7 @@
+<? defined('KOOWA') or die('Nooku not installed'); ?>
+<?= @helper('behavior.mootools'); ?>
+<script src="media://lib_koowa/js/koowa.js" />
+
 <h2>Updating Profile for <?= $user->name ?></h2>
 
 <form action="<?= @route('view=profile&id='. $profile->id)?>" method="post" class="-koowa-form">

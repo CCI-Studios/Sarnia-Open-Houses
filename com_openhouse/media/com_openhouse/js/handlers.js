@@ -22,7 +22,7 @@ window.addEvent('domready', function() {
 			dotter.start();
 			
 			request = new Request.JSON({
-				url: 'index.php?option=com_openhouse&view=waypoint',
+				url: 'index.php?option=com_openhouse&view=waypoint&format=json',
 				method: 'post',
 				data: 'action=save&ordering=1&openhouse_house_id='+ id +'&_token='+ token,
 
@@ -64,7 +64,7 @@ window.addEvent('domready', function() {
 			dotter.start();
 			
 			request = new Request.JSON({
-				url: 'index.php?option=com_openhouse&view=waypoint&id=' + id,
+				url: 'index.php?option=com_openhouse&view=waypoint&format=json&id=' + id,
 				method: 'post',
 				data: 'action=delete&_token='+ token,
 

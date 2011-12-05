@@ -1,6 +1,8 @@
 /* editor content */
 .button, button {
-	display: block;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 	padding: 0 0 0 13px;
 	
 	background: url(../images/button.png) no-repeat;
@@ -11,9 +13,7 @@
 }
 
 .button span, button span {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	display: block;
 	padding: 14px 30px 13px 17px;
 	
 	background: url(../images/button.png) right -45px no-repeat;
