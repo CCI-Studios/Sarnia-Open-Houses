@@ -14,10 +14,12 @@
 
 #menu {
 	height: 49px;
-	margin: 0 -15px;
-	padding: 1px 30px 11px;
+	padding: 1px 45px 11px;
 	position: relative;
+	left: -15px;
 	z-index: 2;
+	zoom: 1;
+	width: 900px;
 	
 	background: url(../images/menu-bg.png) no-repeat;
 }
@@ -26,8 +28,6 @@
 	background: teal;	
 	margin-bottom: 25px;
 	border-radius: 0 0 5px 5px;
-	
-	min-height: 150px; /* FIXME remove */
 }
 
 #body {
