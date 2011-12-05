@@ -22,6 +22,11 @@ class ComOpenhouseControllerProfile extends ComDefaultControllerDefault
 		$profile = $this->getService('com://site/openhouse.model.profiles')
 						->set('created_by', $user->id)
 						->getItem();
+		
+		if ($profile->isNew()) {
+			$profile->created_by = $user->id;
+			$profile->save();
+		}		
 
 		if ($profile) {
 			$app->redirect('index.php?option=com_openhouse&view=profile&id='. $profile->id);
