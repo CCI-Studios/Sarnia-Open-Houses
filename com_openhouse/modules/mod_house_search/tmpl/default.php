@@ -22,7 +22,7 @@
 
 		<tr>
 			<td>&nbsp;</td>
-			<td><button class="red"><span>Search</span></button></td>
+			<td><button type="submit" class="red"><span>Search</span></button></td>
 		</tr>
 	</table>
 </form>

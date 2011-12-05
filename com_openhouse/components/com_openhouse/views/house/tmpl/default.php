@@ -70,7 +70,7 @@
 							<td>
 							<form action="<?= @route('view=showing&id='. $showing->id) ?>" method="post" class="-koowa-form">
 								<input type="hidden" name="action" value="delete" />
-								<button class="plain">Delete</button>
+								<button type="submit" class="plain">Delete</button>
 							</form>
 							</td>
 						<?  endif; ?>

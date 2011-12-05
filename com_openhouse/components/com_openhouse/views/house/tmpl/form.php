@@ -79,9 +79,9 @@
 			<td width="100">&nbsp;</td>
 			<td>
 				<? if ($house->isNew()): ?>
-					<button><span>Create</span></button>
+					<button type="submit"><span>Create</span></button>
 				<? else: ?>
-					<button><span>Update</span></button>
+					<button type="submit"><span>Update</span></button>
 				<? endif; ?>
 			</td>
 		</tr>

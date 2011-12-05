@@ -20,7 +20,7 @@
 	
 		<tr class="action">
 			<td width="100">&nbsp;</td>
-			<td><button><span>Submit</span></button></td>
+			<td><button type="submit"><span>Submit</span></button></td>
 		</tr>
 	</table>
 

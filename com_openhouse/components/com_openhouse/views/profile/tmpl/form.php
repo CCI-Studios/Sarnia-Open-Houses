@@ -29,7 +29,7 @@
 		
 		<tr>
 			<td width="150">&nbsp;</td>
-			<td><button><span>Save</span></button> or <a class="button" href="<?= @route('view=profile') ?>"><span>Go To Profile</span></a></td>
+			<td><button type="submit"><span>Save</span></button> or <a class="button" href="<?= @route('view=profile') ?>"><span>Go To Profile</span></a></td>
 		</tr>
 	</table>
 </form>
