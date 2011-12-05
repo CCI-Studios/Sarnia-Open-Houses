@@ -17,6 +17,10 @@
 	color: #807f7f;
 }
 
+.module button span, .module .button span {
+	padding: 14px 20px 16px 7px;
+}
+
 /* @group popout */
 .module.popout {
 	margin: 0 -13px 0 -38px;

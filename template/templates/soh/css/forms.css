@@ -37,15 +37,20 @@ button {
   overflow: visible;
 }
 
-select {
-	width: 135px;
-}
+select { width: 135px; }
+.ie7 select { width: 125px; }
+
 
 textarea, input[type=text], input[type=password] {
 	border: 1px solid #cbcbcb;
 	border-radius: 5px;
 	padding: 4px 5px;
 	width: 125px;
+}
+
+.ie7 textarea, .ie7 input[type=text],
+.ie7 input[type=password] {
+	width: 115px;
 }
 
 textarea:focus, input[type=text]:focus, input[type=password]:focus {
