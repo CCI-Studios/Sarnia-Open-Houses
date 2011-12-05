@@ -25,6 +25,9 @@
 			'images'	=> $house->images,
 			'price'		=> $house->price
 		)) ?>
+		<? if ($house->isOwnable() && $house->canEdit()): ?>
+			<p><a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit Gallery</a></p>
+		<? endif; ?>
 
 		<p><?= $house->address .', '. $house->getFullLocation() ?></p>
 		<? if ($house->virtual_link): ?>
