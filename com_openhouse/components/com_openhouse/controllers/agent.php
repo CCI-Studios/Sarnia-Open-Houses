@@ -21,15 +21,19 @@ class ComOpenhouseControllerAgent extends ComDefaultControllerDefault
 
 	public function redirectProfile(KCommandContext $context)
 	{
-		if (is_numeric(KRequest::get('get.id', 'int'))) {
+		if (is_numeric(KRequest::get('get.id', 'int')) || 
+			is_numeric(KRequest::get('get.user_id', 'int'))) {
 			return;
 		}
 
 		$app = JFactory::getApplication();
-		$self = $this->getService('com://site/openhouse.model.agents')->getMe();
+		$user = JFactory::getUser();
+		$agent = $this->getService('com://site/openhouse.model.agents')
+						->set('user_id', $user->id)
+						->getItem();
 
-		if ($self) {
-			$app->redirect('index.php?option=com_openhouse&view=agent&id='. $self->id);
+		if ($agent) {
+			$app->redirect('index.php?option=com_openhouse&view=agent&id='. $agent->id);
 		} else {
 			$app->redirect('index.php', 'Agent not found.');
 		}

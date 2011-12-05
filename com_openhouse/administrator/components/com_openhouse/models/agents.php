@@ -18,19 +18,7 @@ class ComOpenhouseModelAgents extends ComDefaultModelDefault
 
 		parent::_buildQueryWhere($query);
 	}
-
-	public function getMe()
-	{
-		$user = JFactory::getUser();
-
-		if ($user->guest) {
-			return null;
-		}
-
-		$model = $this->getService($this->getIdentifier());
-		return $model->set('user_id', $user->id)->getItem();
-	}
-
+	
 	public function isValid()
 	{
 		$item = $this->getItem();

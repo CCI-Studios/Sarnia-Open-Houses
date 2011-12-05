@@ -11,4 +11,4 @@
 	<p>You are looking for houses is <?= $profile->city?>, <?= $profile->province ?></p>
 <? endif; ?>
 
-<p><a href="<?= @route('view=profile&layout=form')?>">Update your profile</a></p>
+<p><a href="<?= @route('view=profile&layout=form&id='. $profile->id)?>">Update your profile</a></p>
