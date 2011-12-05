@@ -96,7 +96,7 @@ JHtml::_('behavior.mootools');
 		</div></div></div>
 		
 		<div id="copyright">
-			<div class="right">Site by <a href="http://ccistudios.com">CCI Studios</a></div>
+			<div class="right">Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></div>
 			<div class="left">&copy; Sarnia Open House <?php echo date('Y') ?>. All Rights Reserved.</div>
 			
 			<div class="clear"></div>
