@@ -22,6 +22,7 @@
 	color: #444;
 	text-align: center;
 }
+.ie7 button span { background: url(../images/button.png) right -47px no-repeat; }
 
 .button:hover, button:hover {
 	text-decoration: none;
