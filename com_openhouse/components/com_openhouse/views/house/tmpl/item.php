@@ -6,7 +6,7 @@
 		style="margin-right: 10px;" />
 <? else: ?>
 	<img
-		src="http://dummyimage.com/75x35/f80000/ffffff&text=Coming+Soon"
+		src="media://com_openhouse/images/placeholder.jpg"
 		width="75"
 		class="left bordered"
 		style="margin-right: 10px;" />

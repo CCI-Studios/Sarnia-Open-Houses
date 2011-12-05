@@ -10,7 +10,7 @@
 					height="129" />
 			<? else: ?>
 				<img
-					src="http://dummyimage.com/275x129/f80000/ffffff&text=Coming+Soon"
+					src="media://com_openhouse/images/placeholder.jpg"
 					width="275"
 					height="129" />
 			<?  endif; ?>
