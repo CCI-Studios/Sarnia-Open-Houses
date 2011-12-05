@@ -73,7 +73,7 @@
 
 .openhouse-gallery li {
 	display: inline-block;
-	*display: block;
+	*display: inline;
 	*zoom: 1;
 	margin: 0 5px;
 	padding: 2px;
