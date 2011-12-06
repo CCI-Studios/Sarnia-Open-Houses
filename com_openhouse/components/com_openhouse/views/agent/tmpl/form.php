@@ -9,7 +9,7 @@
 </module>
 
 <div>
-	<h2>Editing <?= $agent->name ?>'s Profile</h2>
+	<h2>Editing Profile of <?= $agent->name ?></h2>
 
 	<form action="<?= @route('view=agent&id='. $agent->id) ?>" method="post" class="-koowa-form" enctype="multipart/form-data">
 		<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
@@ -54,7 +54,8 @@
 				<td align="right"><label><?= @text('Profile Picture') ?>:</label></td>
 				<td>
 					<input type="file" name="fileupload" /><br/>
-					Images will be automatically resized to 193x193 and should be under 2 megabytes in size.
+					Images will be automatically resized to 193x193 and should be under 2 megabytes in size.<br/>
+					Images should be jpeg files.
 				</td>
 			</tr>
 	
