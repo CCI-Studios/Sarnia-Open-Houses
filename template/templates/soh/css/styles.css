@@ -53,6 +53,7 @@ dd.notice {
 	background-image: -o-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
 	background-image: -ms-linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
 	background-image: linear-gradient(bottom, #e5e5e5, #fff 2px, #f8f8f8 3px, #fff 20px);
+	zoom: 1;
 }
 
 .bordered {
