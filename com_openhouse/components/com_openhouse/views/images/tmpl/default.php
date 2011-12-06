@@ -1,5 +1,6 @@
 <? defined('KOOWA') or die('Nooku is not installed') ?>
 <?= @helper('behavior.mootools') ?>
+<?= @helper('behavior.validator') ?>
 <script src="media://lib_koowa/js/koowa.js" />
 <style src="media://lib_koowa/css/koowa.css" />
 
@@ -39,7 +40,7 @@
 	
 	<p>
 		<label><?= @text('Add Picture') ?>:</label>
-		<input type="file" name="fileupload" /><br/>
+		<input type="file" name="fileupload" class="required" /><br/>
 		Images will be automatically resized to 620x290 and should be under 2 megabytes in size.<br/>
 		<button type="submit"><span>Save</span></button>
 	</p>
