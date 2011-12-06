@@ -70,9 +70,8 @@
 			<td><?= @helper('select.booleanlist', array('selected' => $house->enabled, 'name' => 'enabled'))?>
 		
 		<tr>
-			<td colspan="2">
-				<textarea name="description"><?= $house->description ?></textarea>
-			</td>
+			<td align="right" valign="top"><label for="description_field">Description:</label></td>
+			<td><textarea name="description" id="description_field"><?= $house->description ?></textarea></td>
 		</tr>
 		
 		<tr class="actions">
