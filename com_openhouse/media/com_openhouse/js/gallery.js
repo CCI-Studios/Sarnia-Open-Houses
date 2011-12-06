@@ -9,7 +9,7 @@ CCI.OpenHouse.Gallery = new Class({
 		wrap: true,
 		
 		delay: 5000,
-		duration: 1000,
+		duration: 1000
 		//onReady
 		//onChangeStart
 		//onChangeDone
