@@ -36,7 +36,10 @@ class ComOpenhouseViewNotificationsHtml extends ComOpenhouseViewHtml
 			
 			$full_body = $body;
 			foreach ($houses as $house) {
-				$full_body .= "<li><a href=\"". JRoute::_('index.php?option=com_openhouse&view=house&id='. $house->id) ."\">{$house->address}, \${$house->price}</a></li>\n";
+				$full_body .= "<li><a href=\"". 
+								JURI::base(). 
+								'index.php?option=com_openhouse&view=house&id='. $house->id
+								."\">{$house->address}, \${$house->price}</a></li>\n";
 			}
 			$full_body .= $signature;
 			$full_body = str_replace(array('{{NAME}}'), array($user->name), $full_body);
