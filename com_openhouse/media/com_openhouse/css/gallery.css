@@ -57,11 +57,11 @@
 }
 .openhouse-gallery .prev-button {
 	background: url(../images/prev-button.png) no-repeat;
-	left: -10px;
+	left: -11px;
 }
 .openhouse-gallery .next-button {
 	background: url(../images/next-button.png) no-repeat;
-	right: -10px;
+	right: -11px;
 }
 
 .openhouse-gallery ul {
