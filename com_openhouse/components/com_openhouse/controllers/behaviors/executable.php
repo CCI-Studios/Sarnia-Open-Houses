@@ -2,9 +2,6 @@
 
 class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehaviorExecutable
 {
-
-	
-	
 	public function canAdd() {
 		$name = $this->getMixer()->getIdentifier()->name;
 		$item = $this->getMixer()->getModel()->getItem();
