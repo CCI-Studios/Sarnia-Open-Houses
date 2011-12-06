@@ -9,7 +9,7 @@ window.addEvent('domready', function() {
 		id = cart.get('data-id');
 		token = cart.get('data-token');
 		child = cart.getChildren()[0];
-		child.setStyle('width', child.getStyle('width'));
+		child.setStyle('width', 10 + parseInt(child.getStyle('width'), 10));
 		
 		dotter = new Dotter(cart.getChildren()[0], {
 			delay: 1000,
