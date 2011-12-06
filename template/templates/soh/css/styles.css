@@ -70,3 +70,18 @@ dd.notice {
 	clear: both;
 	visibility: hidden;
 }
+
+
+/* @group Tooltips */
+.tip-wrap .tip {
+	padding: 5px 10px;
+	border-radius: 10px;
+	max-width: 300px;
+	
+	background: #fff;
+	border: 1px solid #f80001;
+	box-shadow: 0 0 5px #333;
+}
+
+.tip-wrap .tip .tip-title { font-weight: bold; }
+/* @end */
