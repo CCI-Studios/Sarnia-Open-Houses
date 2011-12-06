@@ -45,7 +45,9 @@
 	)) ?>
 
 	<? if ($valid): ?>
-		<p><a href="<?= @route('view=house&layout=form') ?>">Add new house listing</a></p>
+		<p><a href="<?= @route('view=house&layout=form') ?>" class="button"><span>
+			Add new house listing
+		</span></a></p>
 	<? else: ?>
 		<p>You must <a href="<?= @route('view=agent&layout=form&id='. $agent->id) ?>">complete you profile</a> before creating a new listing.</p>
 	<? endif; ?>
