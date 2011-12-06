@@ -45,6 +45,7 @@
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
+	border-right: 1px solid transparent;
 }
 
 .moduletable.hmenu li > a,
