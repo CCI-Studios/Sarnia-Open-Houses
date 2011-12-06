@@ -20,7 +20,7 @@
 			<tr>
 				<td align="center">
 					<div class="hidden"><?= @helper('grid.checkbox', array('row'=>$image))?></div>
-					<img src="media://com_openhouse/uploads/small/<?= $image->filename ?>" class="bordered left" />
+					<img src="media://com_openhouse/uploads/small/<?= $image->filename ?>" class="bordered" />
 				</td>
 				<td align="center"><?= @helper('grid.order', array('row' => $image)) ?></td>
 				<td align="center">
