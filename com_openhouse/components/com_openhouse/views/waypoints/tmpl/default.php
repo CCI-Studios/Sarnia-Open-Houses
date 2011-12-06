@@ -33,7 +33,7 @@
 				<div class="hidden"><?= @helper('grid.checkbox', array('row' => $wp)) ?></div>
 				
 			 	<div class="button" data-action="delete">
-					<span>Remove from Cart</span>
+					<span>Remove Bookmark</span>
 				</div>
 			</td>
 		</tr>
@@ -42,7 +42,7 @@
 		<? if (!count($waypoints)): ?>
 		<tr>
 			<td colspan="3">
-				<p>There are no houses in your cart.</p>
+				<p>You have no bookmarks.</p>
 			</td>
 		</tr>
 		<? endif; ?>

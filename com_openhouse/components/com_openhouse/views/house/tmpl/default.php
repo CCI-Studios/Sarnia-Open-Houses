@@ -95,10 +95,10 @@
 			<p>
 				<? if ($allow_waypoint): ?>
 					<? if ($has_waypoint): ?>
-						<div class="button disabled"><span>House is already in cart</span></div>
+						<div class="button disabled"><span>House is already bookmarked</span></div>
 					<? else: ?>
 						<div class="button add_to_cart" data-id="<?= $house->id ?>" data-token="<?= JUtility::getToken() ?>">
-							<span>Add to cart</span>
+							<span>Bookmark house</span>
 						</div>
 					<? endif; ?>
 				<?  else: ?>
