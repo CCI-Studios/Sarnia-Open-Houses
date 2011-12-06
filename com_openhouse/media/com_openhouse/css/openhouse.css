@@ -43,12 +43,12 @@ dl.data-set dd {
 
 /* @group house listing */
 .com_openhouse .details {
+	width: 150px;
 	float: right;
-	width: 100px;
+	margin: 0 0 5px 5px;
 }
 
 .com_openhouse .description {
-	margin-right: 100px;
 }
 
 .com_openhouse .map {
