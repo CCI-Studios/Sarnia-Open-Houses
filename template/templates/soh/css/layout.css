@@ -28,6 +28,8 @@
 	background: teal;	
 	margin-bottom: 25px;
 	border-radius: 0 0 5px 5px;
+	
+	behavior: url(/templates/soh/resources/PIE.htc);
 }
 
 #body {
@@ -42,6 +44,9 @@
 
 	background: #f7f7f7;
 	border: 1px solid #d8d8d8;
+	
+	behavior: url(/templates/soh/resources/PIE.htc);
+	position: relative;
 }
 #body > div > div {
 	border-radius: 5px;
@@ -52,6 +57,9 @@
 	background-image: -ms-linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
 	background-image: linear-gradient(left, #fff, #fff 700px, #ececec 701px, #fdfdfd 702px, #f8f8f8 703px, #f8f8f8);
 	border: 1px solid #e5e5e5;
+	
+	behavior: url(/templates/soh/resources/PIE.htc);
+	position: relative;
 }
 
 #contents {

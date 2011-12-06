@@ -60,6 +60,9 @@ dd.notice {
 	padding: 3px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+	
+	behavior: url(/templates/soh/resources/PIE.htc);
+	position: relative;
 }
 
 .clearfix { *zoom: 1; *display: block; }
@@ -81,6 +84,9 @@ dd.notice {
 	background: #fff;
 	border: 1px solid #f80001;
 	box-shadow: 0 0 5px #333;
+	
+	behavior: url(/templates/soh/resources/PIE.htc);
+	position: relative;
 }
 
 .tip-wrap .tip .tip-title { font-weight: bold; }
