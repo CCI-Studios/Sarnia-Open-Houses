@@ -62,8 +62,8 @@
 			<tr class="actions">
 				<td width="100">&nbsp;</td>
 				<td>
-					<button type="submit"><span>Submit</span></button>
-					<a href="<?= @route('view=agent&id='. $agent->id) ?>" class="button"><span>Done</span></a>
+					<button type="submit"><span>Save</span></button>
+					<a href="<?= @route('view=agent&id='. $agent->id) ?>" class="button"><span>Cancel</span></a>
 				</td>
 			</tr>
 		</table>

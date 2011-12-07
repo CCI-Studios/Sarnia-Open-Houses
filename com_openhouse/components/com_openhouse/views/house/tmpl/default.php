@@ -81,7 +81,7 @@
 					<tr>
 						<td colspan="2">
 							<a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">
-								Add New Listing
+								Schedule your Open House
 							</a>
 						</td>
 					</tr>

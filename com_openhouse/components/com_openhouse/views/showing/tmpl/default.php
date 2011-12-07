@@ -9,7 +9,7 @@
 
 	<table class="form">
 		<tr>
-			<td align="right"><label for="start_date_field">Start Date:</label></td>
+			<td align="right"><label for="start_date_field">Open House date:</label></td>
 			<td><?= JHtml::_('calendar', $showing->start_date, 'start_date', 'start_date', '%Y-%m-%d'); ?></td>
 		</tr>
 		
@@ -19,8 +19,8 @@
 		</tr>
 	
 		<tr class="action">
-			<td width="100">&nbsp;</td>
-			<td><button type="submit"><span>Submit</span></button></td>
+			<td width="125Ï2">&nbsp;</td>
+			<td><button type="submit"><span>Save</span></button></td>
 		</tr>
 	</table>
 
