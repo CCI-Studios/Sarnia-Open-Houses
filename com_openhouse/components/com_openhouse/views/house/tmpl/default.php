@@ -14,10 +14,10 @@
 	<ul>
 		<li><a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit your listing details</a></li>
 		<li><a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit your gallery</a></li>
-		<li><a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">Schedule your Open House</a></li>
+		<li><a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">Schedule your open house</a></li>
 	</ul>
 	<p>Please note, your listing will not appear on the site unless you have at least
-		one open house date that has passed.</p>
+		one open house date that has not passed.</p>
 </module>
 <? endif; ?>
 
@@ -68,7 +68,7 @@
 				<tbody>
 					<? if (count($house->showings) === 0): ?>
 					<tr>
-						<td>There are currently no showings dates.</td>
+						<td>There are currently no open house dates.</td>
 					</tr>
 					<? endif; ?>
 				
@@ -93,7 +93,7 @@
 					<tr>
 						<td colspan="2">
 							<a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">
-								Schedule your Open House
+								Schedule your open house
 							</a>
 						</td>
 					</tr>
