@@ -2,12 +2,24 @@
 <script src="media://com_openhouse/js/dotter.js" />
 <script src="media://com_openhouse/js/handlers.js" />
 
-
 <module title="" position="sidebar">
 	<?= @template('com://site/openhouse.view.agent.module', array(
 		'agent'	=> $house->agent
 	)) ?>
 </module>
+
+<? if ($house->isOwnable() && $house->canEdit()): ?>
+<module title="What's Next" position="sidebar" params="moduleclass_sfx= important">
+	<p>Now that you've created your house listing, what's next?</p>
+	<ul>
+		<li><a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit your listing details</a></li>
+		<li><a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit your gallery</a></li>
+		<li><a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">Schedule your Open House</a></li>
+	</ul>
+	<p>Please note, your listing will not appear on the site unless you have at least
+		one open house date that has passed.</p>
+</module>
+<? endif; ?>
 
 <div class="com_openhouse">
 	<div class="padded gradient clearfix">

@@ -34,6 +34,13 @@
 }
 /* @end */
 
+/* @group important */
+.module.important h3 {
+	color: #b00200;
+}
+
+/* @end */
+
 /* @group hmenu */
 .moduletable.hmenu ul {
 	margin: 0;
