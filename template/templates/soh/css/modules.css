@@ -1,6 +1,11 @@
 .moduletable, .module {
 }
 
+.module + .module,
+.moduletable + .moduletable {
+	margin-top: 1em;
+}
+
 .moduletable h3, .module h3 {
 	margin: 0 0 15px;
 	padding-bottom: 22px;
