@@ -27,8 +27,6 @@ window.addEvent('domready', function() {
 				data: 'action=save&ordering=1&openhouse_house_id='+ id +'&_token='+ token,
 
 				onSuccess: function(json, text) {
-					console.log(json);
-					console.log(text);
 					dotter.stop();
 					child.set('html', 'Added');
 					cart.removeEvents('click');
@@ -69,8 +67,6 @@ window.addEvent('domready', function() {
 				data: 'action=delete&_token='+ token,
 
 				onSuccess: function(json, text) {
-					console.log(json);
-					console.log(text);
 					dotter.stop();
 					child.set('html', 'Removed');
 					cart.removeEvents('click');
