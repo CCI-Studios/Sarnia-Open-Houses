@@ -19,8 +19,9 @@
 			</td>
 			
 			<td valign="center">
-				or <a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
-					<?php echo JText::_('Register Now'); ?></a>
+				or <a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>"><span>
+					<?php echo JText::_('Create a Profile'); ?>
+				</span></a>
 			</td>
 		</tr>
 	</table>
