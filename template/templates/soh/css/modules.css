@@ -1,8 +1,7 @@
 .moduletable, .module {
 }
 
-.module + .module,
-.moduletable + .moduletable {
+#sidebar .module + #sidebar .module {
 	margin-top: 1em;
 }
 
