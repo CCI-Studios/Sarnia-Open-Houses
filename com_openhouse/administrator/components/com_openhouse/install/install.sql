@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_houses` (
 	`bedrooms` VARCHAR(10) NOT NULL,
 	`bathrooms` VARCHAR(10) NOT NULL,
 	`address` VARCHAR(30) NOT NULL,
-	`city` VARCHAR(20) NOT NULL,
+	`city` VARCHAR(50) NOT NULL,
 	`province` VARCHAR(40) NOT NULL,
 	`virtual_link` VARCHAR(250) NOT NULL,
 	`postal` VARCHAR(20) NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE `#__openhouse_profiles` (
 	
 	`min_price` INT(11) UNSIGNED NOT NULL,
 	`max_price` INT(11) UNSIGNED NOT NULL,
-	`city`	VARCHAR(20) NOT NULL,
+	`city`	VARCHAR(50) NOT NULL,
 	`province` VARCHAR(40) NOT NULL,
 	`notifications` TINYINT(1) NOT NULL DEFAULT '1',
 	
