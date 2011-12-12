@@ -22,3 +22,6 @@ KService::setAlias('com://site/openhouse.database.row.house', 'com://admin/openh
 KService::setAlias('com://site/openhouse.database.row.image', 'com://admin/openhouse.database.row.image');
 KService::setAlias('com://site/openhouse.database.row.showing', 'com://admin/openhouse.database.row.showing');
 KService::setAlias('com://site/openhouse.database.row.waypoint', 'com://admin/openhouse.database.row.waypoint');
+
+/* rowsets */
+KService::setAlias('com://site/openhouse.database.rowset.waypoints', 'com://admin/openhouse.database.rowset.waypoints');

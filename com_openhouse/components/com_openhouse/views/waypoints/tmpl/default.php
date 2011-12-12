@@ -43,5 +43,13 @@
 			<p>You have no bookmarks.</p>
 		</td>
 	</tr>
+	<? else: ?>
+	<tr>
+		<td colspan="3">
+			<a href="<?= $waypoints->getDirectionsUrl() ?>" target="_blank" class="button"><span>
+				Get Directions
+			</span></a>
+		</td>
+	</tr>
 	<? endif; ?>
 </table>
