@@ -3,12 +3,11 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_agents` (
 
 	`name` VARCHAR(250) NOT NULL,
 	`title` VARCHAR(250) NOT NULL,
-	`phone` VARCHAR(20) NOT NULL DEFAULT '',
-	`website` VARCHAR(250) NOT NULL DEFAULT '',
+	`office_phone` VARCHAR(20) NOT NULL DEFAULT '',
+	`cell_phone` VARCHAR(20) NOT NULL DEFAULT '',
 	`email` VARCHAR(250) NOT NULL DEFAULT '',
 	`picture` VARCHAR(250) NOT NULL DEFAULT '',
 
-	`openhouse_office_id` BIGINT(20) NOT NULL,
 	`openhouse_company_id` BIGINT(20) NOT NULL,
 	`user_id` INT(11) NOT NULL UNIQUE,
 

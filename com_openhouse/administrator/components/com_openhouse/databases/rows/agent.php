@@ -9,6 +9,7 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 		$this->has_many('houses', array(
 			'local_key'	=> 'user_id'
 		));
+		$this->belongs_to('company');
 	}
 	
 	public function save()

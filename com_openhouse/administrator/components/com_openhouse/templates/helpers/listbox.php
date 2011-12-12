@@ -82,4 +82,21 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 		return $this->optionlist($config);
 	}
 
+	public function repTitles($config = array())
+	{
+		$config = new KConfig($config);
+		$config->append(array(
+			'name'		=> 'title',
+			'attribs'	=> array(),
+			'selected'	=> null,
+		));
+		
+		$options = array();
+
+		$options[] = $this->option(array('text' => 'Sales Representative', 'value' => 'Sales Representative'));
+		$options[] = $this->option(array('text' => 'Broker', 'value' => 'Broker'));
+		
+		$config->options = $options;
+		return $this->optionlist($config);
+	}
 }

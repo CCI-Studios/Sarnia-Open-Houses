@@ -33,12 +33,8 @@ class ComOpenhouseModelAgents extends ComDefaultModelDefault
 			$errors[] = JText::_("Title cannot be blank.");
 		}
 
-		if (!$item->phone) {
-			$errors[] = JText::_("You need to have a phone number listed.");
-		}
-
-		if (!$item->openhouse_office_id) {
-			$errors[] = JText::_("You must specify your office.");
+		if (!$item->office_phone) {
+			$errors[] = JText::_("You need to have an office phone number listed.");
 		}
 
 		if (!$item->openhouse_company_id) {
