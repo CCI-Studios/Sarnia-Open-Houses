@@ -28,9 +28,9 @@
 	text-decoration: none;
 }
 
-.button.disabled, button.disabled,
+.button.disabled, button.disabled { background-position: left -90px; }
 .button.disabled span, button.disabled span {
-	background: #ddd;
+	background-position: right -135px;
 	cursor: default;
 }
 
