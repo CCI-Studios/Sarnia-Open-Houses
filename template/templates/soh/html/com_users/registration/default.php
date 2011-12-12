@@ -20,6 +20,8 @@ JHtml::_('behavior.tooltip');
 <?php endif; ?>
 <h2>New User Registration</h2>
 
+	<p>Your user profile details will be secure within the website and will NOT be used for soliciting purposes.</p>
+
 	<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate">
 <?php foreach ($this->form->getFieldsets() as $fieldset): // Iterate through the form fieldsets and display each one.?>
 	<?php $fields = $this->form->getFieldset($fieldset->name);?>
@@ -60,8 +62,6 @@ JHtml::_('behavior.tooltip');
 	<?php endif;?>
 <?php endforeach;?>
 		<div>
-			
-			
 			<input type="hidden" name="option" value="com_users" />
 			<input type="hidden" name="task" value="registration.register" />
 			<?php echo JHtml::_('form.token');?>
