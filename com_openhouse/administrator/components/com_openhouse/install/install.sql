@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_houses` (
 	`province` VARCHAR(40) NOT NULL,
 	`virtual_link` VARCHAR(250) NOT NULL,
 	`postal` VARCHAR(20) NOT NULL,
-	`description` TEXT NOT NULL,
+	`description` VARCHAR(200) NOT NULL,
 	`enabled` TINYINT(1) NOT NULL DEFAULT '1',
 	`next_showing` DATETIME DEFAULT '0000-00-00 00:00:00',
 
