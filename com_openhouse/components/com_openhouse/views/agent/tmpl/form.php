@@ -49,8 +49,8 @@
 				<td align="right"><label><?= @text('Profile Picture') ?>:</label></td>
 				<td>
 					<input type="file" name="fileupload" /><br/>
-					Images will be automatically resized to 193x193 and should be under 2 megabytes in size.<br/>
-					Images should be jpeg files.
+					Images will be automatically resized to 193 pixels wide and should be under 2 megabytes in size.<br/>
+					Images must be jpeg files.
 				</td>
 			</tr>
 	

@@ -31,7 +31,7 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/agents/';
 		$valid = array('jpeg', 'jpg');
 		$width = 193;
-		$height = 193;
+		$height = 203;
 		
 		if (!isset($_FILES[$field])) {
 			return;
@@ -58,8 +58,6 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 		$myImage = imagecreatefromjpeg($imgSrc);
 		$ratio_orig = $width_orig/$height_orig;
 		
-		
-	
 		if ($thumbnail_width/$thumbnail_height > $ratio_orig) {
 			$new_height = $thumbnail_width/$ratio_orig;
 			$new_width = $thumbnail_width;
