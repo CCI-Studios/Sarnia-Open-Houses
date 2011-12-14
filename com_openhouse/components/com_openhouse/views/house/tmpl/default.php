@@ -74,8 +74,14 @@
 				
 					<? foreach ($house->showings as $showing): ?>
 					<tr>
-						<td><?= @format('named_date', $showing->start_date); ?></td>
-						<td><?= $showing->hours; ?></td>
+						<td>
+							<?= @format('named_date', $showing->start_date); ?>
+						</td>
+						<td><?= 
+							strftime('%l:%M:%P', strtotime($showing->start_time))
+							.' - '.
+							strftime('%l:%M:%P', strtotime($showing->end_time))
+						?></td>
 						<?  if ($house->isOwnable() && $house->canEdit()): ?>
 							<td>
 							<form action="<?= @route('view=showing&id='. $showing->id) ?>" method="post" class="-koowa-form">

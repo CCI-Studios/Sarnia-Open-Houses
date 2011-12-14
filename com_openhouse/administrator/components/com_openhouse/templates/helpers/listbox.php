@@ -99,4 +99,64 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 		$config->options = $options;
 		return $this->optionlist($config);
 	}
+	
+	public function timeselect($config = array())
+	{
+		$config = new KConfig($config);
+		$config->append(array(
+			'name'		=> 'time',
+			'attribs'	=> array(),
+			'selected'	=> '00:00:00'
+		));
+
+		$hour = strftime('%l', $config->selected);
+		$min = strftime('%M', $config->selected);
+		$period = strftime('%P', $config->selected);
+		$html = '';
+		
+		// hours setup
+		$hour_config = new KConfig(array(
+			'name'		=> $config->name .'[hour]',
+			'selected'	=> $hour,
+			'attribs'	=> array('style' => 'width: auto;')
+		));
+		$options = array();
+		for ($i = 1; $i < 13; $i++) {
+			$options[] = $this->option(array('text' => $i, 'value' => $i));
+		}
+		$hour_config->options = $options;
+		$html .= $this->optionlist($hour_config);
+		$html .= ' ';
+
+		// minutes setup
+		$min_config = new KConfig(array(
+			'name'		=> $config->name .'[min]',
+			'selected' 	=> $hour,
+			'attribs'	=> array('style' => 'width: auto;')
+		));
+		$options = array();
+		$options[] = $this->option(array('text' => '00', 'value' => '00'));
+		$options[] = $this->option(array('text' => '15', 'value' => '15'));
+		$options[] = $this->option(array('text' => '30', 'value' => '30'));
+		$options[] = $this->option(array('text' => '45', 'value' => '45'));
+
+		$min_config->options = $options;
+		$html .= $this->optionlist($min_config);
+		$html .= " ";
+
+		// period setup
+		$period_config = new KConfig(array(
+			'name'		=> $config->name .'[period]',
+			'selected'	=> $hour,
+			'attribs'	=> array('style' => 'width: auto;')
+		));
+		$options = array();
+		$options[] = $this->option(array('text' => 'am', 'value' => 'am'));
+		$options[] = $this->option(array('text' => 'pm', 'value' => 'pm'));
+
+		$period_config->options = $options;
+		$html .= $this->optionlist($period_config);
+		
+		return $html;
+	}
 }

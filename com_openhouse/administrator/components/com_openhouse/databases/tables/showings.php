@@ -20,19 +20,22 @@ class ComOpenhouseDatabaseTableShowings extends KDatabaseTableDefault
 	}
 	
 	public function updateUpcoming(KCommandContext $context)
-	{
+	{	
 		$showing = $context->data;
 		$house = $showing->house;
 		$table = $showing->getTable();
 		$query = $table->getDatabase()->getQuery();
 		
-		$query->select('MIN(start_date) AS min');
+		$query->select('*');
 		$query->where('openhouse_house_id', '=', $house->id);
 		$query->where('start_date', '>=', date('Y-m-d'));
+		$query->order('start_date');
+		$query->order('start_time');
 		$query->limit(1);
-		
+
 		$row = $table->select($query, KDatabase::FETCH_ROW);
-		$house->upcoming = $row->min;
+		
+		$house->upcoming = $row->start_date .' '. $row->start_time;
 		$house->save();
 
 		return true;

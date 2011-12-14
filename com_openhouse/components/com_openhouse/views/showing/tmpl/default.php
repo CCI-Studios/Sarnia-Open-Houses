@@ -14,12 +14,17 @@
 		</tr>
 		
 		<tr>
-			<td class="right"><label for="hours_field">Hours:</label></td>
-			<td><input type="text" name="hours" value="<?= $showing->hours ?>" /></td>
+			<td class="right"><label for="start_time_field">Start Time:</label></td>
+			<td><?= @helper('listbox.timeselect', array('name' => 'start_time'))?></td>
+		</tr>
+		
+		<tr>
+			<td class="right"><label for="end_time_field">End Time:</label></td>
+			<td><?= @helper('listbox.timeselect', array('name' => 'end_time'))?></td>
 		</tr>
 	
 		<tr class="action">
-			<td width="125Ï2">&nbsp;</td>
+			<td width="125">&nbsp;</td>
 			<td><button type="submit"><span>Save</span></button></td>
 		</tr>
 	</table>

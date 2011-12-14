@@ -66,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_showings` (
 	`openhouse_showing_id` SERIAL,
 
 	`start_date` DATE NOT NULL,
-	`end_date` DATE NOT NULL,
-	`hours` VARCHAR(50) NOT NULL,
+	`start_time` TIME NOT NULL,
+	`end_time` TIME NOT NULL,
 
 	`openhouse_house_id` BIGINT(20) UNSIGNED NOT NULL
 ) ENGINE=MyISAM;
