@@ -71,7 +71,10 @@
 		
 		<tr>
 			<td align="right" valign="top"><label for="description_field">Description:</label></td>
-			<td><textarea name="description" id="description_field"><?= $house->description ?></textarea></td>
+			<td>
+				<textarea name="description" id="description_field"><?= $house->description ?></textarea>
+				<p>Description is limited to 200 characters.</p>
+			</td>
 		</tr>
 		
 		<tr class="actions">

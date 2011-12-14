@@ -22,7 +22,7 @@
 <? endif; ?>
 
 <div class="com_openhouse">
-	<div class="padded gradient clearfix">
+	<div class="padded clearfix">
 		<h1 class="house-address">
 			<?= $house->address ?><br>
 			<small>
@@ -38,24 +38,8 @@
 			'images'	=> $house->images,
 			'price'		=> $house->price
 		)) ?>
-
-		<p><?= $house->address .', '. $house->getFullLocation() ?></p>
-		<? if ($house->virtual_link): ?>
-			<p><a href="<?= str_replace('http://http://', 'http://', 'http://'.$house->virtual_link) ?>" target="_blank" class="button">
-				<span>Take a Virtual Tour</span></a>
-			</p>
-		<? endif; ?>
-		<div class="details">
-			Price: <?= $house->getPrice() ?><br>
-			Bedrooms: <?= $house->bedrooms ?><br>
-			Bathrooms: <?= $house->bathrooms ?>
-		</div>
-
-		<div class="description">
-			<p><?= str_replace("\n", "<br/>", str_replace("\n\n", "</p><p>", $house->description)) ?></p>
-		</div>
 	</div>
-
+	
 	<div class="gradient padded clearfix">
 		<h2>Dates</h2>
 
@@ -123,6 +107,24 @@
 					</a>
 				<? endif; ?>
 			</p>
+		</div>
+	</div>
+	
+	<div class="padded gradient clearfix">
+		<p><?= $house->address .', '. $house->getFullLocation() ?></p>
+		<? if ($house->virtual_link): ?>
+			<p><a href="<?= str_replace('http://http://', 'http://', 'http://'.$house->virtual_link) ?>" target="_blank" class="button">
+				<span>Take a Virtual Tour</span></a>
+			</p>
+		<? endif; ?>
+		<div class="details">
+			Price: <?= $house->getPrice() ?><br>
+			Bedrooms: <?= $house->bedrooms ?><br>
+			Bathrooms: <?= $house->bathrooms ?>
+		</div>
+
+		<div class="description">
+			<p><?= str_replace("\n", "<br/>", str_replace("\n\n", "</p><p>", $house->description)) ?></p>
 		</div>
 	</div>
 
