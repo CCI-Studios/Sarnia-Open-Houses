@@ -15,7 +15,7 @@
 					<?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a></div>
 			</td>
 			<td valign="top">
-				<button type="submit"><span><?php echo JText::_('Sign In') ?></span></button>
+				<button type="submit" style="margin-top: -3px;"><span><?php echo JText::_('Sign In') ?></span></button>
 			</td>
 			
 			<td valign="center">
