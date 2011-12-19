@@ -133,9 +133,8 @@ dl.data-set dd {
 }
 
 .openhouse-listings h2 small {
-	color: #808080;
+	color: #000;
 	font-size: 58%;
-	font-weight: normal;
 }
 
 .openhouse-listings p {
@@ -176,3 +175,9 @@ dl.data-set dd {
 
 h1.house-address { text-align: center; }
 h1.house-address small { color: #807f7f; font-weight: normal; }
+
+/* showings */
+.showings {
+	color: #bf1e2e;
+	font-weight: bold;
+}

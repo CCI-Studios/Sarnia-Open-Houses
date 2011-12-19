@@ -6,7 +6,8 @@
 		<br/><br/>
 	<? endif; ?>
 
-	<strong><?= "{$agent->name} ({$agent->title})" ?></strong><br/>
+	<strong><?= $agent->name ?></strong><br/>
+	<strong><?= $agent->title ?></strong><br/>
 	<?= $agent->company->title ?><br/>
 	Office Number: <?= $agent->office_phone ?><br/>
 	<?= $agent->cell_phone ? "Cell Number: {$agent->cell_phone}<br/>" : "" ?>

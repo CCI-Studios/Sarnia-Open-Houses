@@ -48,7 +48,7 @@
 		</div>
 
 		<div class="left">
-			<table style="width:300px;">
+			<table style="width:300px;" class="showings">
 				<tbody>
 					<? if (count($house->showings) === 0): ?>
 					<tr>
@@ -103,7 +103,7 @@
 					<? endif; ?>
 				<?  else: ?>
 					<a href="<?= @route('option=com_users&view=registration') ?>" class="button">
-						<span>Register to add directions</span>
+						<span>Create a profile to get directions</span>
 					</a>
 				<? endif; ?>
 			</p>
