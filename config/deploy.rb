@@ -132,8 +132,6 @@ namespace :deploy do
         curl -sLk #{symlinker_url} > symlinker &&
         chmod +x symlinker
       CMD
-      
-      joomla::setup
     end
   end
 
