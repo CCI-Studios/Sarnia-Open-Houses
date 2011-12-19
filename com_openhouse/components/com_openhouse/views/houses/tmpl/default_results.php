@@ -25,7 +25,10 @@
 				<h2><?= $house->address ?><br />
 					<small>
 						<?= $house->city .', '. $house->province ?><br/>
-						<?= date('l F j, g:ia', strtotime($house->upcoming)) ?>
+						<span class="showings">
+							<?= date('l F j, g:ia', strtotime($house->upcoming)) ?>
+							- <?= date('g:ia', strtotime($house->showings->current()->end_time)) ?>
+						</span>
 					</small>
 				</h2>
 				<p><?= str_replace("\n\n", "</p><p>", substr($house->description, 0, 150)) ?>...</p>
