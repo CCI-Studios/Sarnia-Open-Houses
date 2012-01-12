@@ -12,10 +12,13 @@ class ComOpenhouseDatabaseRowShowing extends ComOpenhouseDatabaseRowRelated
 	
 	public function __set($column, $value)
 	{
-		if (($column == 'start_time' || $column == 'end_time') && is_array($value)) {			
-			if ($value['period'] == 'pm') {
+		if (($column == 'start_time' || $column == 'end_time') && is_array($value)) {
+			if ($value['period'] == 'pm' && $value['hour'] !== 12) {
 				$value['hour'] += 12;
+			} elseif ($value['period'] == 'am' && $value['hour'] == 12) {
+				$value['hour'] = 0;
 			}
+			
 			$value = "{$value['hour']}:{$value['min']}:00";
 		}
 
