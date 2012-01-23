@@ -11,18 +11,19 @@
 			<tr>
 			<tr>
 				<th width="1%"><?= @helper('grid.checkall') ?></th>
-				<th><?= @helper('grid.sort', array('title' => 'address')) ?></th>
-				<th width="100"><?= @helper('grid.sort', array('title' => 'city')) ?></th>
-				<th width="100"><?= @helper('grid.sort', array('title' => 'province')) ?></th>
-				<th width="100"><?= @helper('grid.sort', array('title' => 'postal')) ?></th>
-				<th width="100"><?= @helper('grid.sort', array('title' => 'price')) ?></th>
-				<th width="10"><?= @helper('grid.sort', array('title' => 'created_by')) ?></th>
+				<th><?= @helper('grid.sort', array('column' => 'address')) ?></th>
+				<th width="100"><?= @helper('grid.sort', array('column' => 'city')) ?></th>
+				<th width="100"><?= @helper('grid.sort', array('column' => 'province')) ?></th>
+				<th width="100"><?= @helper('grid.sort', array('column' => 'postal')) ?></th>
+				<th width="100"><?= @helper('grid.sort', array('column' => 'price')) ?></th>
+				<th width="125"><?= @text('Agent') ?></th>
+				<th width="10"><?= @helper('grid.sort', array('column' => 'id'))?>
 			</tr>
 		</thead>
 
 		<tfoot>
 			<tr>
-				<td colspan="7" align="center"><?= @helper('paginator.pagination', array('total'=>$total)) ?></td>
+				<td colspan="8" align="center"><?= @helper('paginator.pagination', array('total'=>$total)) ?></td>
 			</tr>
 		</tfoot>
 
@@ -37,7 +38,8 @@
 				<td align="center"><?= $house->province ?></td>
 				<td align="center"><?= $house->postal ?></td>
 				<td align="center"><?= $house->price ?></td>
-				<td align="center"><?= $house->created_by ?></td>
+				<td align="center"><?= $house->agent->name ?></td>
+				<td align="center"><?= $house->id ?></td>
 			</tr>
 			<? endforeach; ?>
 		</tbody>
