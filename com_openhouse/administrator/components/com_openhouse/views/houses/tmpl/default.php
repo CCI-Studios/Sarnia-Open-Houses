@@ -7,6 +7,9 @@
 	<table class="adminlist">
 		<thead>
 			<tr>
+				<td colspan="8"><div style="float: right"><?= @helper('listbox.agents') ?></div></td>
+			<tr>
+			<tr>
 				<th width="1%"><?= @helper('grid.checkall') ?></th>
 				<th><?= @helper('grid.sort', array('title' => 'address')) ?></th>
 				<th width="100"><?= @helper('grid.sort', array('title' => 'city')) ?></th>

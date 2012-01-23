@@ -33,6 +33,21 @@ class ComOpenHouseTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 
 		return $this->optionlist($config);
 	}
+	
+	public function agents($config = array())
+	{
+		$config = new KConfig($config);
+		$config->append(array(
+			'model'		=> 'agents',
+			'name'		=> 'openhouse_agent_id',
+			'value'		=> 'user_id',
+			'text'		=> 'name',
+			'prompt'		=> '- filter Agent -',
+			//'attribs'	=> array('id'=>$config->name),
+		));
+
+		return parent::_listbox($config);
+	}
 
 	public function offices($config = array())
 	{
