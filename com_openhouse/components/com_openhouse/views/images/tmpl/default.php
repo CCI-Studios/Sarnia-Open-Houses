@@ -35,13 +35,13 @@
 </form>
 
 <form action="<?= @route('view=image&id=') ?>" method="post" class="-koowa-form" enctype="multipart/form-data">
-	<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+	<input type="hidden" name="MAX_FILE_SIZE" value="4000000" />
 	<input type="hidden" name="openhouse_house_id" value="<?= $house->id ?>" />
 	
 	<p>
 		<label><?= @text('Add Picture') ?>:</label>
 		<input type="file" name="fileupload" class="required" /><br/>
-		Images will be automatically resized to 620x290 and should be under 2 megabytes in size.<br/>
+		Images will be automatically resized to 620x290 and should be under 4 megabytes in size.<br/>
 		<button type="submit"><span>Save</span></button>
 	</p>
 		

@@ -44,9 +44,10 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 		$f = $this->saveImages();
 		if ($f) {
 			$this->filename = $f;
+			return parent::save();
 		}
-		
-		return parent::save();
+
+		return;
 	}
 	
 	protected function saveImages()
@@ -63,9 +64,20 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 		}
 	
 		$upload = $_FILES[$field];
-	
-		if ($upload['error'] > 0) {
-			return;
+		$extension = strtolower(end(explode('.', $upload['name'])));
+		
+		if ($extension != 'jpg' && $extension != 'jpeg' && $extension != 'png') {
+			JFactory::getApplication()->enqueueMessage('That image is not valid. Please upload an image file.');
+			return false;
+		} elseif ($upload['error'] == UPLOAD_ERR_NO_FILE) {
+			JFactory::getApplication()->enqueueMessage('Please select an image to upload.');
+			return false;
+		} elseif($upload['error'] == UPLOAD_ERR_FORM_SIZE || $upload['error'] == 1) {			
+			JFactory::getApplication()->enqueueMessage('Your image is too large. Please limit to 4 megabytes.');
+			return false;
+		} elseif($upload['error']) {
+			JFactory::getApplication()->enqueueMessage('Image could not be uploaded: error '.$upload['error']);
+			return false;
 		}
 	
 		if ($this->picture) {
