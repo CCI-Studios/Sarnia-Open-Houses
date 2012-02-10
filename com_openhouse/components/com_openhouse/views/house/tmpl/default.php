@@ -93,18 +93,20 @@
 
 			
 			<p>
-				<? if ($allow_waypoint): ?>
-					<? if ($has_waypoint): ?>
-						<div class="button disabled"><span>House is already bookmarked</span></div>
-					<? else: ?>
-						<div class="button add_to_cart" data-id="<?= $house->id ?>" data-token="<?= JUtility::getToken() ?>">
-							<span>Bookmark house</span>
-						</div>
+				<? if (false): ?>
+					<? if ($allow_waypoint): ?>
+						<? if ($has_waypoint): ?>
+							<div class="button disabled"><span>House is already bookmarked</span></div>
+						<? else: ?>
+							<div class="button add_to_cart" data-id="<?= $house->id ?>" data-token="<?= JUtility::getToken() ?>">
+								<span>Bookmark house</span>
+							</div>
+						<? endif; ?>
+					<?  else: ?>
+						<a href="<?= @route('option=com_users&view=registration') ?>" class="button">
+							<span>Create a profile to get directions</span>
+						</a>
 					<? endif; ?>
-				<?  else: ?>
-					<a href="<?= @route('option=com_users&view=registration') ?>" class="button">
-						<span>Create a profile to get directions</span>
-					</a>
 				<? endif; ?>
 			</p>
 		</div>
