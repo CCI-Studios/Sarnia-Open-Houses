@@ -91,3 +91,7 @@ dd.notice {
 
 .tip-wrap .tip .tip-title { font-weight: bold; }
 /* @end */
+
+#messages { }
+#messages dt { display: none; }
+#messages dd ul { margin: 0; color: #f80001; }
