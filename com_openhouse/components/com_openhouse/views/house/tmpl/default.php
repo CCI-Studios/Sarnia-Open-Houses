@@ -82,9 +82,9 @@
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">
+							<a class="button" href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>"><span>
 								Schedule your open house
-							</a>
+							</span></a>
 						</td>
 					</tr>
 				</tfoot>
