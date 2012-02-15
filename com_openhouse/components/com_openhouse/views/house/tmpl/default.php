@@ -13,7 +13,7 @@
 	<p>Now that you've created your house listing, what's next?</p>
 	<ul>
 		<li><a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit your listing details</a></li>
-		<li><a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit your gallery</a></li>
+		<li><a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit your Photos</a></li>
 		<li><a href="<?= @route('view=showing&openhouse_house_id='. $house->id) ?>">Schedule your open house</a></li>
 	</ul>
 	<p>Please note, your listing will not appear on the site unless you have at least
@@ -29,7 +29,7 @@
 				<?= $house->getFullLocation() ?>
 				<? if ($house->isOwnable() && $house->canEdit()): ?>
 					- <a href="<?= @route('view=house&layout=form&id='. $house->id) ?>">Edit Listing</a>
-					- <a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit Gallery</a>
+					- <a href="<?= @route('view=images&openhouse_house_id='. $house->id) ?>">Edit Photos</a>
 				<? endif; ?>
 			</small>
 		</h1>
