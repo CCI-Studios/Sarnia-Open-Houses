@@ -1,4 +1,6 @@
 <?php
+jimport('joomla.filesystem.file');
+jimport('joomla.filesystem.folder');
 
 class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 {
@@ -17,52 +19,33 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 	 */
 	public function delete()
 	{
-		$this->deleteImages();
+		$this->deleteOriginal();
+		$this->deleteThumbs();
 		return parent::delete();
-	}
-	
-	protected function deleteImages()
-	{
-		jimport('joomla.filesystem.file');
-		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
-		
-		if (JFile::exists($path .'full/'. $this->filename)) {
-			JFile::delete($path .'full/'. $this->filename);
-		}
-		
-		if (JFile::exists($path .'large/'. $this->filename)) {
-			JFile::delete($path .'large/'. $this->filename);
-		}
-		
-		if (JFile::exists($path .'small/'. $this->filename)) {
-			JFile::delete($path .'small/'. $this->filename);
-		}
 	}
 	
 	public function save()
 	{
-		$f = $this->saveImages();
+		$f = $this->saveOriginal();
 		if ($f) {
 			$this->filename = $f;
+			$this->createThumbs();
 			return parent::save();
 		}
 
 		return;
 	}
-	
-	protected function saveImages()
+
+	protected function saveOriginal()
 	{
-		jimport('joomla.filesystem.file');
-		jimport('joomla.filesystem.folder');
-	
 		$field = "fileupload";
 		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
 		$valid = array('jpeg', 'jpg');
-		
+
 		if (!isset($_FILES[$field])) {
 			return;
 		}
-	
+
 		$upload = $_FILES[$field];
 		$extension = strtolower(end(explode('.', $upload['name'])));
 		
@@ -72,26 +55,55 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 		} elseif ($upload['error'] == UPLOAD_ERR_NO_FILE) {
 			JFactory::getApplication()->enqueueMessage('Please select an image to upload.');
 			return false;
-		} elseif($upload['error'] == UPLOAD_ERR_FORM_SIZE || $upload['error'] == 1) {			
+		} elseif($upload['error'] == UPLOAD_ERR_FORM_SIZE || $upload['error'] == 1) {
 			JFactory::getApplication()->enqueueMessage('Your image is too large. Please limit to 4 megabytes.');
 			return false;
 		} elseif($upload['error']) {
 			JFactory::getApplication()->enqueueMessage('Image could not be uploaded: error '.$upload['error']);
 			return false;
 		}
-	
+
 		if ($this->picture) {
-			$this->deleteImages();
+			$this->deleteOriginal();
+			$this->deleteThumbs();
 		}
-	
+
 		do {
 			$filename = 'image-'. $this->openhouse_house_id .'-'. rand(0, 50) .'.jpg';
 		} while (JFile::exists($path .'full/'. $filename));
 		JFile::upload($upload['tmp_name'], $path .'full/'. $filename);
-	
-		$this->croppedThumbnail($path .'full/'. $filename, 620, 230, $path .'large/'. $filename);
-		$this->croppedThumbnail($path .'full/'. $filename, 27, 27, $path .'small/'. $filename);
+
 		return $filename;
+	}
+
+	protected function deleteOriginal()
+	{
+		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
+		
+		if (JFile::exists($path .'full/'. $this->filename)) {
+			JFile::delete($path .'full/'. $this->filename);
+		}
+	}
+
+	public function deleteThumbs()
+	{
+		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
+		
+		if (JFile::exists($path .'large/'. $this->filename)) {
+			JFile::delete($path .'large/'. $this->filename);
+		}
+		
+		if (JFile::exists($path .'small/'. $this->filename)) {
+			JFile::delete($path .'small/'. $this->filename);
+		}
+	}
+
+	public function createThumbs()
+	{
+		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
+
+		$this->croppedThumbnail($path .'full/'. $this->filename, 620, 413, $path .'large/'. $filename);
+		$this->croppedThumbnail($path .'full/'. $this->filename, 27, 27, $path .'small/'. $filename);
 	}
 	
 	protected function croppedThumbnail($imgSrc, $thumbnail_width, $thumbnail_height, $filename) {
