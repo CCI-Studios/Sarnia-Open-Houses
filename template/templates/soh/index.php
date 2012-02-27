@@ -91,7 +91,7 @@ JHtml::_('behavior.mootools');
 				<jdoc:include type="modules" name="sidebar" style="rounded" />
 				
 				<div class="module"><div><div>
-					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsarnialambtonopenhouses.ca&amp;send=false&amp;layout=standard&amp;width=204&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=35&amp;appId=124096491039103" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:204px; height:35px;" allowTransparency="true"></iframe>
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsarnialambtonopenhouses.ca&amp;send=false&amp;layout=standard&amp;width=204&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=35&amp;appId=124096491039103" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:204px; height:45px;" allowTransparency="true"></iframe>
 				</div></div></div>
 				<div class="clear"></div>
 			</div>
