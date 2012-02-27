@@ -31,7 +31,7 @@ class ComOpenhouseDatabaseRowAgent extends ComOpenhouseDatabaseRowRelated
 		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/agents/';
 		$valid = array('jpeg', 'jpg');
 		$width = 193;
-		$height = 203;
+		$height = 252;
 		
 		if (!isset($_FILES[$field])) {
 			return;
