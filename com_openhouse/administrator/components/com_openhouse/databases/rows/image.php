@@ -102,8 +102,8 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 	{
 		$path = JPATH_SITE.DS.'media/com_openhouse/uploads/';
 
-		$this->croppedThumbnail($path .'full/'. $this->filename, 620, 413, $path .'large/'. $filename);
-		$this->croppedThumbnail($path .'full/'. $this->filename, 27, 27, $path .'small/'. $filename);
+		$this->croppedThumbnail($path .'full/'. $this->filename, 620, 413, $path .'large/'. $this->filename);
+		$this->croppedThumbnail($path .'full/'. $this->filename, 27, 27, $path .'small/'. $this->filename);
 	}
 	
 	protected function croppedThumbnail($imgSrc, $thumbnail_width, $thumbnail_height, $filename) {

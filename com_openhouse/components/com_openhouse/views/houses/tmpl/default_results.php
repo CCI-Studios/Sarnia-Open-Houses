@@ -8,12 +8,12 @@
 					<img 
 						src="media://com_openhouse/uploads/large/<?= $house->images->current()->filename ?>"
 						width="275"
-						height="129" />
+						height="183" />
 				<? else: ?>
 					<img
 						src="media://com_openhouse/images/placeholder.jpg"
 						width="275"
-						height="129" />
+						height="183" />
 				<?  endif; ?>
 			
 				<div class="price"><span><span>

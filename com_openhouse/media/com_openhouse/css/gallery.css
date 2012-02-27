@@ -9,7 +9,7 @@
 .openhouse-gallery .main-image > div {
 	position: relative;
 	width: 622px;
-	height: 293px;
+	height: 415px;
 	margin: 0 auto;
 	padding: 3px;
 	border: 1px solid #ccc;
@@ -21,7 +21,7 @@
 .openhouse-gallery .main-image img {
 	display: block;
 	width: 620px;
-	height: 291px;
+	height: 413px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	
