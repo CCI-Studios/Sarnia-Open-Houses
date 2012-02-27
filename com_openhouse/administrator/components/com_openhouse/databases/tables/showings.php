@@ -20,7 +20,7 @@ class ComOpenhouseDatabaseTableShowings extends KDatabaseTableDefault
 	}
 	
 	public function updateUpcoming(KCommandContext $context)
-	{	
+	{
 		$showing = $context->data;
 		$house = $showing->house;
 		$table = $showing->getTable();
@@ -34,9 +34,14 @@ class ComOpenhouseDatabaseTableShowings extends KDatabaseTableDefault
 		$query->limit(1);
 
 		$row = $table->select($query, KDatabase::FETCH_ROW);
-		
-		$house->upcoming = $row->start_date .' '. $row->start_time;
-		$house->save();
+
+		if ($row->id) {		
+			$house->upcoming = $row->start_date .' '. $row->start_time;
+			$house->save();
+		} else {
+			$house->upcoming = '0000-00-00 00:00:00';
+			$house->save();
+		}
 
 		return true;
 	}
