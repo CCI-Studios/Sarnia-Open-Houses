@@ -22,6 +22,11 @@ class ComOpenHouseControllerToolbarMenubar extends ComDefaultControllerToolbarMe
 			'active'	=> ($name == 'agent')
 		));
 
+		$this->addCommand('Images', array(
+			'href'  		=> 'index.php?option=com_openhouse&view=images',
+			'active'	=> ($name == 'image')
+		));
+
 		$this->addCommand('Locations', array(
 			'href'		=> 'index.php?option=com_openhouse&view=locations',
 			'active'	=> ($name == 'location')
