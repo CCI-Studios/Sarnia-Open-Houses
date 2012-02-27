@@ -1,5 +1,6 @@
 <? defined('KOOWA') or die ?>
 <?= @helper('behavior.mootools') ?>
+<?= @helper('behavior.modal') ?>
 <script src="media://com_openhouse/js/gallery.js" />
 <style src="media://com_openhouse/css/gallery.css" />
 

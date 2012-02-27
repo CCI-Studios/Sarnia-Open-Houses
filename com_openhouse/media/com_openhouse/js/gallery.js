@@ -47,7 +47,15 @@ CCI.OpenHouse.Gallery = new Class({
 		this.max = this.filenames.length - 1;
 		
 		this.image1 = this.container.getElement('.image1');
+		this.image1.addEvent('click', function() {
+			SqueezeBox.open(this.image1.get('src'));
+		}.bind(this));
+		this.image1.setStyle('cursor', 'pointer');
 		this.image2 = this.container.getElement('.image2');
+		this.image2.addEvent('click', function() {
+			SqueezeBox.open(this.image2.get('src'));
+		}.bind(this));
+		this.image2.setStyle('cursor', 'pointer');
 		
 		this.fx = new Fx.Tween(this.image2, {
 			property: 'opacity',
@@ -76,6 +84,10 @@ CCI.OpenHouse.Gallery = new Class({
 	},
 	
 	start: function() {
+		if (this.images.length < 2) {
+			return;
+		}
+
 		this.running = true;
 		this.timer = this.next.delay(this.options.delay, this);
 	},
