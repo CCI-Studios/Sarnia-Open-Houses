@@ -22,8 +22,6 @@ class ComOpenhouseDatabaseBehaviorOrderable extends KDatabaseBehaviorOrderable
 		}
 		
 		parent::_buildQueryWhere($query);
-		
-		echo $query;
 	}
 	
 	
