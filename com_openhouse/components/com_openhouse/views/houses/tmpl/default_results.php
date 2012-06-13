@@ -17,7 +17,7 @@
 				<?  endif; ?>
 			
 				<div class="price"><span><span>
-					<?= @format('price', $house->price) ?>
+					<?= @helper('format.price', array('value' => $house->price)) ?>
 				</span></span></div>
 			</div></div>
 		
@@ -34,6 +34,11 @@
 				<p><?= str_replace("\n\n", "</p><p>", substr($house->description, 0, 150)) ?>...</p>
 				<div class="center">
 					<a href="<?= @route('view=house&id='. $house->id) ?>" class="button"><span>View Listing</span></a>
+					<?= KService::get('com://site/openhouse.controller.cart')
+							->view('cart')
+							->layout('form')
+							->houseID($house->id)
+							->display(); ?>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -46,3 +51,4 @@
 	</li>
 	<? endif; ?>
 </ul>
+

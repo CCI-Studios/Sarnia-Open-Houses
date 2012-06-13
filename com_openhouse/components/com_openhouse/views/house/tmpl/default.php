@@ -91,6 +91,13 @@
 				<? endif; ?>
 			</table>
 
+			<p>
+			<?= KService::get('com://site/openhouse.controller.cart')
+							->view('cart')
+							->layout('form')
+							->houseID($house->id)
+							->display(); ?>
+			</p>
 			
 			<p>
 				<? if (false): ?>

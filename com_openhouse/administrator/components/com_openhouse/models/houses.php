@@ -7,6 +7,7 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		parent::__construct($config);
 		
 		$this->_state
+			->insert('ids', 'array')
 			->insert('openhouse_agent_id', 'int')
 			->insert('enabled', 'bool')
 			->insert('past', 'bool')
@@ -72,7 +73,11 @@ class ComOpenHouseModelHouses extends ComDefaultModelDefault
 		if ($state->hasShowing === true) {
 			$query->where('upcoming', '>=', date('Y-m-d'));
 		}
-		
+
+		if ($state->ids) {
+			$query->where('openhouse_house_id IN ('. implode(', ', $state->ids) .')');
+		}
+
 		parent::_buildQueryWhere($query);
 	}
 	
