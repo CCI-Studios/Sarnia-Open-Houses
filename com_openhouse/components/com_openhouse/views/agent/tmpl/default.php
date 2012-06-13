@@ -1,4 +1,6 @@
 <style src="media://com_openhouse/css/openhouse.css" />
+<? @helper('behavior.mootools') ?>
+<script src="media://lib_koowa/js/koowa.js" />
 
 <module title="" position="sidebar">
 	<?= @template('com://site/openhouse.view.agent.module', array(
@@ -41,7 +43,8 @@
 	<h2><?= @text('House Listings') ?></h2>
 
 	<?= @template('com://site/openhouse.view.houses.list', array(
-		'houses' => $agent->houses
+		'houses'	=> $agent->houses,
+		'agent'		=> $agent
 	)) ?>
 
 	<? if ($valid): ?>

@@ -60,6 +60,8 @@ class ComOpenHouseControllerBehaviorExecutable extends ComDefaultControllerBehav
 				return ($user->id === $item->house->created_by);
 			case 'waypoint':
 				return ($user->id === $item->created_by);
+			case 'house':
+				return ($user->id === $item->created_by);
 			default:
 				return parent::canDelete();
 		}
