@@ -35,7 +35,6 @@ class ComOpenhouseControllerCart extends ComDefaultControllerResource
 	private function _removeHouse($id)
 	{
 		$houses = $this->_getHouses();
-		
 		$houses = array_diff($houses, array($id));
 		$this->_setHouses($houses);
 
@@ -58,13 +57,12 @@ class ComOpenhouseControllerCart extends ComDefaultControllerResource
 	{
 		$houses = array_values($houses);
 
-		KRequest::set('cookie.sloh.cart', json_encode($houses));
+		//KRequest::set('cookie.sloh.cart', json_encode($houses));
+		setcookie('sloh[cart]', json_encode($houses), 0, '/');
 	}
 
 	private function _redirect($message)
 	{
-
-
 		$this->setRedirect(KRequest::referrer()? KRequest::referrer():'/', $message);
 	}
 
