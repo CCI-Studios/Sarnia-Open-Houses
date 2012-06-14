@@ -152,7 +152,7 @@ namespace :deploy do
       run "#{deploy_to}/shared/symlinker #{current_path}/#{path} #{public}"
     end
     
-    run "ln -nfs #{deploy_to}/shared/uploads/com_openhouse #{public}/media/com_openhouse/uploads"
+    run "ln -nfs #{deploy_to}/shared/uploads/com_openhouse #{latest_release}/com_openhouse/media/com_openhouse/uploads"
   end
 
   task :start do ; end
