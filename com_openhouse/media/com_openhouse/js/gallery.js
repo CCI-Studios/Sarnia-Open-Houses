@@ -112,7 +112,9 @@ CCI.OpenHouse.Gallery = new Class({
 var gallery;
 window.addEvent('domready', function() {
 	$$('.openhouse-gallery').each(function(g) {
-		gallery = new CCI.OpenHouse.Gallery(g);
+		gallery = new CCI.OpenHouse.Gallery(g, {
+			delay: 1500000
+		});
 		gallery.start();
 	});
 });
