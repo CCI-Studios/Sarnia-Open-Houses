@@ -162,3 +162,4 @@ end
 
 after "deploy:symlink", "deploy:symlink_modules"
 after "deploy:finalize_update", "deploy:finalize"
+after "deploy:finalize_update", "deploy:symlink_modules"
