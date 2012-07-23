@@ -2,5 +2,5 @@
 	<input type="hidden" name="operation" value="<?= $operation ?>" />
 	<input type="hidden" name="id" value="<?= $house ?>" />
 
-	<button type="submit"><span><?= ($operation == 'add')? 'Add to my Lists':'Remove from my Lists' ?></span></button>
+	<button type="submit"><span><?= ($operation == 'add')? 'Add to My List':'Remove from My List' ?></span></button>
 </form>

@@ -9,7 +9,7 @@
 			<form style="display: inline;" action="index.php?option=com_openhouse&view=cart" class="-koowa-form" method="post">
 				<input type="hidden" name="operation" value="clear" />
 				<button type="submit"><span>
-					Clear my List
+					Clear My List
 				</span></button>
 			</form>
 		</section>
