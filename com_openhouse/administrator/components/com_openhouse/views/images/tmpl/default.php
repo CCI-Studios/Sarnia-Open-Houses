@@ -1,6 +1,6 @@
 <?= @helper('behavior.mootools') ?>
 <script src="media://lib_koowa/js/koowa.js" />
-<script src="media://lib_koowa/css/koowa.css" />
+<style src="media://lib_koowa/css/koowa.css" />
 
 <form action="<?= @route('view=images') ?>" method="get" class="-koowa-grid">
 	<table class="adminlist">
