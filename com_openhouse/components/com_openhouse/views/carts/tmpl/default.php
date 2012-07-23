@@ -11,6 +11,10 @@
 				<button type="submit"><span>
 					Clear My List
 				</span></button>
+
+				<a href="<?=@route('tmpl=component&print=1')?>" target="_blank" class="button"><span>
+					Print My List
+				</span></a>
 			</form>
 		</section>
 	<? else: ?>
