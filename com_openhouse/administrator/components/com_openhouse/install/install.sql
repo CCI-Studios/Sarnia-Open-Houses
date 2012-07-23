@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `#__openhouse_images` (
 	`title` VARCHAR(200) NOT NULL,
 	`enabled` TINYINT(1) NOT NULL DEFAULT '0',
 
-	`ordering` TINYINT(3) NOT NULL DEFAULT '0',
+	`ordering` INT(11) NOT NULL DEFAULT '0',
 	`openhouse_house_id` BIGINT(20) UNSIGNED NOT NULL
 ) ENGINE=MyISAM;
 
