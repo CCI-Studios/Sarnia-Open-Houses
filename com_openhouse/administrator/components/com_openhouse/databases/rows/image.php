@@ -30,10 +30,9 @@ class ComOpenHouseDatabaseRowImage extends ComOpenhouseDatabaseRowRelated
 		if ($f) {
 			$this->filename = $f;
 			$this->createThumbs();
-			return parent::save();
 		}
-
-		return;
+		
+		return parent::save();
 	}
 
 	protected function saveOriginal()
